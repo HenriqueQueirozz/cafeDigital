@@ -4,27 +4,34 @@
 
 
 :root{
-    --main-color: 285;
-    --first-color: hsl(var(--main-color), 69%, 61%);
-    --first-color-second: hsl(var(--main-color), 69%, 61%);
-    --first-color-alt: hsl(var(--main-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--main-color), 92%, 85%);
-    --title-color: hsl(var(--main-color), 8%, 15%);
-    --text-color: hsl(var(--main-color), 8%, 45%);
-    --text-color-light: hsl(var(--main-color), 8%, 65%);
-    --input-color: hsl(var(--main-color), 70%, 96%);
-    --body-color: hsl(var(--main-color), 60%, 99%);
+    --main-color: 37; /*285*/
+    --main-first-color: hsl(var(--main-color), 100%, 88%); /*#FFE8C2*/
+    --main-first-color-alt: hsl(var(--main-color), 57%, 53%);
+    --main-first-color-lighter: hsl(var(--main-color), 92%, 85%);
+    --main-title-color: hsl(var(--main-color), 8%, 15%);
+    --main-text-color: hsl(var(--main-color), 8%, 45%);
+    --main-text-color-light: hsl(var(--main-color), 8%, 65%);
+    
+    --main-input-color: hsl(var(--main-color), 70%, 96%);
+    --main-body-color: hsl(var(--main-color), 60%, 99%);
+
+    --second-color: 60;
+    --second-sec-color: hsl(var(--second-color), 100%, 50%);
+    --second-sec-color-alt: hsl(var(--second-color), 100%, 80%);
+
+    --details-color: 355;
+    --details-tec-color: hsl(var(--details-color), 81%, 50%);
+    --details-tec-color-alt: hsl(var(--details-color), 81%, 61%);
+
     --container-color: #FFFFFF;
 
     --body-font: 'Poppins', sans-serif;
     --title-font: 'Doppio One', sans-serif;
 }
 
-   
 .square{
     font-family: var(--title-font);
-    color: red;
     width: 200px;
     height: 200px;
-    background-color: var(--first-color);
+    background-color: var(--main-first-color);
 }
