@@ -1,0 +1,30 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+:root{
+    --main-color: 285;
+    --first-color: hsl(var(--main-color), 69%, 61%);
+    --first-color-second: hsl(var(--main-color), 69%, 61%);
+    --first-color-alt: hsl(var(--main-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--main-color), 92%, 85%);
+    --title-color: hsl(var(--main-color), 8%, 15%);
+    --text-color: hsl(var(--main-color), 8%, 45%);
+    --text-color-light: hsl(var(--main-color), 8%, 65%);
+    --input-color: hsl(var(--main-color), 70%, 96%);
+    --body-color: hsl(var(--main-color), 60%, 99%);
+    --container-color: #FFFFFF;
+
+    --body-font: 'Poppins', sans-serif;
+    --title-font: 'Doppio One', sans-serif;
+}
+
+   
+.square{
+    font-family: var(--title-font);
+    color: red;
+    width: 200px;
+    height: 200px;
+    background-color: var(--first-color);
+}
