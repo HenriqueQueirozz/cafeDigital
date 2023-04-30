@@ -19,7 +19,7 @@
     --main-body-color-alt: hsla(220, 5%, 11%, 0.95);
 
     --second-color: 359;
-    --second--color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
+    --second-sec-color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
     --second-color-alt: hsl(var(--second-color), 100%, 80%); /* ----> #ff999b*/
     --second-first-color-lighter: hsl(var(--second-color), 92%, 85%); /* ----> #fcb6b7*/
     --second-title-color: hsl(var(--second-color), 8%, 15%);/* ----> #292323*/
@@ -140,6 +140,15 @@ img{
     font-style: italic;
 }
 
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
 /* ========================================================== LOGIN CSS ========================================================== */
 .main{
     width: 100%;
@@ -175,7 +184,6 @@ img{
     width: 100%;
     padding: 5% 4% 5% 4%;
     background-color: var(--main-body-color-alt)
-    
 }
 
 .main-title{
@@ -205,5 +213,20 @@ img{
     font-size: var(--big-font-size);
     color: hsl(var(--main-color), 100%, 75%);
 }
+
+.main-label{
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--main-input-color);
+}
+
+.main-form-obrigatorio{
+    color: var(--second-sec-color);
+}
+
+
 
 /* ========================================================== LOGIN CSS ========================================================== */
