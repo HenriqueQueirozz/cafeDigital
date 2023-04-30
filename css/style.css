@@ -2,36 +2,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* ========================================================== ROOT CSS ========================================================== */
 
 :root{
-    --main-color: 37; /*285*/
-    --main-first-color: hsl(var(--main-color), 100%, 88%); /*#FFE8C2*/
-    --main-first-color-alt: hsl(var(--main-color), 57%, 53%);
-    --main-first-color-lighter: hsl(var(--main-color), 92%, 85%);
-    --main-title-color: hsl(var(--main-color), 8%, 15%);
-    --main-text-color: hsl(var(--main-color), 8%, 45%);
-    --main-text-color-light: hsl(var(--main-color), 8%, 65%);
-    
-    --main-input-color: hsl(var(--main-color), 70%, 96%);
-    --main-body-color: hsl(var(--main-color), 60%, 99%);
+    /* CORES */
+    --main-color: 216;
+    --main-first-color: hsl(var(--main-color), 59%, 41%); /* ----> #2B5CA5*/
+    --main-first-color-alt: hsl(var(--main-color), 100%, 75%);/* ----> #82b4ff*/
+    --main-first-color-lighter: hsl(var(--main-color), 92%, 85%);/* ----> #b6d2fc*/
+    --main-title-color: hsl(var(--main-color), 8%, 15%);/* ----> #232629*/
+    --main-text-color: hsl(var(--main-color), 8%, 45%);/* ----> #6a717c*/
+    --main-text-color-light: hsl(var(--main-color), 8%, 65%);/* ----> #9fa4ad*/
+    --main-input-color: hsl(var(--main-color), 70%, 96%);/* ----> #eef3fc*/
+    --main-body-color: hsl(var(--main-color), 60%, 99%);/* ----> #fbfcfe*/
 
-    --second-color: 60;
-    --second-sec-color: hsl(var(--second-color), 100%, 50%);
-    --second-sec-color-alt: hsl(var(--second-color), 100%, 80%);
-
-    --details-color: 355;
-    --details-tec-color: hsl(var(--details-color), 81%, 50%);
-    --details-tec-color-alt: hsl(var(--details-color), 81%, 61%);
+    --second-color: 359;
+    --second--color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
+    --second-color-alt: hsl(var(--second-color), 100%, 80%); /* ----> #ff999b*/
+    --second-first-color-lighter: hsl(var(--second-color), 92%, 85%); /* ----> #fcb6b7*/
+    --second-title-color: hsl(var(--second-color), 8%, 15%);/* ----> #292323*/
+    --second-text-color: hsl(var(--second-color), 8%, 45%);/* ----> #7c6a6a*/
+    --second-text-color-light: hsl(var(--second-color), 8%, 65%);/* ----> #ad9f9f*/
+    --second-input-color: hsl(var(--second-color), 70%, 96%);/* ----> #fceeee*/
 
     --container-color: #FFFFFF;
-
     --body-font: 'Poppins', sans-serif;
     --title-font: 'Doppio One', sans-serif;
+
+    /* BORDAS */
+    --b-0-5: 0.2rem;
+    --b-1: 0.5rem;
+    --b-1-5: 0.7rem;
+    --b-2: 1rem;
+    --b-2-5: 1.2rem;
+
+    /* FONTES */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.9rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* MARGINS */
+    --margin-0-25: .25rem;
+    --margin-0-5: .5rem;
+    --margin-0-75: .75rem;
+    --margin-1: 1rem;
+    --margin-2: 2rem;
+    --margin-2-5: 2.5rem;
+    --margin-3: 3rem;
+
+    /* CAMADAS */
+    --z-bground: 10;
+    --z-tooltip: 100;
+    --z-fixed: 1000;
+    --z-modal: 10000;
 }
 
-.square{
-    font-family: var(--title-font);
-    width: 200px;
-    height: 200px;
-    background-color: var(--main-first-color);
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --h4-font-size: 1rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/* ========================================================== GLOBAL CSS ========================================================== */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /* Animação suave para scroll */
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.section{
+    padding: 2rem 0 4rem;
+}
+
+.section-title{
+    font-size: var(--h1-font-size);
+}
+
+.section-subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+    margin-top: var(--mb-0-5);
+}
+
+.section-title,
+.section-subtitle{
+    text-align: center;
+}
+
+.italic{
+    font-style: italic;
 }
