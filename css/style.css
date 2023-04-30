@@ -5,6 +5,7 @@
 /* ========================================================== ROOT CSS ========================================================== */
 
 :root{
+    --header-height: 3rem;
     /* CORES */
     --main-color: 216;
     --main-first-color: hsl(var(--main-color), 59%, 41%); /* ----> #2B5CA5*/
@@ -15,6 +16,7 @@
     --main-text-color-light: hsl(var(--main-color), 8%, 65%);/* ----> #9fa4ad*/
     --main-input-color: hsl(var(--main-color), 70%, 96%);/* ----> #eef3fc*/
     --main-body-color: hsl(var(--main-color), 60%, 99%);/* ----> #fbfcfe*/
+    --main-body-color-alt: hsla(220, 5%, 11%, 0.95);
 
     --second-color: 359;
     --second--color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
@@ -85,7 +87,6 @@
 }
 
 html{
-    /* Animação suave para scroll */
     scroll-behavior: smooth;
 }
 
@@ -93,12 +94,12 @@ body{
     margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var(--body-color);
+    background-color: var(--main-body-color);
     color: var(--text-color);
 }
 
 h1, h2, h3, h4{
-    color: var(--title-color);
+    color: var(--main-title-color);
     font-weight: var(--font-semi-bold);
 }
 
@@ -126,8 +127,8 @@ img{
 .section-subtitle{
     display: block;
     font-size: var(--small-font-size);
-    margin-bottom: var(--mb-3);
-    margin-top: var(--mb-0-5);
+    margin-bottom: var(--margin-3);
+    margin-top: var(--margin-0-5);
 }
 
 .section-title,
@@ -138,3 +139,71 @@ img{
 .italic{
     font-style: italic;
 }
+
+/* ========================================================== LOGIN CSS ========================================================== */
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.main-logo{
+    width: 281px;
+    height: 368px;
+    margin: 8%;
+}
+
+.main-welcome-text{
+    text-align: center;
+}
+
+.main-first-content{
+    width: 100%;
+    padding: 2% 4% 5% 4%;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-body-color);
+}
+
+.main-content{
+    text-align: center;
+    margin-left: var(--margin-3);
+    width: 70%;
+}
+
+.main-second-content{
+    width: 100%;
+    padding: 5% 4% 5% 4%;
+    background-color: var(--main-body-color-alt)
+    
+}
+
+.main-title{
+    font-size: var(--big-font-size);
+}
+
+.main-subtitle{
+    font-size: var(--h3-font-size);
+}
+
+.main-description{
+    font-family: var(--title-font);
+    line-height: 115%;
+    font-size: var(--h4-font-size);
+}
+
+.main-copy{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 115%;
+    margin-top: var(--margin-3);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.main-title-second{
+    font-size: var(--big-font-size);
+    color: hsl(var(--main-color), 100%, 75%);
+}
+
+/* ========================================================== LOGIN CSS ========================================================== */
