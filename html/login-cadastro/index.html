@@ -5,23 +5,58 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Café Digital</title>
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="../../css/style.css">
     </head>
     <body>
-       <main>
-            <div class="main">
-                <div class="main content first-child">
-                    <p>Bem vindo ao</p>
-                    <p>Cyber Café!</p>
+        <div class="main">
+            <div class="main-first-content">
+                <div class="main-content">
+                    <div class="main-welcome-text">
+                        <h2 class="main-subtitle">Bem vindo ao</h2>
+                        <h1 class="main-title">Cyber Café</h2>
+                    </div>
                     <figure>
-                        <img src="" alt="">
+                        <img src="../../src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo">
                     </figure>
-                    
-                </div>
-                <div class="main content second-child">
-
+                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
+                    <p class="main-description">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
+                    <p class="main-copy">©Copyright - CaféDigital 2023</p>
                 </div>
             </div>
-       </main> 
+            <div class="main-second-content">
+                <div class="main-content">
+                    <h1 class="main-title-second">Crie sua conta</h2>
+                    <form action="" class="main-form">
+                        <div class="main-form-input">
+                            <label for="id-input-Nome" class="main-label">Nome:<span class="main-form-obrigatorio">*</span></label>
+                            <input type="text" id="id-input-Nome" name="input-Nome" placeholder="Example">
+                        </div>
+                        <div class="main-form-input">
+                            <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
+                            <input type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com">
+                        </div>
+                        <div class="main-form-input">
+                            <label for="id-input-Data" class="main-label">Data de Nascimento:<span class="main-form-obrigatorio">*</span></label>
+                            <input type="date" id="id-input-Data" name="input-Data" placeholder="21/06/2004">
+                        </div>
+                        <div class="main-form-input">
+                            <label for="id-input-Sexo" class="main-label">Sexo:</label>
+                            <select name="input-Sexo" id="id-input-Sexo">
+                                <option value=""></option>
+                                <option value="masc">Masculino</option>
+                                <option value="masc">Feminino</option>
+                                <option value="others">Outros</option>
+                            </select>
+                        </div>
+                        <div class="main-form-input">
+                            <label for="id-input-CPF" class="main-label">CPF:<span class="main-form-obrigatorio">*</span></label>
+                            <input type="date" id="id-input-CPF" name="input-CPF" placeholder="21/06/2004">
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <h2 class="main-desc-cadastro">Já tem uma conta?</h2><a href="#">Clique aqui para Logar</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
