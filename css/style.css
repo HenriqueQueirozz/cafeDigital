@@ -435,6 +435,21 @@ section{
     background-color: var(--body-color);
 } */
 
+.btn{
+    width: 320px;
+    height: 53px;
+    background-color: var(--second-sec-color);
+    border-radius: 15px;
+    color: var(--main-input-color);
+}
+
+.btn:hover{
+    border: 1.5px solid var(--second-sec-color);
+    background-color: var(--second-color-alt);
+    cursor: pointer;
+}
+
+/* ========================================================== LOGIN CSS ========================================================== */
 .main{
     width: 100%;
     height: 100vh;
@@ -453,6 +468,7 @@ section{
 
 .main-first-content{
     width: 100%;
+    margin: auto;
     padding: 2% 4% 5% 4%;
     align-items: center;
     text-align: center;
@@ -506,12 +522,64 @@ section{
     font-size: 24px;
     line-height: 150%;
     color: var(--main-input-color);
+    font-size: var(--normal-font-size);
 }
 
 .main-form-obrigatorio{
+    margin: var(--margin-0-5);
     color: var(--second-sec-color);
 }
 
+.main-form{
+    width: 100%;
+    padding: 8%;
+}
 
+.main-form-aside{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-form-input, .main-input, .main-label{
+    text-align: left;
+    width: 100%;
+}
+
+.main-input{
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid hsla(0, 0%, 100%, 1);
+}
+
+.main-input-sexo{
+    width: 40%;
+}
+.main-input:focus{
+    caret-color: hsla(0, 0%, 100%);
+    outline: 0;
+}
+
+input::placeholder {
+    font-family: var(--title-font);
+    font-style: normal;
+    line-height: 400px;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+.main-informacoes-cadastro{
+    margin-top: var(--margin-3);
+    text-align: center;
+    display: flex;
+}
+
+.main-desc-cadastro{
+    color: var(--main-input-color);
+}
+
+.main-input-link{
+    margin-left: var(--margin-1);
+    color: var(--main-first-color);
+    font-weight: bold;
+}
 
 /* ========================================================== LOGIN CSS ========================================================== */

@@ -27,34 +27,40 @@
                 <div class="main-content">
                     <h1 class="main-title-second">Crie sua conta</h2>
                     <form action="" class="main-form">
-                        <div class="main-form-input">
+                        <div class="main-form-input"><br>
                             <label for="id-input-Nome" class="main-label">Nome:<span class="main-form-obrigatorio">*</span></label>
-                            <input type="text" id="id-input-Nome" name="input-Nome" placeholder="Example">
+                            <br><input class="main-input" type="text" id="id-input-Nome" name="input-Nome" placeholder="Example">
                         </div>
                         <div class="main-form-input">
                             <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
-                            <input type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com">
+                            <br><input class="main-input" type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com">
                         </div>
-                        <div class="main-form-input">
-                            <label for="id-input-Data" class="main-label">Data de Nascimento:<span class="main-form-obrigatorio">*</span></label>
-                            <input type="date" id="id-input-Data" name="input-Data" placeholder="21/06/2004">
+                        <div class="main-form-aside">
+                            <div class="main-form-input">
+                                <label for="id-input-Data" class="main-label">Data de Nascimento:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="date" id="id-input-Data" name="input-Data" placeholder="21/06/2004">
+                            </div>
+                            <div class="main-form-input">
+                                <label for="id-input-Sexo" class="main-label">Sexo:<span class="main-form-obrigatorio">*</span></label>
+                                <br><select class="main-input main-input-sexo" name="input-Sexo" id="id-input-Sexo">
+                                    <option value=""></option>
+                                    <option value="masc">Masculino</option>
+                                    <option value="masc">Feminino</option>
+                                    <option value="others">Outros</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="main-form-input">
-                            <label for="id-input-Sexo" class="main-label">Sexo:</label>
-                            <select name="input-Sexo" id="id-input-Sexo">
-                                <option value=""></option>
-                                <option value="masc">Masculino</option>
-                                <option value="masc">Feminino</option>
-                                <option value="others">Outros</option>
-                            </select>
-                        </div>
+
                         <div class="main-form-input">
                             <label for="id-input-CPF" class="main-label">CPF:<span class="main-form-obrigatorio">*</span></label>
-                            <input type="date" id="id-input-CPF" name="input-CPF" placeholder="21/06/2004">
+                            <br><input class="main-input" type="text" id="id-input-CPF" name="input-CPF" placeholder="21/06/2004">
                         </div>
-                        <button type="submit">Enviar</button>
+                        <button class="btn main-btn" type="submit">Enviar</button>
+                        <div class="main-informacoes-cadastro">
+                            <h2 class="main-desc-cadastro">Já tem uma conta?</h2>
+                            <a href="#" class="main-input-link">Clique aqui para Logar</a>
+                        </div>
                     </form>
-                    <h2 class="main-desc-cadastro">Já tem uma conta?</h2><a href="#">Clique aqui para Logar</a>
                 </div>
             </div>
         </div>
