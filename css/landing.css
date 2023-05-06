@@ -28,10 +28,24 @@ header nav{
 header nav ul{
     display: flex;
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav ul a{
     color: rgba(255, 255, 255, 0.5);
+}
+
+header nav picture{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    top: 1.5rem;
+    position: relative;
+}
+
+header nav picture img{
+    width: 64%
 }
 
 /* ============== Sessão Chamada ============== */
@@ -79,6 +93,16 @@ header nav ul a{
 
 #secao2 > div{
     display: flex;
+}
+
+.imagem-vantagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#secao2 .vantagem .imagem-vantagem img{
+    width: 40%;
 }
 
 #secao2 > div :first-child{
@@ -162,16 +186,41 @@ header nav ul a{
 
 #planos > div{
     display: flex;
-    margin: 0 var(--margin-3);
+    /* margin: 0 var(--margin-3); */
 }
 
 #planos > div > div{
-    width: 50%;
+    width: fit-content;
     background-color: rgba(130, 180, 255, 0.5);
     margin: 0 var(--margin-1);
     border-radius: 20px;
-    padding: var(--margin-3) 0;
+    padding: var(--margin-3) var(--margin-1);
     text-align: center;
+}
+
+.card-subtitle{
+    font-size: var(--smaller-font-size);
+    color: rgba(33, 37, 41, 1);
+}
+
+.card-body{
+    margin: var(--margin-3) var(--margin-2);
+    line-height: 2;
+}
+
+.card-detalhe{
+    text-align: end;
+    color: var(--second-sec-color);
+    font-size: var(--smaller-font-size);
+    margin-right: 1.5rem;
+}
+
+.plano-card h1{
+    margin-bottom: 0.8rem;
+}
+
+.plano-card h1:has(+ p){
+    margin-bottom: 0rem; 
 }
 
 /* ============== Sessão Sobre nós ============== */
@@ -209,7 +258,102 @@ header nav ul a{
 .contato-title{
     text-align: center;
 }
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form-group label{
+   font-weight: var(--font-semi-bold);
+   color: var(--main-title-color);
+   font-size: var(--normal-font-size);
+}
+
+.form-group input{
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #FFFFFF;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: var(--smaller-font-size);
+}
+
+.form-group input:focus {
+    /* border: none; */
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.form-group input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: var(--smaller-font-size);
+}
+
+.contato-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contato-box .form-group{
+    width: 45%;
+}
+
 /* ============== Rodapé ============== */
 footer > div{ 
     background-color: var(--main-first-color);
+    font-family: var(--title-font);
+    padding: 2rem 0 1rem 0;
+}
+
+.footer-box{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
+.box-icone{
+    border-radius: 1rem;
+    padding: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-icone i{
+    font-size: var(--h2-font-size);
+}
+
+footer p {
+    color: rgb(255, 255, 255);
+}
+
+footer .copyright{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: var(--smaller-font-size);
+    font-family: var(--body-font);
+    text-align: center;
+}
+
+/* ============== Botões ============== */
+.btn-vermelho{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 8px;
+    background-color: var(--second-sec-color);
+    color: rgb(255, 255, 255);
+    padding: 0.3rem 2.2rem;
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.btn-vermelho:hover{
+    transition: 0.5s;
+    background-color: rgba(224, 29, 33, 0.8);
 }

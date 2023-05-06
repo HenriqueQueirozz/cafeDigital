@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../css/reset.css">
         <link rel="stylesheet" href="../../css/style.css">
         <link rel="stylesheet" href="../../css/landing.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     </head>
     <body>
         <header class="header mx-3" id="header">
@@ -18,12 +19,12 @@
                     <li><a href="#funcionamento">Funcionamento</a></li>
                 </ul>
                 <picture>
-                    <img src="" alt="">
+                    <img src="../../src/Group 15.png" alt="">
                 </picture>
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a class="option-destaque" href="#">Cadastrar</a></li>
-                    <li><a href="../../html/login-cadastro/index.html">Logar</a></li>
+                    <li><a href="../../html/login-cadastro/index.html"><button class="btn-vermelho">Logar</button></a></li>
                 </ul>
             </nav>
         </header>
@@ -61,14 +62,14 @@
                     </li>
                 </ul>
                 <p class="informacoes-text my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet, lectus ac dictum bibendum, orci lacus sagittis ante, vitae tristique massa orci venenatis ligula. Aliquam aliquet, lectus ac dictum bibendum, orci lacus sagittis ante, vitae tristique massa orci venenatis ligula. In nibh eros, dignissim et velit eu, dignissim convallis dolor.</p>
-                <a href="#planos">Conheça nossos planos</a>
+                <a href="#planos">Conheça nossos planos<i class="bi bi-caret-right-fill"></i></a>
             </section>
             <section id="secao2">
-                <div class="secao2-direction-end">
-                    <div>
-                        <img src="" alt="">
+                <div class="vantagem secao2-direction-end">
+                    <div class="imagem-vantagem">
+                        <img src="../../src/Vector.png" alt="">
                     </div>
-                    <div >
+                    <div>
                         <h3>consectetur adipiscing elit</h3>
                         <div class="secao2-title ms-auto mt-1 mb-2">
                             <h2>#Lorem Ipsum</h2>
@@ -77,9 +78,9 @@
                         <p class="secao2-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet, lectus ac dictum bibendum, orci lacus sagittis ante, vitae tristique massa orci venenatis ligula.</p>
                     </div>
                 </div>
-                <div class="secao2-direction-start">
-                    <div>
-                        <img src="" alt="">
+                <div class="vantagem secao2-direction-start">
+                    <div class="imagem-vantagem">
+                        <img src="../../src/Group 4.png" alt="">
                     </div>
                     <div>
                         <h3>consectetur adipiscing elit</h3>
@@ -94,9 +95,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="secao2-direction-end">
-                    <div>
-                        <img src="" alt="">
+                <div class="vantagem secao2-direction-end">
+                    <div class="imagem-vantagem">
+                        <img src="../../src/Calendar2Week.png" alt="">
                     </div>
                     <div class="secao2-direction-end">
                         <h3>consectetur adipiscing elit</h3>
@@ -107,37 +108,37 @@
                         <p class="secao2-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet, lectus ac dictum <b>bibendum, orci lacus sagittis</b> ante, vitae tristique massa orci venenatis ligula.</p>
                     </div>
                 </div>
-                <a href="#">Converse com nossos especialistas agora mesmo</a>
+                <a href="#">Converse com nossos especialistas agora mesmo<i class="bi bi-caret-right-fill"></i></a>
             </section>
             <section id="planos">
                 <h1 class="planos-title section-title">Conheça nossos Planos!</h1>
                 <h2 class="planos-subtitle section-subtitle mb-5">consectetur adipiscing elit</h2>
 
                 <div>
-                    <div>
+                    <div class="plano-card">
                         <h2>Frater</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="card-subtitle">Lorem ipsum dolor sit amet</p>
 
-                        <div class="my-3">
-                            <p>Lorem ipsum dolor sit amet</p>
-                            <p>Lorem ipsum dolor sit amet</p>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet lectus ac dictum</p>
+                            <p>Lorem ipsum dolor sit amet lectus ac dictum</p>
                         </div>
 
                         <h1>R$ 199,00 / mês</h1>
-                        <button>Contratar</button>
+                        <button class="btn-vermelho mt-1">Contratar</button>
                     </div>
-                    <div>
+                    <div class="plano-card">
                         <h2>Club Owner</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="card-subtitle">Lorem ipsum dolor sit amet</p>
 
-                        <div class="my-3">
-                            <p>Lorem ipsum dolor sit amet</p>
-                            <p>Lorem ipsum dolor sit amet</p>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet lectus ac dictum</p>
+                            <p>Lorem ipsum dolor sit amet lectus ac dictum</p>
                         </div>
 
                         <h1>R$ 615,00 / mês</h1>
-                        <p>aproximadamente</p>
-                        <button>Contratar</button>
+                        <p class="card-detalhe">aproximadamente</p>
+                        <button class="btn-vermelho mt-1">Contratar</button>
                     </div>
                 </div>
             </section>
@@ -161,34 +162,45 @@
             <section id="contato" class="mt-5">
                 <h2 class="contato-title">Seja informado sobre as novidades!</h2>
 
-                <div>
+                <div class="form-group">
                     <label for="">Nome para contato:</label>
-                    <input type="text" name="" id="" placeholder="Seu nome aqui!">
+                    <input class="contato-input" type="text" name="" id="" placeholder="Seu nome aqui!">
                 </div>
                 
-                <div>
+                <div class="form-group">
                     <label for="">E-mail:</label>
-                    <input type="text" name="" id="" placeholder="example@exemple.com">
+                    <input class="contato-input" type="text" name="" id="" placeholder="example@exemple.com">
                 </div>
 
-                <div>
-                    <label for="">Tenho interesse em:</label>
-                    <input type="text" name="" id="" placeholder="Sou programador!">
-    
-                    <button>Cadastrar Contato</button>
+                <div class="contato-box">
+                    <div class="form-group">
+                        <label for="">Tenho interesse em:</label>
+                        <input class="contato-input" type="text" name="" id="" placeholder="Sou programador!">
+                    </div>
+
+                    <button class="btn-vermelho">Cadastrar Contato</button>
                 </div>
             </section>
         </main>
         <footer class="mx-3">
             <div>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <p>Informações</p>
-                <p>Suporte</p>
-                <p>Entre em contato</p>
-                <p>Termos de uso e condições de uso</p>
-                <p>©Copyright - CaféDigital 2023</p>
+                <div class="footer-box">
+                    <div class="box-icone"><i class="bi bi-twitter"></i></div>
+                    <div class="box-icone"><i class="bi bi-facebook"></i></div>
+                    <div class="box-icone"><i class="bi bi-instagram"></i></div>
+                </div>
+                <div class="my-1">
+                    <div class="footer-box mb-1">
+                        <p>Informações</p>
+                        <p>Suporte</p>
+                        <p>Entre em contato</p>
+                    </div>
+                    <div class="footer-box">
+                        <p>Termos de uso e condições de uso</p>
+                    </div>
+                </div>
+                
+                <p class="copyright">©Copyright - CaféDigital 2023</p>
             </div>
         </footer>
     </body>
