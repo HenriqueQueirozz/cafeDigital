@@ -29,7 +29,7 @@
     --second-text-color-light: hsl(var(--second-color), 8%, 65%);/* ----> #ad9f9f*/
     --second-input-color: hsl(var(--second-color), 70%, 96%);/* ----> #fceeee*/
 
-    --container-color: #FFFFFF;
+    --container-color: hsl(216, 100%, 95%);
     --body-font: 'Poppins', sans-serif;
     --title-font: 'Montserrat', sans-serif;;
 
@@ -96,6 +96,8 @@ html{
 
 body{
     /* margin: 0 0 var(--header-height) 0; */
+    width: 100%;
+    height: 100vh;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--main-body-color);
@@ -455,9 +457,51 @@ section{
 /* ========================================================== LOGIN CSS ========================================================== */
 
 .main{
-    width: 100%;
-    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section-cadastro{
+    width: 80%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*overflow: hidden;*/
+}
+
+.main-section-cadastro::before{
+    content: "";
+    position: absolute;
+    background-color: var(--container-color);
+    width: 50%;
+    height: 100%;
+}
+
+.main-first-content{
+    z-index: var(--z-fixed);
+    flex: 1 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.main-second-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex: 2 0 auto;
+    background-color: var(--main-body-color-alt);
+}
+
+
+.second-section-login{
+    position: absolute;
+    display: none;
 }
 
 .main-logo{
@@ -470,27 +514,6 @@ section{
     text-align: center;
 }
 
-.main-first-content{
-    width: 100%;
-    margin: auto;
-    padding: 2% 4% 5% 4%;
-    align-items: center;
-    text-align: center;
-    background-color: var(--main-body-color);
-}
-
-.main-content{
-    text-align: center;
-    margin-left: var(--margin-3);
-    width: 70%;
-}
-
-.main-second-content{
-    width: 100%;
-    background-color: var(--main-body-color-alt);
-    padding: 10% 4% 5% 7%;
-}
-
 .main-title{
     font-size: var(--big-font-size);
 }
@@ -500,7 +523,8 @@ section{
 }
 
 .main-description{
-    font-family: var(--title-font);
+    margin-bottom: var(--margin-1);
+    font-family: var(--body-font);
     line-height: 115%;
     font-size: var(--h4-font-size);
 }
@@ -536,6 +560,8 @@ section{
 }
 
 .main-form{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 8%;
 }
@@ -578,16 +604,11 @@ input::placeholder {
     color: hsla(0, 0%, 100%, 0.7);
 }
 
-.main-input-sexo:focus{
-    outline: 0;
+.main-input-sexo{
+    color: hsla(0, 0%, 100%, 0.7);
+    outline: none;
     box-shadow: 0 0 0 0;
     cursor: pointer;
-}
-
-.main-informacoes-cadastro{
-    margin-top: var(--margin-3);
-    text-align: center;
-    display: flex;
 }
 
 .main-desc-cadastro{
@@ -602,5 +623,13 @@ input::placeholder {
     font-weight: bold;
 }
 
-
+.main-input-link:hover{
+    cursor: pointer;
+    border-bottom: 1px solid var(--main-first-color);
+}
   
+.main-btn{
+    border: none;
+    margin: auto;
+    margin-bottom: var(--margin-3);
+}
