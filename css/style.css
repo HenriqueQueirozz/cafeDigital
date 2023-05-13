@@ -18,7 +18,7 @@
     --main-text-color-light: hsl(var(--main-color), 8%, 65%);/* ----> #9fa4ad*/
     --main-input-color: hsl(var(--main-color), 70%, 96%);/* ----> #eef3fc*/
     --main-body-color: hsl(var(--main-color), 60%, 99%);/* ----> #fbfcfe*/
-    --main-body-color-alt: hsla(220, 5%, 11%, 0.95);
+    --main-body-color-alt: hsla(220, 5%, 11%);
 
     --second-color: 359;
     --second-sec-color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
@@ -29,7 +29,7 @@
     --second-text-color-light: hsl(var(--second-color), 8%, 65%);/* ----> #ad9f9f*/
     --second-input-color: hsl(var(--second-color), 70%, 96%);/* ----> #fceeee*/
 
-    --container-color: hsl(216, 100%, 95%);
+    --container-color: hsl(216, 100%, 85%);
     --body-font: 'Poppins', sans-serif;
     --title-font: 'Montserrat', sans-serif;;
 
@@ -64,9 +64,10 @@
     --margin-5: 5rem;
 
     /* CAMADAS */
+    --z-outdisplay: -1;
     --z-bground: 10;
     --z-tooltip: 100;
-    --z-fixed: 1000;
+    --z-fixed: 10;
     --z-modal: 10000;
 }
 
@@ -115,271 +116,6 @@ select {
   
 select option {
     color: var(--main-title-color);
-}
-
-/* ========================================================== FACILITADORES DE MARGIN ========================================================== */
-.ms-auto{
-    margin-left: auto;
-}
-/* =========== MARGIN 0.25 ===========*/
-.m-0-25{
-    margin: var(--margin-0-25);
-}
-
-.ms-0-25{
-    margin-left: var(--margin-0-25);
-}
-
-.me-0-25{
-    margin-right: var(--margin-0-25);
-}
-
-.mt-0-25{
-    margin-top: var(--margin-0-25);
-}
-
-.mb-0-25{
-    margin-bottom: var(--margin-0-25);
-}
-
-.mx-0-25{
-    margin: 0 var(--margin-0-25);
-}
-
-.my-0-25{
-    margin: var(--margin-0-25) 0;
-}
-
-/* =========== MARGIN 0.5 ===========*/
-.m-0-5{
-    margin: var(--margin-0-5);
-}
-
-.ms-0-5{
-    margin-left: var(--margin-0-5);
-}
-
-.me-0-5{
-    margin-right: var(--margin-0-5);
-}
-
-.mt-0-5{
-    margin-top: var(--margin-0-5);
-}
-
-.mb-0-5{
-    margin-bottom: var(--margin-0-5);
-}
-
-.mx-0-5{
-    margin: 0 var(--margin-0-5);
-}
-
-.my-0-5{
-    margin: var(--margin-0-5) 0;
-}
-
-/* =========== MARGIN 0.75 ===========*/
-.m-0-75{
-    margin: var(--margin-0-75);
-}
-
-.ms-0-75{
-    margin-left: var(--margin-0-75);
-}
-
-.me-0-75{
-    margin-right: var(--margin-0-75);
-}
-
-.mt-0-75{
-    margin-top: var(--margin-0-75);
-}
-
-.mb-0-75{
-    margin-bottom: var(--margin-0-75);
-}
-
-.mx-0-75{
-    margin: 0 var(--margin-0-75);
-}
-
-.my-0-75{
-    margin: var(--margin-0-75) 0;
-}
-
-/* =========== MARGIN 1 ===========*/
-.m-1{
-    margin: var(--margin-1);
-}
-
-.ms-1{
-    margin-left: var(--margin-1);
-}
-
-.me-1{
-    margin-right: var(--margin-1);
-}
-
-.mt-1{
-    margin-top: var(--margin-1);
-}
-
-.mb-1{
-    margin-bottom: var(--margin-1);
-}
-
-.mx-1{
-    margin: 0 var(--margin-1);
-}
-
-.my-1{
-    margin: var(--margin-1) 0;
-}
-
-/* =========== MARGIN 2 ===========*/
-.m-2{
-    margin: var(--margin-2);
-}
-
-.ms-2{
-    margin-left: var(--margin-2);
-}
-
-.me-2{
-    margin-right: var(--margin-2);
-}
-
-.mt-2{
-    margin-top: var(--margin-2);
-}
-
-.mb-2{
-    margin-bottom: var(--margin-2);
-}
-
-.mx-2{
-    margin: 0 var(--margin-2);
-}
-
-.my-2{
-    margin: var(--margin-2) 0;
-}
-
-/* =========== MARGIN 2.5 ===========*/
-.m-2-5{
-    margin: var(--margin-2-5);
-}
-
-.ms-2-5{
-    margin-left: var(--margin-2-5);
-}
-
-.me-2-5{
-    margin-right: var(--margin-2-5);
-}
-
-.mt-2-5{
-    margin-top: var(--margin-2-5);
-}
-
-.mb-2-5{
-    margin-bottom: var(--margin-2-5);
-}
-
-.mx-2-5{
-    margin: 0 var(--margin-2-5);
-}
-
-.my-2-5{
-    margin: var(--margin-2-5) 0;
-}
-
-/* =========== MARGIN 3 ===========*/
-.m-3{
-    margin: var(--margin-3);
-}
-
-.ms-3{
-    margin-left: var(--margin-3);
-}
-
-.me-3{
-    margin-right: var(--margin-3);
-}
-
-.mt-3{
-    margin-top: var(--margin-3);
-}
-
-.mb-3{
-    margin-bottom: var(--margin-3);
-}
-
-.mx-3{
-    margin: 0 var(--margin-3);
-}
-
-.my-3{
-    margin: var(--margin-3) 0;
-}
-
-/* =========== MARGIN 4 ===========*/
-.m-4{
-    margin: var(--margin-4);
-}
-
-.ms-4{
-    margin-left: var(--margin-4);
-}
-
-.me-4{
-    margin-right: var(--margin-4);
-}
-
-.mt-4{
-    margin-top: var(--margin-4);
-}
-
-.mb-4{
-    margin-bottom: var(--margin-4);
-}
-
-.mx-4{
-    margin: 0 var(--margin-4);
-}
-
-.my-4{
-    margin: var(--margin-4) 0;
-}
-
-/* =========== MARGIN 5 ===========*/
-.m-5{
-    margin: var(--margin-5);
-}
-
-.ms-5{
-    margin-left: var(--margin-5);
-}
-
-.me-5{
-    margin-right: var(--margin-5);
-}
-
-.mt-5{
-    margin-top: var(--margin-5);
-}
-
-.mb-5{
-    margin-bottom: var(--margin-5);
-}
-
-.mx-5{
-    margin: 0 var(--margin-5);
-}
-
-.my-5{
-    margin: var(--margin-5) 0;
 }
 
 h1{
@@ -450,8 +186,9 @@ section{
 
 .btn:hover{
     border: 1.5px solid var(--second-sec-color);
-    background-color: var(--second-color-alt);
+    background-color: var(--main-body-color-alt);
     cursor: pointer;
+    transition: background-color .1s;
 }
 
 /* ========================================================== LOGIN CSS ========================================================== */
@@ -460,24 +197,70 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-.main-section-cadastro{
-    width: 80%;
-    height: 100vh;
-    position: relative;
-    display: flex;
+.content{
     justify-content: space-between;
     align-items: center;
-    /*overflow: hidden;*/
+    position: relative;
+    height: 90%;
 }
 
-.main-section-cadastro::before{
+.content-login{
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 90%;
+}
+
+.content::before{
     content: "";
     position: absolute;
     background-color: var(--container-color);
     width: 50%;
     height: 100%;
+    border-radius: 5% 0% 0% 5%;
+    left: 0%;
+}
+
+.content-login::before{
+    content: "";
+    position: absolute;
+    background-color: var(--container-color);
+    width: 50%;
+    height: 100%;
+    border-radius: 0% 5% 5% 0%;
+    left: 50%;
+}
+
+
+.main-section-cadastro{
+    display: flex;
+    width: 80%;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.main-first-content{
+    width: 50%;
+    text-align: center;
+    z-index: var(--z-fixed);
+}
+
+.main-second-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login .main-second-content{
+    width: 100%;
+}
+
+.main-section-cadastro .main-second-content {
+    z-index: var(--z-fixed);
 }
 
 .main-first-content{
@@ -485,6 +268,15 @@ section{
     flex: 1 0 auto;
     align-items: center;
     text-align: center;
+}
+
+.second-section-login{
+    position: absolute;
+    display: flex;
+}
+
+.second-section-login .main-second-content{
+    z-index: var(--z-modal);
 }
 
 .main-second-content{
@@ -495,14 +287,11 @@ section{
     justify-content: center;
     align-items: center;
     flex: 2 0 auto;
+    border-radius: 0% 5% 5% 0%;
     background-color: var(--main-body-color-alt);
 }
 
 
-.second-section-login{
-    position: absolute;
-    display: none;
-}
 
 .main-logo{
     width: 281px;
@@ -572,8 +361,16 @@ section{
     height: 25%;
 }
 
+.main-form-input .password{
+    color: var(--main-input-color);
+    font-size: var(--smaller-font-size);
+    float: right;
+    margin-bottom: var(--margin-3);
+}
+
 .main-form-aside{
     display: flex;
+    margin-bottom: var(--margin-1);
 }
 
 .aside{
@@ -625,6 +422,7 @@ input::placeholder {
 
 .main-input-link:hover{
     cursor: pointer;
+    color: var(--main-first-color-alt);
     border-bottom: 1px solid var(--main-first-color);
 }
   
@@ -633,3 +431,60 @@ input::placeholder {
     margin: auto;
     margin-bottom: var(--margin-3);
 }
+
+/* ALTERNAR ENTRE E-MAIL E ID
+    .switch{
+        position: absolute;
+        margin-left: -9999px;
+        visibility: hidden;
+    }
+      
+    .switch + label{
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        user-select: none;
+    }
+    
+    .switch--shadow + label{
+        padding: 2px;
+        width: 120px;
+        height: 60px;
+        background-color: #dddddd;
+        border-radius: 60px;
+    }
+    
+    .switch--shadow + label:before,
+    .switch--shadow + label:after {
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      content: '';
+    }
+    
+    .switch--shadow + label:before {
+      right: 1px;
+      background-color: #f1f1f1;
+      border-radius: 60px;
+      transition: all 0.4s;
+    }
+    .switch--shadow + label:after {
+      width: 62px;
+      background-color: #fff;
+      border-radius: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s;
+    }
+    
+    .switch--shadow:checked + label:before {
+        background-color: #8ce196;
+    }
+    
+    .switch--shadow:checked + label:after {
+        transform: translateX(60px);
+    }
+    
+*/

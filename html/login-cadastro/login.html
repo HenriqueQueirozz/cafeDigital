@@ -8,62 +8,52 @@
         <link rel="stylesheet" href="../../css/style.css">
     </head>
     <body>
+        <!-- Div de todo o conteúdo -->
         <div class="main">
-            <div class="main-first-content">
-                <div class="main-content">
-                    <div class="main-welcome-text">
-                        <h2 class="main-subtitle">Bem vindo ao</h2>
-                        <h1 class="main-title">Cyber Café</h2>
-                    </div>
-                    <figure>
-                        <img src="../../src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo">
-                    </figure>
-                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
-                    <p class="main-description">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
-                    <a href="./login.html" class="main-input-link" style="margin-top: 15px;">Logue com sua conta agora mesmo!</a>
-                    <p class="main-copy">©Copyright - CaféDigital 2023</p>
-                </div>
-            </div>
-            <div class="main-second-content">
-                <div class="main-content">
-                    <h1 class="main-title-second">Crie sua conta</h2>
-                    <form action="" class="main-form">
-                        <div class="main-form-input"><br>
-                            <label for="id-input-Nome" class="main-label">Nome:<span class="main-form-obrigatorio">*</span></label>
-                            <br><input class="main-input" type="text" id="id-input-Nome" name="input-Nome" placeholder="Example">
-                        </div>
-                        <div class="main-form-input">
-                            <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
-                            <br><input class="main-input" type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com">
-                        </div>
-                        <div class="main-form-aside">
+            <!-- Segunda tela: Login -->
+            <div class="content-login main-section-cadastro">
+                <div class="main-second-content" style="border-radius: 5% 0% 0% 5%;">
+                    <div class="main-content" style="width: 100%; text-align: center;">
+                        <h1 class="main-title-second">Entre em sua conta!</h2>
+                        <form action="" class="main-form">
+                            <!--
+                                <div class="switch__container">
+                                    <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
+                                    <label for="switch-shadow"></label>
+                                </div>
+                            -->
                             <div class="main-form-input">
-                                <label for="id-input-Data" class="main-label">Data de Nascimento:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input" type="date" id="id-input-Data" name="input-Data" placeholder="21/06/2004">
+                                <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="text" id="id-input-Email" name="input-Email">
                             </div>
-                            <div class="main-form-input aside">
-                                <label for="id-input-Sexo" class="main-label">Sexo:<span class="main-form-obrigatorio">*</span></label>
-                                <br><select class="main-input main-input-sexo" name="input-Sexo" id="id-input-Sexo">
-                                    <option value=""></option>
-                                    <option value="masc">Masculino</option>
-                                    <option value="masc">Feminino</option>
-                                    <option value="others">Outros</option>
-                                </select>
+                            <div class="main-form-input password">
+                                <label for="id-input-Pass" class="main-label">Senha:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass">
+                                <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password">Esqueceu a senha?</a></h2>
                             </div>
-                        </div>
-
-                        <div class="main-form-input">
-                            <label for="id-input-CPF" class="main-label">Documento CPF:<span class="main-form-obrigatorio">*</span></label>
-                            <br><input class="main-input" type="text" id="id-input-CPF" name="input-CPF" placeholder="000.000.000-00">
-                        </div>
-                        <button class="btn main-btn" type="submit">Enviar</button>
-                        <div class="main-informacoes-cadastro">
-                            <h2 class="main-desc-cadastro">Já tem uma conta?</h2>
-                            <a href="./login.html" class="main-input-link">Clique aqui para Logar</a>
-                        </div>
-                    </form>
+                            <button class="btn main-btn" type="submit" onclick="window.location.href='../'">Entrar</button>
+                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="./cadastro.html" class="main-input-link">Cadastre-se!</a></h2>
+                        </form>
+                    </div>
                 </div>
+                <div class="main-first-content">
+                    <div class="main-content">
+                        <div class="main-welcome-text">
+                            <h2 class="main-subtitle">Bem vindo de volta!</h2>
+                            <h1 class="main-title">Cyber Café</h2>
+                        </div>
+                        <figure>
+                            <img src="../../src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo">
+                        </figure>
+                        <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
+                        <p class="main-description">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
+                        <a href="./cadastro.html" id="signup" class="main-input-link" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
+                        <p class="main-copy">©Copyright - CaféDigital 2023</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
+        <script src="../../js/script.js"></script>
     </body>
 </html>
