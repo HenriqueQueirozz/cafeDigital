@@ -11,7 +11,31 @@
         <!-- Div de todo o conteúdo -->
         <div class="main">
             <!-- Segunda tela: Login -->
-            <div class="content main-section-cadastro">
+            <div class="content-login main-section-cadastro">
+                <div class="main-second-content" style="border-radius: 5% 0% 0% 5%;">
+                    <div class="main-content" style="width: 100%; text-align: center;">
+                        <h1 class="main-title-second">Entre em sua conta!</h2>
+                        <form action="" class="main-form">
+                            <!--
+                                <div class="switch__container">
+                                    <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
+                                    <label for="switch-shadow"></label>
+                                </div>
+                            -->
+                            <div class="main-form-input">
+                                <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="text" id="id-input-Email" name="input-Email">
+                            </div>
+                            <div class="main-form-input password">
+                                <label for="id-input-Pass" class="main-label">Senha:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass">
+                                <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password">Esqueceu a senha?</a></h2>
+                            </div>
+                            <button class="btn main-btn" type="submit" onclick="window.location.href='../'">Entrar</button>
+                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="./cadastro.html" class="main-input-link">Cadastre-se!</a></h2>
+                        </form>
+                    </div>
+                </div>
                 <div class="main-first-content">
                     <div class="main-content">
                         <div class="main-welcome-text">
@@ -27,30 +51,7 @@
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
-                <div class="main-second-content">
-                    <div class="main-content">
-                        <h1 class="main-title-second">Entre em sua conta!</h2>
-                        <form action="" class="main-form">
-                            <!--
-                                <div class="switch__container">
-                                    <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
-                                    <label for="switch-shadow"></label>
-                                </div>
-                            -->
-                            <div class="main-form-input">
-                                <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input" type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com">
-                            </div>
-                            <div class="main-form-input password">
-                                <label for="id-input-Pass" class="main-label">Senha:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass" placeholder="**********">
-                                <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password">Esqueceu a senha?</a></h2>
-                            </div>
-                            <button class="btn main-btn" type="submit" onclick="window.location.href='../'">Entrar</button>
-                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="./cadastro.html" class="main-input-link">Cadastre-se!</a></h2>
-                        </form>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <script src="../../js/script.js"></script>
