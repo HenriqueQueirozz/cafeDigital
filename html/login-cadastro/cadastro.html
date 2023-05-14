@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Café Digital</title>
         <link rel="stylesheet" href="../../css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     </head>
     <body>
         <!-- Div de todo o conteúdo -->
@@ -15,7 +17,7 @@
                 <div class="main-first-content">
                     <div class="main-welcome-text">
                         <h2 class="main-subtitle">Bem vindo ao</h2>
-                        <h1 class="main-title">Cyber Café</h2>
+                        <h1 class="main-title">Café Digital</h2>
                     </div>
                     <figure>
                         <img src="../../src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo">
@@ -25,16 +27,16 @@
                     <a href="./login.html" id="signin" class="main-input-link">Logue com sua conta agora mesmo!</a>
                     <p class="main-copy">©Copyright - CaféDigital 2023</p>
                 </div>
-                <div class="main-second-content">
+                <div class="main-second-content" id="cadastro_part1">
                     <h1 class="main-title-second">Crie sua conta</h2>
                     <form action="" class="main-form">
                         <div class="main-form-input"><br>
                             <label for="id-input-Nome" class="main-label">Nome:<span class="main-form-obrigatorio">*</span></label>
-                            <br><input class="main-input" type="text" id="id-input-Nome" name="input-Nome" placeholder="Example">
+                            <br><input class="main-input" type="text" id="id-input-Nome" name="input-Nome" placeholder="Example" maxlength="100">
                         </div>
                         <div class="main-form-input">
                             <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
-                            <br><input class="main-input" type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com">
+                            <br><input class="main-input" type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com" maxlength="50">
                         </div>
                         <div class="main-form-aside">
                             <div class="main-form-input">
@@ -53,14 +55,47 @@
                         </div>
                         <div class="main-form-input">
                             <label for="id-input-CPF" class="main-label">Documento CPF:<span class="main-form-obrigatorio">*</span></label>
-                            <br><input class="main-input" type="text" id="id-input-CPF" name="input-CPF" placeholder="000.000.000-00">
+                            <br><input class="main-input" type="text" id="id-input-CPF" name="input-CPF" placeholder="000.000.000-00" maxlength="11">
                         </div>
-                        <button class="btn main-btn" type="submit">Enviar</button>
+                        <button class="btn main-btn" type="submit" onclick="Continuar()" id="main-enviarCadastro-1">Enviar</button>
+                        <h2 class="main-desc-cadastro">Já tem uma conta? <a href="./login.html" class="main-input-link">Clique aqui para Logar</a></h2>
+                    </form>
+                </div>
+                <div class="main-second-content" style="display: none;" id="cadastro_part2">
+                    <h1 class="main-title-second">Continuar cadastro</h2>
+                    <form action="" class="main-form">
+                        <div class="main-form-input"><br>
+                            <label for="id-input-RG" class="main-label">Registro Geral:<span class="main-form-obrigatorio">*</span></label>
+                            <br><input class="main-input" type="text" id="id-input-RG" name="input-RG" placeholder="00.000.000-00" maxlength="10">
+                        </div>
+                        <div class="main-form-input">
+                            <label for="id-input-CPE" class="main-label">CPE:<span class="main-form-obrigatorio">*</span></label>
+                            <br><input class="main-input" type="text" id="id-input-CPE" name="input-CPE" placeholder="example@example.com">
+                        </div>
+                        <div class="main-form-aside">
+                            <div class="main-form-input">
+                                <label for="id-input-log" class="main-label">Logradouro:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="text" id="id-input-log" name="input-log" placeholder="Rua: Example II">
+                            </div>
+                            <div class="main-form-input aside">
+                                <label for="id-input-Numero" class="main-label">Número:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="number" id="id-input-Data" name="input-numero" placeholder="000">
+                            </div>
+                        </div>
+                        <div class="main-form-input">
+                            <label for="id-input-comp" class="main-label">Complemento:<span class="main-form-obrigatorio">*</span></label>
+                            <br><input class="main-input" type="text" id="id-input-comp" name="input-comp" placeholder="Casa / Apartamento">
+                        </div>
+                        <button class="btn main-btn" type="submit">Continuar</button>
                         <h2 class="main-desc-cadastro">Já tem uma conta? <a href="./login.html" class="main-input-link">Clique aqui para Logar</a></h2>
                     </form>
                 </div>
             </div>
         </div>
         <script src="../../js/script.js"></script>
+        <script type="text/javascript">
+            $("#id-input-CPF").mask("000.000.000-00");
+            $("#id-input-RG").mask("00.000.000-00");
+        </script>
     </body>
 </html>

@@ -438,6 +438,14 @@ section{
     text-align: center;
 }
 
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
 .italic{
     font-style: italic;
 }
@@ -651,9 +659,9 @@ section{
     background-color: transparent;
     height: 30px;
     border: 0;
+    color: var(--main-input-color);
     border-bottom: 2px solid hsla(0, 0%, 100%, 1);
     margin-bottom: 5%;
-    color: var(--container-color);
 }
 
 .main-input:focus{
