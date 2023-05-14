@@ -185,7 +185,7 @@ header nav picture img{
 
 #planos > div{
     display: flex;
-    /* margin: 0 var(--margin-3); */
+    justify-content: center;
 }
 
 #planos > div > div{
@@ -316,8 +316,8 @@ footer > div{
 }
 
 .box-icone{
-    border-radius: 1rem;
-    padding: 0.3rem;
+    border-radius: 50%;
+    padding: 0.3rem 0.4rem;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
@@ -343,10 +343,10 @@ footer .copyright{
 .btn-vermelho{
     height: fit-content;
     width: fit-content;
+    padding: 0.3rem 2.2rem;
     border-radius: 8px;
     background-color: var(--second-sec-color);
     color: rgb(255, 255, 255);
-    padding: 0.3rem 2.2rem;
     border: none;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
