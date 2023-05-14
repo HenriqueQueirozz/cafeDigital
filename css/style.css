@@ -250,6 +250,14 @@ section{
     text-align: center;
 }
 
+.active{
+    display: flex !important;
+}
+
+.inactive{
+    display: none !important;
+}
+
 .italic{
     font-style: italic;
 }
@@ -370,7 +378,15 @@ section{
     background-color: var(--main-body-color-alt);
 }
 
+#cadastro_part2{
+    display: none;
+    transition: 1s;
+}
 
+
+#cadastro_part3{
+    display: none;
+}
 
 .main-logo{
     width: 281px;
@@ -418,6 +434,7 @@ section{
 }
 
 label[for="id-input-Termos-Condicoes"]{
+    color: var(--main-input-color);
     font-size: var(--small-font-size);
 }
 
@@ -494,9 +511,9 @@ label[for="id-input-Termos-Condicoes"] b{
     background-color: transparent;
     height: 30px;
     border: 0;
+    color: var(--main-input-color);
     border-bottom: 2px solid hsla(0, 0%, 100%, 1);
-    margin-bottom: 5%;
-    color: var(--container-color);
+    margin-bottom: 3%;
 }
 
 .main-input:focus{
@@ -533,13 +550,13 @@ input::placeholder {
 .main-input-link:hover{
     cursor: pointer;
     color: var(--main-first-color-alt);
-    border-bottom: 1px solid var(--main-first-color);
 }
   
 .main-btn{
     border: none;
     margin: auto;
     margin-bottom: var(--margin-3);
+    margin-top: var(--margin-3);
 }
 
 /* ALTERNAR ENTRE E-MAIL E ID
