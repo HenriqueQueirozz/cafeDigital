@@ -1,20 +1,9 @@
 console.log("Olá!");
 
-var btnSignin = document.querySelector("#signin");
-var btnSignup = document.querySelector("#signup");
+var BtnContinuar = document.getElementById("main-enviarCadastro-1");
+var Cadastro1 = document.getElementsByClassName("main-second-content");
 
-var main = document.querySelector("main");
-
-
-btnSignin.addEventListener("click", function () {
-    main.className = "sign-in-js"; 
-});
-
-btnSignup.addEventListener("click", function () {
-    main.className = "sign-up-js";
+BtnContinuar.addEventListener("click", function(){
+    Cadastro1.classList.add("inactive");
+    alert('Oi');
 })
-
-function Foi(){
-    Window.
-    alert("Oiii");
-}
