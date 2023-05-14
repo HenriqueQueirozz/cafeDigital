@@ -5,29 +5,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Café Digital</title>
-        <link rel="stylesheet" href="./css/landing.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/landing.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     </head>
     <body>
-        <header class="header mx-3" id="header">
-            <nav>
+        <header id="landing-header">
+            <nav id="navegation-bar">
                 <ul>
-                    <li><a class="header-title option-destaque" href="index.html">Café digital</a></li>
-                    <li><a href="#planos">Planos</a></li>
-                    <li><a href="#funcionamento">Funcionamento</a></li>
+                    <li><a class="header-logo highlight-option" href="index.html" title="Café Digital">Café digital</a></li>
+                    <li><a href="#planos" title="Planos">Planos</a></li>
+                    <li><a href="#funcionamento" title="Funcionamento">Funcionamento</a></li>
                 </ul>
                 <picture>
-                    <img src="src/Group 15.png" alt="">
+                    <img src="./src/IconeCafeDigital.png" alt="Uma xícara de café">
                 </picture>
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a class="option-destaque" href="./html/login-cadastro/cadastro.html">Cadastrar</a></li>
-                    <li><a href="./html/login-cadastro/login.html"><button class="btn-vermelho">Logar</button></a></li>
+                    <li><a href="#sobre" title="Sobre">Sobre</a></li>
+                    <li><a class="highlight-option" href="./html/login-cadastro/cadastro.html" title="Cadastrar-se">Cadastrar-se</a></li>
+                    <li><a href="./html/login-cadastro/login.html"><button class="btn-vermelho" title="Conectar-se">Conectar-se</button></a></li>
                 </ul>
             </nav>
         </header>
-        <main class="mx-3">
+        <main id="landing-main">
             <section id="chamada">
                 <div>
                     <div class="chamada-info">
@@ -181,7 +182,7 @@
                 </div>
             </section>
         </main>
-        <footer class="mx-3">
+        <footer id="landing-footer">
             <div>
                 <div class="footer-box">
                     <div class="box-icone"><i class="bi bi-twitter"></i></div>
