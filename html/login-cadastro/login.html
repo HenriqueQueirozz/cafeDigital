@@ -25,21 +25,22 @@
                                 <label for="switch-flat"></label>
                             </div>
                             
-                            <div class="main-form-input">
+                            <div class="main-form-input" id="div-id">
                                 <label for="id-input-Id" class="main-label">ID:<span class="main-form-obrigatorio">*</span></label>
                                 <br><input class="main-input" type="number" id="id-input-Id" name="input-Id">
                             </div>
-                            <!-- Liberar por e-mail
-                                <div class="main-form-input">
-                                    <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
-                                    <br><input class="main-input" type="text" id="id-input-Email" name="input-Email">
-                                </div>
-                            !-->
+                              
+                            <div class="main-form-input" id="div-email" style="display: none;">
+                                <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="text" id="id-input-Email" name="input-Email">
+                            </div>                              
+                            
                             <div class="main-form-input password">
                                 <label for="id-input-Pass" class="main-label">Senha:<span class="main-form-obrigatorio">*</span></label>
                                 <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass">
                                 <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
+                            
                             <button class="btn main-btn" type="submit" onclick="window.location.href='../'">Entrar</button>
                             <h2 class="main-desc-cadastro">Não tem uma conta? <a href="./cadastro.html" class="main-input-link">Cadastre-se!</a></h2>
                         </form>
@@ -60,7 +61,6 @@
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
-                
             </div>
 
             <!-- Dialog: Esqueci minha senha -->
@@ -73,8 +73,7 @@
                         <p>Insira seu e-mail ou número de celular para procurar a sua conta.</p>
                         <div class="form-input">
                             <input class="control-input" type="text" id="id-input-EsqueciSenha" name="input-EsqueciSenha" placeholder="Email ou número de celular">
-                        </div>
-                        
+                        </div>  
                     </div>
                 </div>
                 <div class="foot-dialog">
