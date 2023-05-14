@@ -438,11 +438,11 @@ section{
 }
 
 .active{
-    display: block;
+    display: flex !important;
 }
 
 .inactive{
-    display: none;
+    display: none !important;
 }
 
 .italic{
@@ -565,7 +565,15 @@ section{
     background-color: var(--main-body-color-alt);
 }
 
+#cadastro_part2{
+    display: none;
+    transition: 1s;
+}
 
+
+#cadastro_part3{
+    display: none;
+}
 
 .main-logo{
     width: 281px;
@@ -729,7 +737,6 @@ input::placeholder {
 .main-input-link:hover{
     cursor: pointer;
     color: var(--main-first-color-alt);
-    border-bottom: 1px solid var(--main-first-color);
 }
   
 .main-btn{
