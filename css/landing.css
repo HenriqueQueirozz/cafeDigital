@@ -1,41 +1,46 @@
-/* ============== Geral ============== */
+/* =====> Landing Page */
+/* Geral */
+body{
+    padding-right: var(--margin-3);
+    padding-left: var(--margin-3);
+}
+
 .informacoes-text, .sobre-text, .chamada-text, .secao2-text{
     line-height: 1.5;
 }
 
-/* ============== Barra de navegação ============== */
-header nav{
+/* Header*/
+#navegation-bar{
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    background-color: var(--main-first-color);
+
     height: 60px;
     padding: 0 2rem;
-    /* position: fixed;
-    top: 0;
-    z-index: var(--z-fixed); */
+
+    background-color: var(--main-first-color);
 }
 
-.header-title{
-    font-family: var(--title-font);
-}
-
-.option-destaque{
-    color: rgb(255, 255, 255);
-}
-
-header nav ul{
+#navegation-bar ul{
     display: flex;
     gap: 2rem;
     justify-content: center;
     align-items: center;
 }
 
-header nav ul a{
+#navegation-bar ul a{
     color: rgba(255, 255, 255, 0.5);
 }
 
-header nav picture{
+#navegation-bar ul .header-logo{
+    font-family: var(--title-font);
+}
+
+#navegation-bar ul .highlight-option{
+    color: rgb(255, 255, 255);
+}
+
+#navegation-bar picture{
     align-items: center;
     display: flex;
     justify-content: center;
@@ -43,10 +48,11 @@ header nav picture{
     position: relative;
 }
 
-header nav picture img{
+#navegation-bar picture img{
     width: 64%
 }
 
+/* Main */
 /* ============== Sessão Chamada ============== */
 #chamada{
     background-color: rgba(130, 180, 255, 0.5);
@@ -185,7 +191,7 @@ header nav picture img{
 
 #planos > div{
     display: flex;
-    /* margin: 0 var(--margin-3); */
+    justify-content: center;
 }
 
 #planos > div > div{
@@ -316,8 +322,8 @@ footer > div{
 }
 
 .box-icone{
-    border-radius: 1rem;
-    padding: 0.3rem;
+    border-radius: 50%;
+    padding: 0.3rem 0.4rem;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
@@ -343,10 +349,10 @@ footer .copyright{
 .btn-vermelho{
     height: fit-content;
     width: fit-content;
+    padding: 0.3rem 2.2rem;
     border-radius: 8px;
     background-color: var(--second-sec-color);
     color: rgb(255, 255, 255);
-    padding: 0.3rem 2.2rem;
     border: none;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
