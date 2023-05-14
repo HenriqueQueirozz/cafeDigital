@@ -432,59 +432,127 @@ input::placeholder {
     margin-bottom: var(--margin-3);
 }
 
-/* ALTERNAR ENTRE E-MAIL E ID
-    .switch{
-        position: absolute;
-        margin-left: -9999px;
-        visibility: hidden;
-    }
-      
-    .switch + label{
-        display: block;
-        position: relative;
-        cursor: pointer;
-        outline: none;
-        user-select: none;
-    }
-    
-    .switch--shadow + label{
-        padding: 2px;
-        width: 120px;
-        height: 60px;
-        background-color: #dddddd;
-        border-radius: 60px;
-    }
-    
-    .switch--shadow + label:before,
-    .switch--shadow + label:after {
-      display: block;
-      position: absolute;
-      top: 1px;
-      left: 1px;
-      bottom: 1px;
-      content: '';
-    }
-    
-    .switch--shadow + label:before {
-      right: 1px;
-      background-color: #f1f1f1;
-      border-radius: 60px;
-      transition: all 0.4s;
-    }
-    .switch--shadow + label:after {
-      width: 62px;
-      background-color: #fff;
-      border-radius: 100%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      transition: all 0.4s;
-    }
-    
-    .switch--shadow:checked + label:before {
-        background-color: #8ce196;
-    }
-    
-    .switch--shadow:checked + label:after {
-        transform: translateX(60px);
-    }
-    
+/*
+ALTERNAR ENTRE E-MAIL E ID
+.switch{
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+
+.switch + label{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.switch--shadow + label{
+    padding: 2px;
+    width: 120px;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 60px;
+}
+
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: '';
+}
+
+.switch--shadow + label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    transition: all 0.4s;
+}
+
+.switch--shadow + label:after {
+    width: 62px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.switch--shadow:checked + label:before {
+    background-color: #8ce196;
+}
+
+.switch--shadow:checked + label:after {
+    transform: translateX(60px);
+}
 */
+
+.switch_container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.switch_text {
+    color: #fff;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.switch {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    width: 50px;
+    height: 26px;
+    background-color: #dddddd;
+    border-radius: 26px;
+    transition: background 0.4s;
+}
+
+.switch + label:before,
+.switch + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+
+.switch + label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: hsla(220, 5%, 11%);
+    border-radius: 26px;
+    transition: background 0.4s;
+}
+
+.switch + label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 16px;
+    background-color: #dddddd;
+    border-radius: 24px;
+    transition: margin 0.4s, background 0.4s;
+}
+
+.switch-input:checked + label::after {
+    background-color: hsl(216, 100%, 85%);
+}
+
+.switch:checked + label:after {
+    margin-left: 32px;
+    transform: translateX(-35%);
+    background-color: hsl(216, 100%, 85%);
+}  
