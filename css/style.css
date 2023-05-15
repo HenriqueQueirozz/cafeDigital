@@ -684,4 +684,14 @@ ALTERNAR ENTRE E-MAIL E ID
     margin-left: 32px;
     transform: translateX(-35%);
     background-color: hsl(216, 100%, 85%);
-}  
+} 
+
+#manutencao{
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
