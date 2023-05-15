@@ -229,7 +229,8 @@ dialog p{
 }
 
 .btn-search{
-    background-color: var(--main-first-color-alt);
+    background-color: var(--main-first-color);
+    color: rgb(255, 255, 255);
 }
 
 section{
@@ -522,7 +523,7 @@ label[for="id-input-Termos-Condicoes"] b{
     outline: 0;
 }
 
-input::placeholder {
+.main-input:placeholder {
     font-family: var(--title-font);
     font-style: var(--font-medium);
     line-height: 600px;
