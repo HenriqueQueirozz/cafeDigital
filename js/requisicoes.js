@@ -1,29 +1,40 @@
+// webRequest("GET", "https://viacep.com.br/ws/"+17527561+"/json/");
 
-// Requisicao("https://h-apigateway.conectagov.estaleiro.serpro.gov.br/api-cep/v1/consulta/cep/"+60130240);
-// https://h-apigateway.conectagov.estaleiro.serpro.gov.br/api-cep/v1/consulta/cep/60130240
-
-
-// function Requisicao(url) {
+// function webRequest(method, url) {
 //     if (window.XMLHttpRequest) {            // Mozilla, Safari, ...
-//         httpRequest = new XMLHttpRequest();
+//         request = new XMLHttpRequest();
 //     } else if (window.ActiveXObject) {      // IE
 //         try {
-//             httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+//             request = new ActiveXObject("Msxml2.XMLHTTP");
 //         }
-//         catch (e) {
+//         catch (exception) {
 //             try {
-//             httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+//                 request = new ActiveXObject("Microsoft.XMLHTTP");
 //             }
-//             catch (e) {}
+//             catch (exception) {}
 //         }
 //     }
 
-//     if (!httpRequest) {
-//       alert('Giving up :( Cannot create an XMLHTTP instance');
-//       return false;
+//     if (!request) {
+//         console.log('Desistindo :( Não é possível criar uma instância XMLHTTP.');
+//         webResponse(false);
 //     }
 
-//     // httpRequest.onreadystatechange = alertContents;
-//     httpRequest.open('GET', url);
-//     httpRequest.send();
+//     request.open(method, url);
+//     request.onreadystatechange = requestResponse;
+//     request.send();
+// }
+
+// function requestResponse() {
+//     if (request.readyState === 4) {
+//         if (request.status >= 200 && request.status < 400) {
+//             webResponse(JSON.parse(request.responseText));
+//         } else {
+//             webResponse('Houve um problema com o pedido.');
+//         }
+//     }
+// }
+
+// function webResponse(message) {
+//     return(message.cep);
 // }
