@@ -6,7 +6,7 @@
     ],
     "routes": [
         {
-            "src": "/(css|js)/(.*)",
+            "src": "/(css|js|src)/(.*)",
             "dest": "public/$1/$2"
         },
         {
@@ -15,8 +15,9 @@
         }
     ],
     "env": {
-        "APP_NAME": "Vercel Laravel",
+        "APP_NAME": "CafeDigital",
         "APP_ENV": "production",
+        "APP_KEY": "base64:g10qnsLQf9K6EwmtIaiusKJRDQro9SZGBNmzGDbBvmA=",
         "APP_DEBUG": "false",
         "APP_URL": "https://café-digital-seven.vercel.app",
         "VERCEL_DEMO_MODE": "true",
