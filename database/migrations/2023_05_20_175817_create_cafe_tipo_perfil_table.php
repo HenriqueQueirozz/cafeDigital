@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cafe_tipo_perfil', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_tp');
+            $table->string('nome_tp', 50);
+            $table->text('descricao_tp');
         });
     }
 

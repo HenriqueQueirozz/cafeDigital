@@ -12,8 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cafe_endereco', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_end');
+            $table->string('rua_end', 40);
+            $table->string('bairro_end', 45);
+            $table->char('numero_end', 4);
+            $table->char('cep_end', 8);
+            $table->text('complemento_end');
+            $table->integer('fk_idEstado_end');
+            $table->integer('fk_idCidade_end');
+
+            $table->foreign('fk_idEstado_end')->references('id_est')->on('cafe_estado');
+            $table->foreign('fk_idCidade_end')->references('id_cid')->on('cafe_cidade');
         });
     }
 
