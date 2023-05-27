@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CafeConteudo;
 
 class ConteudoController extends Controller
 {
     //
     public function index(){
-        return view('app/conteudos');
+        
+        $conteudos = CafeConteudo::all();
+        return view('app/conteudos', ['conteudos' => $conteudos]);
     }
 }

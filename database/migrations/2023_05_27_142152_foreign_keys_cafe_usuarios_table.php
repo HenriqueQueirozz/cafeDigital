@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('cafe_usuarios', function (Blueprint $table) {
-            $table->foreign('fk_idTipoPerfil_usu')->references('id_tp')->on('cafe_tipo_perfil');
-            $table->foreign('fk_idFotoPerfil_usu')->references('id_fp')->on('cafe_foto_perfil');
-            $table->foreign('fk_idEndereco_usu')->references('id_end')->on('cafe_endereco');
+            $table->foreign('fk_idTipoPerfil_usu')->references('id_tp')->on('cafe_tipo_perfis');
+            $table->foreign('fk_idFotoPerfil_usu')->references('id_fp')->on('cafe_foto_perfis');
+            $table->foreign('fk_idEndereco_usu')->references('id_end')->on('cafe_enderecos');
         });
     }
 

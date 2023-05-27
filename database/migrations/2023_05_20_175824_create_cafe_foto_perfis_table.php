@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('cafe_historico_pagamento', function (Blueprint $table) {
-            $table->foreign('fk_idUsuario_hp')->references('id_usu')->on('cafe_usuarios');
+        Schema::create('cafe_foto_perfis', function (Blueprint $table) {
+            $table->id('id_fp');
+            $table->string('nomeFoto_fp', 40);
+            $table->timestamps();
         });
     }
 
@@ -21,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('cafe_historico_pagamento', function (Blueprint $table) {
-            $table->dropForeign(['fk_idUsuario_hp']);
-        });
+        Schema::dropIfExists('cafe_foto_perfis');
     }
 };
