@@ -27,60 +27,64 @@ function Finalizar(){
     window.location.href = "../../manutencao.html";
 }
 
-inputCPE.addEventListener('blur', function(){
-    var CPE = inputCPE.value.replace(/\D/g, '');
-
-    if (window.XMLHttpRequest) {            // Mozilla, Safari, ...
-        request = new XMLHttpRequest();
-    } else if (window.ActiveXObject) {      // IE
-        try {
-            request = new ActiveXObject("Msxml2.XMLHTTP");
-        }
-        catch (exception) {
+if(inputCPE){
+    inputCPE.addEventListener('blur', function(){
+        var CPE = inputCPE.value.replace(/\D/g, '');
+    
+        if (window.XMLHttpRequest) {            // Mozilla, Safari, ...
+            request = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {      // IE
             try {
-                request = new ActiveXObject("Microsoft.XMLHTTP");
+                request = new ActiveXObject("Msxml2.XMLHTTP");
             }
-            catch (exception) {}
-        }
-    }
-
-    if (!request) {
-        // Não é possível criar uma instância XMLHTTP.;
-        return false;
-    }
-
-    request.open("GET", "https://viacep.com.br/ws/"+CPE+"/json/");
-    request.onreadystatechange = function(){
-        if (request.readyState === 4) {
-            if (request.status >= 200 && request.status < 400) {
-                var data = JSON.parse(request.responseText);
-                if(!data.erro){
-                    inputLog.value = data.logradouro;
+            catch (exception) {
+                try {
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
                 }
-            } else {
-                // Houve um problema com o pedido.;
+                catch (exception) {}
             }
         }
-    };
-    request.send();
-});
+    
+        if (!request) {
+            // Não é possível criar uma instância XMLHTTP.;
+            return false;
+        }
+    
+        request.open("GET", "https://viacep.com.br/ws/"+CPE+"/json/");
+        request.onreadystatechange = function(){
+            if (request.readyState === 4) {
+                if (request.status >= 200 && request.status < 400) {
+                    var data = JSON.parse(request.responseText);
+                    if(!data.erro){
+                        inputLog.value = data.logradouro;
+                    }
+                } else {
+                    // Houve um problema com o pedido.;
+                }
+            }
+        };
+        request.send();
+    });
+}
 
-switchFlat.addEventListener("change", function() {
-    if (switchFlat.checked) {
-      divId.style.display = "none";
-      divEmail.style.display = "block";
-    } else {
-      divId.style.display = "block";
-      divEmail.style.display = "none";
-    }
-});
+if(switchFlat){
+    switchFlat.addEventListener("change", function() {
+        if (switchFlat.checked) {
+        divId.style.display = "none";
+        divEmail.style.display = "block";
+        } else {
+        divId.style.display = "block";
+        divEmail.style.display = "none";
+        }
+    });
 
-switchFlat.addEventListener("change", function() {
-    if (switchFlat.checked) {
-      // Se o switch estiver marcado, altera o texto da label para "Entrar com o E-mail?"
-      switchLabel.textContent = "Entrar com o ID?";
-    } else {
-      // Se o switch não estiver marcado, altera o texto da label para "Entrar com o ID?"
-      switchLabel.textContent = "Entrar com o E-mail?";
-    }
-});
+    switchFlat.addEventListener("change", function() {
+        if (switchFlat.checked) {
+        // Se o switch estiver marcado, altera o texto da label para "Entrar com o E-mail?"
+        switchLabel.textContent = "Entrar com o ID?";
+        } else {
+        // Se o switch não estiver marcado, altera o texto da label para "Entrar com o ID?"
+        switchLabel.textContent = "Entrar com o E-mail?";
+        }
+    });
+}
