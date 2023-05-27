@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('cafe_usuario_habilidade', function (Blueprint $table) {
             $table->id('id_uh');
-            $table->integer('fk_idUsuario_uh');
-            $table->integer('fk_idHabilidade_uh');
+            $table->unsignedBigInteger('fk_idUsuario_uh');
+            $table->unsignedBigInteger('fk_idHabilidade_uh');
             $table->timestamps();
         });
     }

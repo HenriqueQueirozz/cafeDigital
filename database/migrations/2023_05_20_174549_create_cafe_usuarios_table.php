@@ -19,14 +19,10 @@ return new class extends Migration
             $table->string('senha_usu', 20);
             $table->char('cpf_usu', 11)->unique();
             $table->char('rg_usu', 9)->unique();
-            $table->integer('fk_idTipoPerfil_usu');
-            $table->integer('fk_idFotoPerfil_usu');
-            $table->integer('fk_idEndereco_usu');
+            $table->unsignedBigInteger('fk_idTipoPerfil_usu');
+            $table->unsignedBigInteger('fk_idFotoPerfil_usu');
+            $table->unsignedBigInteger('fk_idEndereco_usu');
             $table->timestamps();
-
-            $table->foreign('fk_idTipoPerfil_usu')->references('id_tp')->on('cafe_usuarios');
-            $table->foreign('fk_idFotoPerfil_usu')->references('id_fp')->on('cafe_foto_perfil');
-            $table->foreign('fk_idEndereco_usu')->references('id_end')->on('cafe_endereco');
         });
     }
 

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('cafe_tipo_contato', function (Blueprint $table) {
             $table->id('id_tc');
             $table->enum('tipoContato_tc', ['Celular', 'Telefone', 'E-mail']);
+            $table->timestamps();
         });
     }
 

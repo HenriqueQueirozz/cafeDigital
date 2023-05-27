@@ -18,11 +18,9 @@ return new class extends Migration
             $table->char('numero_end', 4);
             $table->char('cep_end', 8);
             $table->text('complemento_end');
-            $table->integer('fk_idEstado_end');
-            $table->integer('fk_idCidade_end');
-
-            $table->foreign('fk_idEstado_end')->references('id_est')->on('cafe_estado');
-            $table->foreign('fk_idCidade_end')->references('id_cid')->on('cafe_cidade');
+            $table->unsignedBigInteger('fk_idEstado_end');
+            $table->unsignedBigInteger('fk_idCidade_end');
+            $table->timestamps();
         });
     }
 

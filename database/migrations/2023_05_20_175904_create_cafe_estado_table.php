@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_est');
             $table->string('nome_est', 20);
             $table->char('uf_est', 2);
+            $table->timestamps();
         });
     }
 

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('cafe_foto_perfil', function (Blueprint $table) {
             $table->id('id_fp');
             $table->string('nomeFoto_fp', 40);
+            $table->timestamps();
         });
     }
 

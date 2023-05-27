@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('link_con', 150);
             $table->string('titulo_con', 100);
             $table->text('descricao_con');
+            $table->timestamps();
         });
     }
 

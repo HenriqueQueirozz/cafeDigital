@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_contato', function (Blueprint $table) {
-            $table->id('id_con');
-            $table->string('contato_con', 100);
-            $table->unsignedBigInteger('fk_idTipoContato_con');
-            $table->unsignedBigInteger('fk_idUsuario_con');
-            $table->timestamps();
+        Schema::table('cafe_historico_pagamento', function (Blueprint $table) {
+            $table->foreign('fk_idUsuario_hp')->references('id_usu')->on('cafe_usuarios');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_contato');
+        Schema::table('cafe_historico_pagamento', function (Blueprint $table) {
+            $table->dropForeign(['fk_idUsuario_hp']);
+        });
     }
 };

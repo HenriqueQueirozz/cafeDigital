@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('cafe_cidade', function (Blueprint $table) {
             $table->id('id_cid');
             $table->string('nome_cid', 35);
+            $table->timestamps();
         });
     }
 

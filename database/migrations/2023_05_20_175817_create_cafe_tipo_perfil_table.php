@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_tp');
             $table->string('nome_tp', 50);
             $table->text('descricao_tp');
+            $table->timestamps();
         });
     }
 
