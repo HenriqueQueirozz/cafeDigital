@@ -12,8 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cafe_contato', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_con');
+            $table->string('contato_con', 100);
+            $table->integer('fk_idTipoContato_con');
+            $table->integer('fk_idUsuario_con');
+
+            $table->foreign('fk_idTipoContato_con')->references('id_tp')->on('cafe_tipo_contato');
+            $table->foreign('fk_idUsuario_con')->references('id_usu')->on('cafe_usuarios');
         });
     }
 

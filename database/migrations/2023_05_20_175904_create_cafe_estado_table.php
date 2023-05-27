@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cafe_estado', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_est');
+            $table->string('nome_est', 20);
+            $table->char('uf_est', 2);
         });
     }
 

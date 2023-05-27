@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cafe_tipo_contato', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_tc');
+            $table->enum('tipoContato_tc', ['Celular', 'Telefone', 'E-mail']);
         });
     }
 

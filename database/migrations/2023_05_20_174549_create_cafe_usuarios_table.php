@@ -23,6 +23,10 @@ return new class extends Migration
             $table->integer('fk_idFotoPerfil_usu');
             $table->integer('fk_idEndereco_usu');
             $table->timestamps();
+
+            $table->foreign('fk_idTipoPerfil_usu')->references('id_tp')->on('cafe_usuarios');
+            $table->foreign('fk_idFotoPerfil_usu')->references('id_fp')->on('cafe_foto_perfil');
+            $table->foreign('fk_idEndereco_usu')->references('id_end')->on('cafe_endereco');
         });
     }
 
