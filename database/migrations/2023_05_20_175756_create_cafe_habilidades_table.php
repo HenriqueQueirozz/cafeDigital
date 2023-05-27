@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_conteudo', function (Blueprint $table) {
-            $table->id('id_con');
-            $table->string('link_con', 150);
-            $table->string('titulo_con', 100);
-            $table->text('descricao_con');
+        Schema::create('cafe_habilidades', function (Blueprint $table) {
+            $table->id('id_hab');
+            $table->string('atuacao_hab', 100);
+            $table->text('descricao_hab');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_conteudo');
+        Schema::dropIfExists('cafe_habilidades');
     }
 };

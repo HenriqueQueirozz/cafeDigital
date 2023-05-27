@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_habilidade', function (Blueprint $table) {
-            $table->id('id_hab');
-            $table->string('atuacao_hab', 100);
-            $table->text('descricao_hab');
-            $table->timestamps();
+        Schema::table('cafe_historico_pagamentos', function (Blueprint $table) {
+            $table->foreign('fk_idUsuario_hp')->references('id_usu')->on('cafe_usuarios');
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_habilidade');
+        Schema::table('cafe_historico_pagamentos', function (Blueprint $table) {
+            $table->dropForeign(['fk_idUsuario_hp']);
+        });
     }
 };

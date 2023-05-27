@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_tipo_perfil', function (Blueprint $table) {
-            $table->id('id_tp');
-            $table->string('nome_tp', 50);
-            $table->text('descricao_tp');
+        Schema::create('cafe_cidades', function (Blueprint $table) {
+            $table->id('id_cid');
+            $table->string('nome_cid', 35);
             $table->timestamps();
         });
     }
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_tipo_perfil');
+        Schema::dropIfExists('cafe_cidades');
     }
 };

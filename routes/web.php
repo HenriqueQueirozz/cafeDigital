@@ -22,7 +22,8 @@ Route::get('/manutencao',   function () {return view('manutencao');});
 
 // É necessário a validação de Login
 Route::get('/app/conteudos',            [ConteudoController::class, 'index']);
-Route::get('/app/cadastro-associado',   [ConteudoController::class, 'cadastro_associado']);
-Route::get('/app/mapa-associados',      [ConteudoController::class, 'mapa_associados']);
+Route::get('/app/cadastro-associado',   [UsuarioController::class, 'cadastro_associado']);
+Route::get('/app/mapa-associados',      [UsuarioController::class, 'mapa_associados']);
 Route::get('/app/historico-pagamento',  [HistoricoPagamentoController::class, 'index']);
 
+Route::post('/app',  [UsuarioController::class, 'store']);

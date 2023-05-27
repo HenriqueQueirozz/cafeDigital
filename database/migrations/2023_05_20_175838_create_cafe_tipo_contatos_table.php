@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_cidade', function (Blueprint $table) {
-            $table->id('id_cid');
-            $table->string('nome_cid', 35);
+        Schema::create('cafe_tipo_contatos', function (Blueprint $table) {
+            $table->id('id_tc');
+            $table->enum('tipoContato_tc', ['Celular', 'Telefone', 'E-mail']);
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_cidade');
+        Schema::dropIfExists('cafe_tipo_contatos');
     }
 };

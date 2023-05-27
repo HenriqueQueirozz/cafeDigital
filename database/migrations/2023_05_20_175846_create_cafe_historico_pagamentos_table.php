@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_historico_pagamento', function (Blueprint $table) {
+        Schema::create('cafe_historico_pagamentos', function (Blueprint $table) {
             $table->id('id_hp');
             $table->date('dataPagamento_hp');
             $table->date('dataVencimento_hp');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_historico_pagamento');
+        Schema::dropIfExists('cafe_historico_pagamentos');
     }
 };

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('cafe_usuario_habilidade', function (Blueprint $table) {
+        Schema::table('cafe_usuario_habilidades', function (Blueprint $table) {
             $table->foreign('fk_idUsuario_uh')->references('id_usu')->on('cafe_usuarios');
-            $table->foreign('fk_idHabilidade_uh')->references('id_hab')->on('cafe_habilidade');
+            $table->foreign('fk_idHabilidade_uh')->references('id_hab')->on('cafe_habilidades');
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('cafe_usuario_habilidade', function (Blueprint $table) {
+        Schema::table('cafe_usuario_habilidades', function (Blueprint $table) {
             $table->dropForeign(['fk_idUsuario_uh']);
             $table->dropForeign(['fk_idHabilidade_uh']);
         });

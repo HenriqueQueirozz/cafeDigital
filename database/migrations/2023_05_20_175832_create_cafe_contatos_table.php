@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_usuario_habilidade', function (Blueprint $table) {
-            $table->id('id_uh');
-            $table->unsignedBigInteger('fk_idUsuario_uh');
-            $table->unsignedBigInteger('fk_idHabilidade_uh');
+        Schema::create('cafe_contatos', function (Blueprint $table) {
+            $table->id('id_con');
+            $table->string('contato_con', 100);
+            $table->unsignedBigInteger('fk_idTipoContato_con');
+            $table->unsignedBigInteger('fk_idUsuario_con');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_usuario_habilidade');
+        Schema::dropIfExists('cafe_contatos');
     }
 };

@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_estado', function (Blueprint $table) {
-            $table->id('id_est');
-            $table->string('nome_est', 20);
-            $table->char('uf_est', 2);
+        Schema::create('cafe_usuario_habilidades', function (Blueprint $table) {
+            $table->id('id_uh');
+            $table->unsignedBigInteger('fk_idUsuario_uh');
+            $table->unsignedBigInteger('fk_idHabilidade_uh');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_estado');
+        Schema::dropIfExists('cafe_usuario_habilidades');
     }
 };
