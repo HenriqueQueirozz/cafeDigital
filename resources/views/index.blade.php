@@ -4,16 +4,16 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        @vite('resources/css/app.css')
         <title>Café Digital</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/bootstrap.css">
         <link rel="stylesheet" href="./css/landing.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <script src="https://cdn.tailwindcss.com"></script>
+        @vite('resources/css/app.css')
     </head>
-    <body>
-        <header id="landing-header">
+    <body class="font-body">
+        <header id="landing-header" class="bg-primary-400">
             <nav id="navegation-bar">
                 <ul>
                     <li><a class="header-logo highlight-option" href="/" title="Café Digital">Café digital</a></li>
@@ -26,7 +26,7 @@
                 <ul>
                     <li><a href="#sobre" title="Sobre">Sobre</a></li>
                     <li><a class="highlight-option" href="/cadastro" title="Cadastrar-se">Cadastrar-se</a></li>
-                    <li><a href="/login"><button class="btn-vermelho" title="Conectar-se">Conectar-se</button></a></li>
+                    <li><a href="/login"><button class="btn w-100 h-8 rounded-lg pr-10 pl-10 text-mainInputColor bg-secondary-400 hover:bg-primary-200" title="Conectar-se">Conectar-se</button></a></li>
                 </ul>
             </nav>
         </header>

@@ -7,30 +7,6 @@
 
 :root{
     --header-height: 3rem;
-    /* CORES */
-    --main-color: 216;
-    --main-first-color: hsl(var(--main-color), 59%, 41%); /* ----> #2B5CA5*/
-    --main-first-color-alt: hsl(var(--main-color), 100%, 75%);/* ----> #82b4ff*/
-    --main-first-color-lighter: hsl(var(--main-color), 92%, 85%);/* ----> #b6d2fc*/
-    --main-title-color: hsl(var(--main-color), 8%, 15%);/* ----> #232629*/
-    --main-text-color: hsl(var(--main-color), 8%, 45%);/* ----> #6a717c*/
-    --main-text-color-light: hsl(var(--main-color), 8%, 65%);/* ----> #9fa4ad*/
-    --main-input-color: hsl(var(--main-color), 70%, 96%);/* ----> #eef3fc*/
-    --main-body-color: hsl(var(--main-color), 60%, 99%);/* ----> #fbfcfe*/
-    --main-body-color-alt: hsla(220, 5%, 11%);
-
-    --second-color: 359;
-    --second-sec-color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
-    --second-color-alt: hsl(var(--second-color), 100%, 80%); /* ----> #ff999b*/
-    --second-first-color-lighter: hsl(var(--second-color), 92%, 85%); /* ----> #fcb6b7*/
-    --second-title-color: hsl(var(--second-color), 8%, 15%);/* ----> #292323*/
-    --second-text-color: hsl(var(--second-color), 8%, 45%);/* ----> #7c6a6a*/
-    --second-text-color-light: hsl(var(--second-color), 8%, 65%);/* ----> #ad9f9f*/
-    --second-input-color: hsl(var(--second-color), 70%, 96%);/* ----> #fceeee*/
-
-    --container-color: hsl(216, 100%, 85%);
-    --body-font: 'Poppins', sans-serif;
-    --title-font: 'Montserrat', sans-serif;
 
     /* BORDAS */
     --b-0-5: 0.2rem;
@@ -72,20 +48,8 @@
     --z-modal: 10000;
 }
 
-@media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --h4-font-size: 1rem;
-        --normal-font-size: 1rem;
-        --small-font-size: 0.875rem;
-        --smaller-font-size: 0.813rem;
-    }
-}
-
 /* ========================================================== GLOBAL CSS ========================================================== */
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -220,14 +184,6 @@ dialog p{
     color: black;
 }
 
-.btn-teste{
-    height: fit-content;
-    width: fit-content;
-    padding: 0.7rem 1.2rem;
-    border-radius: 8px;
-    border: none;
-}
-
 .btn-search{
     background-color: var(--main-first-color);
     color: rgb(255, 255, 255);
@@ -262,15 +218,6 @@ section{
 
 .italic{
     font-style: italic;
-}
-
-.btn{
-    width: 280px;
-    margin-top: var(--margin-2);
-    height: 53px;
-    background-color: var(--second-sec-color);
-    border-radius: 15px;
-    color: var(--main-input-color);
 }
 
 .btn:hover{
@@ -560,64 +507,6 @@ label[for="id-input-Termos-Condicoes"] b{
     margin-bottom: var(--margin-3);
     margin-top: var(--margin-3);
 }
-
-/*
-ALTERNAR ENTRE E-MAIL E ID
-.switch{
-    position: absolute;
-    margin-left: -9999px;
-    visibility: hidden;
-}
-
-.switch + label{
-    display: block;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-}
-
-.switch--shadow + label{
-    padding: 2px;
-    width: 120px;
-    height: 60px;
-    background-color: #dddddd;
-    border-radius: 60px;
-}
-
-.switch--shadow + label:before,
-.switch--shadow + label:after {
-    display: block;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    content: '';
-}
-
-.switch--shadow + label:before {
-    right: 1px;
-    background-color: #f1f1f1;
-    border-radius: 60px;
-    transition: all 0.4s;
-}
-
-.switch--shadow + label:after {
-    width: 62px;
-    background-color: #fff;
-    border-radius: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s;
-}
-
-.switch--shadow:checked + label:before {
-    background-color: #8ce196;
-}
-
-.switch--shadow:checked + label:after {
-    transform: translateX(60px);
-}
-*/
 
 .switch_container {
     display: inline-flex;
