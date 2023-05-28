@@ -7,6 +7,7 @@ var container3 = document.getElementById("cadastro_part3");
 
 var inputCPE = document.getElementById("id-input-Cpe");
 var inputLog = document.getElementById("id-input-Log");
+var inputBairro = document.getElementById("id-input-Bairro")
 
 var switchFlat = document.getElementById("switch-flat");
 var divId = document.getElementById("div-id");
@@ -24,7 +25,7 @@ function Continuar(){
 }
 
 function Finalizar(){
-    window.location.href = "../../manutencao.html";
+    window.location.href = "../../manutencao";
 }
 
 if(inputCPE){
@@ -57,6 +58,7 @@ if(inputCPE){
                     var data = JSON.parse(request.responseText);
                     if(!data.erro){
                         inputLog.value = data.logradouro;
+                        inputBairro.value = data.bairro;
                     }
                 } else {
                     // Houve um problema com o pedido.;
