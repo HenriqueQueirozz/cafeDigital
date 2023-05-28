@@ -70,9 +70,15 @@
                             <label for="id-input-Rg" class="main-label">Registro Geral:<span class="main-form-obrigatorio">*</span></label>
                             <br><input class="main-input" type="text" id="id-input-Rg" name="input-Rg" placeholder="00.000.000-00" maxlength="10">
                         </div>
-                        <div class="main-form-input">
-                            <label for="id-input-Cpe" class="main-label">CPE:<span class="main-form-obrigatorio">*</span></label>
-                            <br><input class="main-input" type="text" id="id-input-Cpe" name="input-Cpe" placeholder="00000-000" maxlength="8">
+                        <div class="main-form-aside">
+                            <div class="main-form-input">
+                                <label for="id-input-Cpe" class="main-label">CPE:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="text" id="id-input-Cpe" name="input-Cpe" placeholder="00000-000" maxlength="8">
+                            </div>
+                            <div class="main-form-input aside">
+                                <label for="id-input-Bairro" class="main-label">Bairro:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input" type="text" id="id-input-Bairro" name="input-Bairro" placeholder="Exemplo II" maxlength="20">
+                            </div>
                         </div>
                         <div class="main-form-aside">
                             <div class="main-form-input">
