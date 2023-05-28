@@ -24,7 +24,7 @@ function Continuar(){
 }
 
 function Finalizar(){
-    window.location.href = "../../manutencao.html";
+    window.location.href = "../../manutencao";
 }
 
 if(inputCPE){
