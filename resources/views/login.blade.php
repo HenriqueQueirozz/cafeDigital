@@ -19,7 +19,7 @@
                 <div class="main-second-content" style="border-radius: 5% 0% 0% 5%;">
                     <div class="main-content" style="width: 100%; text-align: center;">
                         <h1 class="main-title-second">Entre em sua conta!</h2>
-                        <form action="" class="main-form">
+                        <form action="/v1/login" class="main-form" method="POST">
                             
                             <div class="switch_container">
                                 <label for="switch-flat" class="switch_text">Entrar com o E-mail?</label>
@@ -43,7 +43,7 @@
                                 <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
                             
-                            <button class="btn main-btn" type="submit" onclick="window.location.href='../'">Entrar</button>
+                            <button class="btn main-btn" type="submit">Entrar</button>
                             <h2 class="main-desc-cadastro">Não tem uma conta? <a href="/cadastro" class="main-input-link">Cadastre-se!</a></h2>
                         </form>
                     </div>
