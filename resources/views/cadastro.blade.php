@@ -29,7 +29,7 @@
                 </div>
                 <div class="main-second-content" id="cadastro_part1">
                     <h1 class="main-title-second">Crie sua conta</h2>
-                    <form action="" class="main-form">
+                    <form action="/v1/cadastrar-usuario" class="main-form">
                         <div class="main-form-input"><br>
                             <label for="id-input-Nome" class="main-label">Nome:<span class="main-form-obrigatorio">*</span></label>
                             <br><input class="main-input" type="text" id="id-input-Nome" name="input-Nome" placeholder="Example" maxlength="100">
@@ -57,7 +57,8 @@
                             <label for="id-input-Cpf" class="main-label">Documento CPF:<span class="main-form-obrigatorio">*</span></label>
                             <br><input class="main-input" type="text" id="id-input-Cpf" name="input-Cpf" placeholder="000.000.000-00" maxlength="11">
                         </div>
-                        <button class="btn main-btn" type="button" onclick="Enviar();" id="main-enviarCadastro">Enviar</button>
+                        <!-- <button class="btn main-btn" type="button" onclick="Enviar();" id="main-enviarCadastro">Enviar</button> -->
+                        <button class="btn main-btn" type="submit" id="main-enviarCadastro">Enviar</button>
                         <h2 class="main-desc-cadastro">Já tem uma conta? <a href="/login" class="main-input-link">Clique aqui para Logar</a></h2>
                     </form>
                 </div>
@@ -86,7 +87,8 @@
                             <label for="id-input-Comp" class="main-label">Complemento:</label>
                             <br><input class="main-input" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
                         </div>
-                        <button class="btn main-btn" type="button" onclick="Continuar()" id="main-continuarCadastro">Continuar</button>
+                        <button class="btn main-btn" type="submit" id="main-continuarCadastro">Continuar</button>
+                        <!-- <button class="btn main-btn" type="button" onclick="Continuar()" id="main-continuarCadastro">Continuar</button> -->
                     </form>
                 </div>
                 <div class="main-second-content inactive" id="cadastro_part3">
