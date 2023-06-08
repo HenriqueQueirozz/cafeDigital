@@ -8,6 +8,51 @@
 :root{
     --header-height: 3rem;
 
+     /* CORES */
+     --main-color: 216;
+     --main-first-color: hsl(var(--main-color), 59%, 41%); /* ----> #2B5CA5*/
+     --main-first-color-alt: hsl(var(--main-color), 100%, 75%);/* ----> #82b4ff*/
+     --main-first-color-lighter: hsl(var(--main-color), 92%, 85%);/* ----> #b6d2fc*/
+     --main-title-color: hsl(var(--main-color), 8%, 15%);/* ----> #232629*/
+     --main-text-color: hsl(var(--main-color), 8%, 45%);/* ----> #6a717c*/
+     --main-text-color-light: hsl(var(--main-color), 8%, 65%);/* ----> #9fa4ad*/
+     --main-input-color: hsl(var(--main-color), 70%, 96%);/* ----> #eef3fc*/
+     --main-body-color: hsl(var(--main-color), 60%, 99%);/* ----> #fbfcfe*/
+     --main-body-color-alt: hsla(220, 5%, 11%);
+ 
+     --second-color: 359;
+     --second-sec-color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
+     --second-color-alt: hsl(var(--second-color), 100%, 80%); /* ----> #ff999b*/
+     --second-first-color-lighter: hsl(var(--second-color), 92%, 85%); /* ----> #fcb6b7*/
+     --second-title-color: hsl(var(--second-color), 8%, 15%);/* ----> #292323*/
+     --second-text-color: hsl(var(--second-color), 8%, 45%);/* ----> #7c6a6a*/
+     --second-text-color-light: hsl(var(--second-color), 8%, 65%);/* ----> #ad9f9f*/
+     --second-input-color: hsl(var(--second-color), 70%, 96%);/* ----> #fceeee*/
+ 
+     --container-color: hsl(216, 100%, 85%);
+     --body-font: 'Poppins', sans-serif;
+     --title-font: 'Montserrat', sans-serif;
+ 
+     /* BORDAS */
+     --b-0-5: 0.2rem;
+     --b-1: 0.5rem;
+     --b-1-5: 0.7rem;
+     --b-2: 1rem;
+     --b-2-5: 1.2rem;
+ 
+     /* FONTES */
+     --big-font-size: 2rem;
+     --h1-font-size: 1.5rem;
+     --h2-font-size: 1.25rem;
+     --h3-font-size: 1.125rem;
+     --h4-font-size: 1rem;
+     --normal-font-size: 0.9rem;
+     --small-font-size: 0.813rem;
+     --smaller-font-size: 0.75rem;
+ 
+     --font-medium: 500;
+     --font-semi-bold: 600;
+
     /* BORDAS */
     --b-0-5: 0.2rem;
     --b-1: 0.5rem;
@@ -190,7 +235,7 @@ dialog p{
 }
 
 section{
-    padding: 2rem 4rem;
+    padding: 3rem 15rem;
 }
 
 .section-title{
@@ -219,14 +264,6 @@ section{
 .italic{
     font-style: italic;
 }
-
-.btn:hover{
-    border: 1.5px solid var(--second-sec-color);
-    background-color: var(--main-body-color-alt);
-    cursor: pointer;
-    transition: background-color .1s;
-}
-
 /* ========================================================== LOGIN CSS ========================================================== */
 
 .main{

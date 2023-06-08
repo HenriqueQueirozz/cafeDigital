@@ -24,7 +24,7 @@ module.exports = {
 
         containerColor: '#B3D1FF',
         mainInputColor: '#EEF3FC',
-        mainBodyColorAlt: '#1C1C1D',
+        mainBodyColorAlt: '#1B1C1E',
 
         primary: {
           0:   '#D5DEED', 

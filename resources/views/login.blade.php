@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        @vite('resources/css/app.css')
         <title>Café Digital</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <script src="https://cdn.tailwindcss.com"></script>
+        @vite('resources/css/app.css')
     </head>
     <body>
         <div id="fade"></div>
@@ -16,7 +16,7 @@
         <div class="main">
             <!-- Segunda tela: Login -->
             <div class="content-login main-section-cadastro">
-                <div class="main-second-content" style="border-radius: 5% 0% 0% 5%;">
+                <div class="main-second-content bg-mainBodyColorAlt opacity-95" style="border-radius: 5% 0% 0% 5%;">
                     <div class="main-content" style="width: 100%; text-align: center;">
                         <h1 class="main-title-second">Entre em sua conta!</h2>
                         <form action="" class="main-form">
@@ -43,7 +43,7 @@
                                 <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
                             
-                            <button class="btn main-btn" type="submit" onclick="window.location.href='../'">Entrar</button>
+                            <button class="btn main-btn w-100 h-8 rounded-lg pr-10 pl-10 text-mainInputColor bg-secondary-400" type="submit" onclick="window.location.href='../'">Entrar</button>
                             <h2 class="main-desc-cadastro">Não tem uma conta? <a href="/cadastro" class="main-input-link">Cadastre-se!</a></h2>
                         </form>
                     </div>
