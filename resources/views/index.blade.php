@@ -15,7 +15,7 @@
     <body class="font-body">
         <header id="landing-header">
             <nav id="navegation-bar" class=" fixed w-full">
-                    <ul class="mb-5">
+                    <ul>
                         <li><a class="header-logo highlight-option" href="/" title="Café Digital">Café digital</a></li>
                         <li><a href="#planos" title="Planos">Planos</a></li>
                         <li><a href="#funcionamento" title="Funcionamento">Funcionamento</a></li>

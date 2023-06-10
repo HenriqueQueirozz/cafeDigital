@@ -40,25 +40,25 @@
                             <div class="main-form-input password">
                                 <label for="id-input-Pass" class="main-label">Senha:<span class="main-form-obrigatorio">*</span></label>
                                 <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass">
-                                <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
+                                <h2 class="main-desc-cadastro"><a href="#" class="text-primary-200 m-2 hover:text-primary-400 password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
                             
-                            <button class="btn main-btn w-100 h-8 rounded-lg pr-10 pl-10 text-mainInputColor bg-secondary-400" type="submit" onclick="window.location.href='../'">Entrar</button>
-                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="/cadastro" class="main-input-link">Cadastre-se!</a></h2>
+                            <button class="btn main-btn btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" onclick="window.location.href='../'">Entrar</button>
+                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="/cadastro" class="main-input-link text-primary-200 m-2 hover:text-primary-400">Cadastre-se!</a></h2>
                         </form>
                     </div>
                 </div>
                 <div class="main-first-content">
                     <div class="main-content">
                         <div class="main-welcome-text">
-                            <h2 class="main-subtitle">Bem vindo de volta!</h2>
-                            <h1 class="main-title">Café Digital</h2>
+                            <h2 class="main-subtitle text-base">Bem vindo de volta!</h2>
+                            <h1 class="text-lx main-title">Café Digital</h2>
                         </div>
                         <figure>
-                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo">
+                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-16">
                         </figure>
-                        <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
-                        <p class="main-description">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
+                        <p class="main-description text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
+                        <p class="main-description text-base">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
                         <a href="/cadastro" id="signup" class="main-input-link" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
@@ -79,8 +79,8 @@
                     </div>
                 </div>
                 <div class="foot-dialog">
-                    <button class="btn-teste" onclick="fecharDialog('EsqueciSenha');">Cancelar</button>
-                    <button class="btn-teste btn-search" onclick="esqueciSenha();">Pesquisar</button>
+                    <button class="hover:text-secondary-400" onclick="fecharDialog('EsqueciSenha');">Cancelar</button>
+                    <button class="w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-primary-400" onclick="esqueciSenha();">Pesquisar</button>
                 </div>
             </dialog>
 

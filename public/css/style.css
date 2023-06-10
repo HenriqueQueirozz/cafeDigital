@@ -377,7 +377,7 @@ section{
 .main-logo{
     width: 281px;
     height: 368px;
-    margin: 8%;
+    margin: auto;
 }
 
 .main-welcome-text{
@@ -525,17 +525,6 @@ label[for="id-input-Termos-Condicoes"] b{
     margin: auto;
     font-size: var(--h4-font-size);
     color: var(--main-input-color);
-}
-
-.main-input-link{
-    margin-left: var(--margin-1);
-    color: var(--main-first-color);
-    font-weight: bold;
-}
-
-.main-input-link:hover{
-    cursor: pointer;
-    color: var(--main-first-color-alt);
 }
   
 .main-btn{
