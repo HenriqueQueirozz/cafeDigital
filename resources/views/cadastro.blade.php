@@ -19,18 +19,18 @@
                 <div class="main-first-content">
                     <div class="main-welcome-text">
                         <h2 class="main-subtitle">Bem vindo ao</h2>
-                        <h1 class="main-title">Café Digital</h2>
+                        <h1 class="main-title text-4xl">Café Digital</h2>
                     </div>
                     <figure>
                         <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-16">
                     </figure>
-                    <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
-                    <p class="main-description">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
-                    <a href="/login" id="signin" class="main-input-link">Logue com sua conta agora mesmo!</a>
+                    <p class="main-description text-base lg:text-sm 2xl:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
+                    <p class="main-description text-base lg:text-sm 2xl:text-base">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
+                    <a href="/login" id="signin" class="main-input-link text-base lg:text-sm hover:bg-primary-200 hover:p-2 hover:rounded-lg mt-5">Logue com sua conta agora mesmo!</a>
                     <p class="main-copy">©Copyright - CaféDigital 2023</p>
                 </div>
                 <div class="main-second-content" id="cadastro_part1">
-                    <h1 class="main-title-second">Crie sua conta</h2>
+                    <h1 class="main-title-second mt-6">Crie sua conta</h2>
                     <form action="/v1/cadastrar-usuario" class="main-form">
                         <div class="main-form-input"><br>
                             <label for="id-input-Nome" class="main-label">Nome:<span class="main-form-obrigatorio">*</span></label>
@@ -59,12 +59,12 @@
                             <label for="id-input-Cpf" class="main-label">Documento CPF:<span class="main-form-obrigatorio">*</span></label>
                             <br><input class="main-input" type="text" id="id-input-Cpf" name="input-Cpf" placeholder="000.000.000-00" maxlength="11">
                         </div>
-                        <button class="btn main-btn w-100 h-16 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Enviar();" id="main-enviarCadastro">Enviar</button>
-                        <h2 class="main-desc-cadastro">Já tem uma conta? <a href="/login" class="main-input-link">Clique aqui para Logar</a></h2>
+                        <button class="btn main-btn w-100 h-14 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Enviar();" id="main-enviarCadastro">Enviar</button>
+                        <h2 class="main-desc-cadastro text-base lg:text-sm">Já tem uma conta? <a href="/login" class="main-input-link hover:text-primary-400">Clique aqui para Logar</a></h2>
                     </form>
                 </div>
                 <div class="main-second-content inactive" id="cadastro_part2">
-                    <h1 class="main-title-second">Continuar cadastro</h2>
+                    <h1 class="main-title-second mt-20">Continuar cadastro</h2>
                     <form action="" class="main-form">
                         <div class="main-form-input"><br>
                             <label for="id-input-Rg" class="main-label">Registro Geral:<span class="main-form-obrigatorio">*</span></label>
@@ -94,11 +94,11 @@
                             <label for="id-input-Comp" class="main-label">Complemento:</label>
                             <br><input class="main-input" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
                         </div>
-                        <button class="btn main-btn btn main-btn w-100 h-16 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Continuar()" id="main-continuarCadastro">Continuar</button>
+                        <button class="btn main-btn btn main-btn w-100 h-14 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Continuar()" id="main-continuarCadastro">Continuar</button>
                     </form>
                 </div>
                 <div class="main-second-content inactive" id="cadastro_part3">
-                    <h1 class="main-title-second">Continuar Cadastro</h1>
+                    <h1 class="main-title-second mt-24">Continuar Cadastro</h1>
                     <h2 class="main-subtitle-second">Falta só mais essas informações</h2>
                     <form action="" class="main-form">
                         <div class="main-form-aside">
@@ -123,7 +123,7 @@
                             <input type="checkbox" name="input-Termos-Condicoes" id="id-input-Termos-Condicoes">
                             <label for="id-input-Termos-Condicoes">Aceito os <b>Termos & Condições de uso</b></label>
                         </div>
-                        <button class="btn main-btn btn main-btn w-100 h-16 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Finalizar()" id="main-finalizarCadastro" style="height: 75px;">Finalizar</button>
+                        <button class="btn main-btn btn main-btn w-100 h-14 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Finalizar()" id="main-finalizarCadastro" style="height: 75px;">Finalizar</button>
                     </form>
                 </div>
             </div>

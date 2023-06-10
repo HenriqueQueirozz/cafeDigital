@@ -317,6 +317,7 @@ section{
 
 .main-first-content{
     width: 50%;
+    margin: auto;
     text-align: center;
     z-index: var(--z-fixed);
 }
@@ -610,3 +611,10 @@ label[for="id-input-Termos-Condicoes"] b{
     width: 100vw;
     height: 100vh;
 }
+
+@media (max-width: 1280px) {
+    .main-logo{
+        width: 150px;
+        height: 200px;
+    }
+  }
