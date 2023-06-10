@@ -51,14 +51,14 @@
                     <div class="main-content">
                         <div class="main-welcome-text">
                             <h2 class="main-subtitle text-base">Bem vindo de volta!</h2>
-                            <h1 class="text-lx main-title">Café Digital</h2>
+                            <h1 class="text-4xl main-title">Café Digital</h2>
                         </div>
                         <figure>
-                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-16">
+                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-14">
                         </figure>
-                        <p class="main-description text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
-                        <p class="main-description text-base">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
-                        <a href="/cadastro" id="signup" class="main-input-link" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
+                        <p class="main-description text-base">Lorem ipsum dolor sit amet,  adipiscing elit.</p>
+                        <p class="main-description text-base mb-10">Etiam consectetur consequat in nisl eu faucibus !</p>
+                        <a href="/cadastro" id="signup" class="main-input-link hover:bg-primary-200 hover:p-2 hover:rounded-lg" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
