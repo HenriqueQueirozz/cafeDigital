@@ -22,7 +22,7 @@
                         <h1 class="main-title">Café Digital</h2>
                     </div>
                     <figure>
-                        <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo">
+                        <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-16">
                     </figure>
                     <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
                     <p class="main-description">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
@@ -59,8 +59,7 @@
                             <label for="id-input-Cpf" class="main-label">Documento CPF:<span class="main-form-obrigatorio">*</span></label>
                             <br><input class="main-input" type="text" id="id-input-Cpf" name="input-Cpf" placeholder="000.000.000-00" maxlength="11">
                         </div>
-                        <!-- <button class="btn main-btn" type="button" onclick="Enviar();" id="main-enviarCadastro">Enviar</button> -->
-                        <button class="btn main-btn" type="submit" id="main-enviarCadastro">Enviar</button>
+                        <button class="btn main-btn w-100 h-16 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Enviar();" id="main-enviarCadastro">Enviar</button>
                         <h2 class="main-desc-cadastro">Já tem uma conta? <a href="/login" class="main-input-link">Clique aqui para Logar</a></h2>
                     </form>
                 </div>
@@ -95,8 +94,7 @@
                             <label for="id-input-Comp" class="main-label">Complemento:</label>
                             <br><input class="main-input" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
                         </div>
-                        <button class="btn main-btn" type="submit" id="main-continuarCadastro">Continuar</button>
-                        <!-- <button class="btn main-btn" type="button" onclick="Continuar()" id="main-continuarCadastro">Continuar</button> -->
+                        <button class="btn main-btn btn main-btn w-100 h-16 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Continuar()" id="main-continuarCadastro">Continuar</button>
                     </form>
                 </div>
                 <div class="main-second-content inactive" id="cadastro_part3">
@@ -125,7 +123,7 @@
                             <input type="checkbox" name="input-Termos-Condicoes" id="id-input-Termos-Condicoes">
                             <label for="id-input-Termos-Condicoes">Aceito os <b>Termos & Condições de uso</b></label>
                         </div>
-                        <button class="btn main-btn" type="button" onclick="Finalizar()" id="main-finalizarCadastro" style="height: 75px;">Finalizar</button>
+                        <button class="btn main-btn btn main-btn w-100 h-16 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="button" onclick="Finalizar()" id="main-finalizarCadastro" style="height: 75px;">Finalizar</button>
                     </form>
                 </div>
             </div>

@@ -19,6 +19,7 @@ Route::get('/',             function () {return view('index');});
 Route::get('/login',        function () {return view('login');});
 Route::get('/cadastro',     function () {return view('cadastro');});
 Route::get('/manutencao',   function () {return view('manutencao');});
+Route::get('/choice-plan',  function () {return view('choice-plan');});
 
 // É necessário a validação de Login
 Route::get('/app/conteudos',            [ConteudoController::class, 'index']);
