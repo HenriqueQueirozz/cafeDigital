@@ -11,5 +11,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CafeTipoPerfilSeeder::class);
         $this->call(CafeConteudoSeeder::class);
+        $this->call(CafeEtapasAberturaSeeder::class);
     }
 }
