@@ -19,6 +19,7 @@ Route::get('/',             function () {return view('index');});
 Route::get('/login',        function () {return view('login');});
 Route::get('/cadastro',     function () {return view('cadastro');});
 Route::get('/manutencao',   function () {return view('manutencao');});
+Route::get('/choice-plan',  function () {return view('choice-plan');});
 
 // É necessário a validação de Login
 Route::get('/app/conteudos',            [ConteudoController::class, 'index']);
@@ -26,4 +27,6 @@ Route::get('/app/cadastro-associado',   [UsuarioController::class, 'cadastro_ass
 Route::get('/app/mapa-associados',      [UsuarioController::class, 'mapa_associados']);
 Route::get('/app/historico-pagamento',  [HistoricoPagamentoController::class, 'index']);
 
-Route::post('/app',  [UsuarioController::class, 'store']);
+Route::post('/v1/login',              [UsuarioController::class, 'login']);
+Route::post('/v1/cadastrar-usuario',  [UsuarioController::class, 'cadastrarUsuario']);
+// Route::post('/v1/cadastrar-frater',  [UsuarioController::class, 'store']);

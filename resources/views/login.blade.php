@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        @vite('resources/css/app.css')
         <title>Café Digital</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <script src="https://cdn.tailwindcss.com"></script>
+        @vite('resources/css/app.css')
     </head>
     <body>
         <div id="fade"></div>
@@ -16,10 +16,10 @@
         <div class="main">
             <!-- Segunda tela: Login -->
             <div class="content-login main-section-cadastro">
-                <div class="main-second-content" style="border-radius: 5% 0% 0% 5%;">
+                <div class="main-second-content bg-mainBodyColorAlt opacity-95" style="border-radius: 5% 0% 0% 5%;">
                     <div class="main-content" style="width: 100%; text-align: center;">
                         <h1 class="main-title-second">Entre em sua conta!</h2>
-                        <form action="" class="main-form">
+                        <form action="/v1/login" class="main-form" method="POST">
                             
                             <div class="switch_container">
                                 <label for="switch-flat" class="switch_text">Entrar com o E-mail?</label>
@@ -40,26 +40,25 @@
                             <div class="main-form-input password">
                                 <label for="id-input-Pass" class="main-label">Senha:<span class="main-form-obrigatorio">*</span></label>
                                 <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass">
-                                <h2 class="main-desc-cadastro"><a href="#" class="main-input-link password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
+                                <h2 class="main-desc-cadastro"><a href="#" class="text-primary-200 m-2 hover:text-primary-400 password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
-                            
-                            <button class="btn main-btn" type="submit" onclick="window.location.href='../'">Entrar</button>
-                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="/cadastro" class="main-input-link">Cadastre-se!</a></h2>
+                            <button class="btn main-btn btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" onclick="window.location.href='../'">Entrar</button>
+                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="/cadastro" class="main-input-link text-primary-200 m-2 hover:text-primary-400">Cadastre-se!</a></h2>
                         </form>
                     </div>
                 </div>
                 <div class="main-first-content">
                     <div class="main-content">
                         <div class="main-welcome-text">
-                            <h2 class="main-subtitle">Bem vindo de volta!</h2>
-                            <h1 class="main-title">Café Digital</h2>
+                            <h2 class="main-subtitle text-base">Bem vindo de volta!</h2>
+                            <h1 class="text-4xl main-title">Café Digital</h2>
                         </div>
                         <figure>
-                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo">
+                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-14">
                         </figure>
-                        <p class="main-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
-                        <p class="main-description">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
-                        <a href="/cadastro" id="signup" class="main-input-link" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
+                        <p class="main-description text-base">Lorem ipsum dolor sit amet,  adipiscing elit.</p>
+                        <p class="main-description text-base mb-10">Etiam consectetur consequat in nisl eu faucibus !</p>
+                        <a href="/cadastro" id="signup" class="main-input-link hover:bg-primary-200 hover:p-2 hover:rounded-lg" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
@@ -79,8 +78,8 @@
                     </div>
                 </div>
                 <div class="foot-dialog">
-                    <button class="btn-teste" onclick="fecharDialog('EsqueciSenha');">Cancelar</button>
-                    <button class="btn-teste btn-search" onclick="esqueciSenha();">Pesquisar</button>
+                    <button class="hover:text-secondary-400" onclick="fecharDialog('EsqueciSenha');">Cancelar</button>
+                    <button class="w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-primary-400" onclick="esqueciSenha();">Pesquisar</button>
                 </div>
             </dialog>
 

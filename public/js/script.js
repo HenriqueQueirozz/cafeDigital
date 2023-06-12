@@ -25,7 +25,7 @@ function Continuar(){
 }
 
 function Finalizar(){
-    window.location.href = "../../manutencao";
+    window.location.href = "../../choice-plan";
 }
 
 if(inputCPE){

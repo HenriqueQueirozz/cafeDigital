@@ -5,7 +5,7 @@
     <h1>Cadastro de associado</h1>
 
 
-    <form action="/app" method="POST">
+    <form action="" method="POST">
         @csrf
         <label>Nome</label><br>
         <input type="text" name="input-nome-associado"><br><br>
