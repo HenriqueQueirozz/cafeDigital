@@ -1,6 +1,9 @@
 /* =====> Landing Page */
 /* Geral */
 
+section{
+    padding: 3rem 15rem;
+}
 
 .informacoes-text, .sobre-text, .chamada-text, .secao2-text{
     line-height: 1.5;
@@ -199,7 +202,6 @@
     border-radius: 20px;
     padding: var(--margin-3) var(--margin-1);
     text-align: center;
-    
 }
 
 .card-subtitle{

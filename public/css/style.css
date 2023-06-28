@@ -234,10 +234,6 @@ dialog p{
     color: rgb(255, 255, 255);
 }
 
-section{
-    padding: 3rem 15rem;
-}
-
 .section-title{
     font-size: var(--h1-font-size);
     color: var(--second-sec-color);
@@ -306,7 +302,6 @@ section{
     border-radius: 0% 5% 5% 0%;
     left: 50%;
 }
-
 
 .main-section-cadastro{
     display: flex;
