@@ -163,7 +163,7 @@
                         <img src="./src/undraw_completed.svg" alt="">
                     </div>
                     <div>
-                        <p class="sobre-text text-xl xl:leading-loose text-justify">
+                        <p class="sobre-text text-xl xl:leading-loose text-justify lg:text-base">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut bibendum dolor, a tincidunt nunc. Nunc eleifend orci vel tempus dictum. Integer tincidunt sapien quam, in <b>vehicula quam vehicula sit amet. Suspendisse</b> vehicula erat arcu, id facilisis mauris vulputate eu. Maecenas mollis quis arcu hendrerit vulputate. Ut a commodo enim. Proin;<br><br>
                             Aenean bibendum velit eu tempus tincidunt. Vivamus luctus, est non luctus posuere, justo felis luctus nisl, vel mattis elit eros eget libero. <b>Proin semper, purus eget malesuada varius, nulla lectus</b> molestie neque, at varius risus elit id nisi. Donec congue volutpat laoreet. Morbi sit amet eros eget enim semper sollicitudin quis ut augue.
                         </p>
