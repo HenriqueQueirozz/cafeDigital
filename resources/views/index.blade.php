@@ -1,16 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Café Digital</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/bootstrap.css">
-        <link rel="stylesheet" href="./css/landing.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        @vite('resources/css/app.css')
+        @include('configuracoes_head')
     </head>
     <body class="font-body">
         <header id="landing-header">
@@ -74,7 +66,7 @@
                 <p class="informacoes-text my-2 text-base xl:leading-loose text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet, lectus ac dictum bibendum, orci lacus sagittis ante, vitae tristique massa orci venenatis ligula. Aliquam aliquet, lectus ac dictum bibendum, orci lacus sagittis ante, vitae tristique massa orci venenatis ligula. In nibh eros, dignissim et velit eu, dignissim convallis dolor.</p>
                 <a href="#planos">Conheça nossos planos<i class="bi bi-caret-right-fill"></i></a>
             </section>
-            <section id="secao2" class="mb-40">
+            <section id="funcionamento" class="mb-40">
                 <div class="vantagem secao2-direction-end">
                     <div class="imagem-vantagem">
                         <img src="./src/Vector.png" alt="">
@@ -220,6 +212,5 @@
                 <p class="copyright">©Copyright - CaféDigital 2023</p>
             </div>
         </footer>
-        <script src="./js/requisicoes.js"></script>
     </body>
 </html>

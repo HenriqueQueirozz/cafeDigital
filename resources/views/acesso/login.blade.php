@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Café Digital</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        @vite('resources/css/app.css')
+        @include('configuracoes_head')
     </head>
     <body>
-        <div id="fade"></div>
         <!-- Div de todo o conteúdo -->
-        <div class="main">
+        <div id="main">
             <!-- Segunda tela: Login -->
             <div class="content-login main-section-cadastro">
                 <div class="main-second-content bg-mainBodyColorAlt opacity-95" style="border-radius: 5% 0% 0% 5%;">
                     <div class="main-content" style="width: 100%; text-align: center;">
                         <h1 class="main-title-second">Entre em sua conta!</h2>
-                        <form action="/v1/login" class="main-form" method="POST">
+                        <form method="POST" action="{{ route('authenticacao') }}" class="main-form">
+                            @csrf
                             
                             <div class="switch_container">
                                 <label for="switch-flat" class="switch_text">Entrar com o E-mail?</label>
@@ -42,8 +36,8 @@
                                 <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass">
                                 <h2 class="main-desc-cadastro"><a href="#" class="text-primary-200 m-2 hover:text-primary-400 password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
-                            <button class="btn main-btn btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" onclick="window.location.href='../'">Entrar</button>
-                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="/cadastro" class="main-input-link text-primary-200 m-2 hover:text-primary-400">Cadastre-se!</a></h2>
+                            <button class="btn main-btn btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Entrar</button>
+                            <h2 class="main-desc-cadastro">Não tem uma conta? <a href="{{ route('cadastro') }}" class="main-input-link text-primary-200 m-2 hover:text-primary-400">Cadastre-se!</a></h2>
                         </form>
                     </div>
                 </div>
@@ -58,7 +52,7 @@
                         </figure>
                         <p class="main-description text-base">Lorem ipsum dolor sit amet,  adipiscing elit.</p>
                         <p class="main-description text-base mb-10">Etiam consectetur consequat in nisl eu faucibus !</p>
-                        <a href="/cadastro" id="signup" class="main-input-link hover:bg-primary-200 hover:p-2 hover:rounded-lg" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
+                        <a href="{{ route('cadastro') }}" id="signup" class="main-input-link hover:bg-primary-200 hover:p-2 hover:rounded-lg" style="margin-top: 15px;">Cadastre uma conta agora mesmo!</a>
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
@@ -82,9 +76,8 @@
                     <button class="w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-primary-400" onclick="esqueciSenha();">Pesquisar</button>
                 </div>
             </dialog>
-
         </div>
-        <script src="./js/script.js"></script>
-        <script src="./js/dialog.js"></script>
+        @include('configuracoes_script')
+        <script src="./js/login.js"></script>
     </body>
 </html>

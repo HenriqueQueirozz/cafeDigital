@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cafe_tipo_contatos', function (Blueprint $table) {
-            $table->id('id_tc');
-            $table->enum('tipoContato_tc', ['Celular', 'Telefone', 'E-mail']);
-            $table->timestamps();
+        Schema::table('cafe_cidades', function (Blueprint $table) {
+            $table->foreign('fk_idEstado_end')->references('id_est')->on('cafe_estados');
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cafe_tipo_contatos');
+        Schema::table('cafe_cidades', function (Blueprint $table) {
+            $table->dropForeign(['fk_idEstado_end']);
+        });
     }
 };

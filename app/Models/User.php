@@ -10,6 +10,9 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    protected $table = 'cafe_usuarios';
+    // protected $primaryKey = 'flight_id';
+
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -18,9 +21,19 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'nome_usu',
+        'email_usu',
+        'codigo_usu',
+        'dataNascimento_usu',
+        'sexo_usu',
         'password',
+        'type_usu',
+        'cpf_usu',
+        'rg_usu',
+        'fk_idTipoPerfil_usu',
+        'fk_idAberturaEtapa_usu',
+        'fk_idFotoPerfil_usu',
+        'fk_idEndereco_usu',
     ];
 
     /**

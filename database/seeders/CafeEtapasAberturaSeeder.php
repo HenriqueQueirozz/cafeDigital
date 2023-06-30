@@ -11,6 +11,7 @@ class CafeEtapasAberturaSeeder extends Seeder
     public function run(): void
     {
         DB::table('cafe_abertura_etapas')->insert([
+            ['nome_eta' => 'Dados da conta'],
             ['nome_eta' => 'Dados do usuário'],
             ['nome_eta' => 'Endereço'],
             ['nome_eta' => 'Escolha de planos'],

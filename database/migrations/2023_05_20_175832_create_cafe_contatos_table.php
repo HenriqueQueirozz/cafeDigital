@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('cafe_contatos', function (Blueprint $table) {
             $table->id('id_con');
             $table->string('contato_con', 100);
-            $table->unsignedBigInteger('fk_idTipoContato_con');
+            $table->enum('tipo_con', ['Telefone', 'Celular']);
             $table->unsignedBigInteger('fk_idUsuario_con');
             $table->timestamps();
         });

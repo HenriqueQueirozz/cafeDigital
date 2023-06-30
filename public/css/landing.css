@@ -90,13 +90,13 @@ section{
 }
 
 /* ============== Sessão 2 ============== */
-#secao2{
+#funcionamento{
     display: flex;
     flex-direction: column;
     gap: var(--margin-4);
 }
 
-#secao2 > div{
+#funcionamento > div{
     display: flex;
 }
 
@@ -106,23 +106,23 @@ section{
     align-items: center;
 }
 
-#secao2 .vantagem .imagem-vantagem img{
+#funcionamento .vantagem .imagem-vantagem img{
     width: 40%;
 }
 
-#secao2 > div :first-child{
+#funcionamento > div :first-child{
     width: 30%;
 }
 
-#secao2 > div :last-child{
+#funcionamento > div :last-child{
     width: 70%;
 }
 
-#secao2 > div :last-child *{
+#funcionamento > div :last-child *{
     width: 100%;
 }
 
-#secao2 a{
+#funcionamento a{
     color: var(--second-sec-color);
 }
 
@@ -142,7 +142,7 @@ section{
     padding-right: 8rem;
 }
 
-#secao2 > div :last-child .secao2-title{
+#funcionamento > div :last-child .secao2-title{
     width: fit-content;
     display: flex;
     flex-direction: column;

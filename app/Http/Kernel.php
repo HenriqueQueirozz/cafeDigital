@@ -53,6 +53,14 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
+        'cadastrado' => \App\Http\Middleware\Cadastrado::class,
+        'cadastro_passo_2' => \App\Http\Middleware\Cadastro_passo_2::class,
+        'cadastro_passo_3' => \App\Http\Middleware\Cadastro_passo_3::class,
+        'cadastro_passo_4' => \App\Http\Middleware\Cadastro_passo_4::class,
+        'cadastro_passo_5' => \App\Http\Middleware\Cadastro_passo_5::class,
+        'admin' => \App\Http\Middleware\Admin::class,
+        'Owner' => \App\Http\Middleware\Owner::class,
+        'frater' => \App\Http\Middleware\Frater::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
