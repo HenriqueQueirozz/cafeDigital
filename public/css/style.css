@@ -1,10 +1,18 @@
+/*
+|--------------------------------------------------------------------------
+| Configurações de reset e fonts
+|--------------------------------------------------------------------------
+*/
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 
-/* ========================================================== ROOT CSS ========================================================== */
-
+/*
+|--------------------------------------------------------------------------
+| Configurações root
+|--------------------------------------------------------------------------
+*/
 :root{
     --header-height: 3rem;
 
@@ -93,8 +101,11 @@
     --z-modal: 10000;
 }
 
-/* ========================================================== GLOBAL CSS ========================================================== */
-
+/*
+|--------------------------------------------------------------------------
+| Configurações gerais
+|--------------------------------------------------------------------------
+*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -106,7 +117,6 @@ html{
 }
 
 body{
-    /* margin: 0 0 var(--header-height) 0; */
     width: 100%;
     height: 100vh;
     font-family: var(--body-font);
@@ -153,15 +163,16 @@ a, a:visited{
     font-weight: var(--font-medium);
 }
 
-input[type="date"]{
-    color: hsla(0, 0%, 100%, 0.7);
-}
-
 img{
     max-width: 100%;
     height: auto;
 }
 
+/*
+|--------------------------------------------------------------------------
+| Configurações modais e popUps
+|--------------------------------------------------------------------------
+*/
 #fade{
     display: none;
     height: 100vh;
@@ -171,6 +182,7 @@ img{
     position: absolute;
 }
 
+/* Modal médio */
 dialog[open]{
     display: flex;
     flex-direction: column;
@@ -213,6 +225,124 @@ dialog p{
     width: 100%;
 }
 
+/*
+|--------------------------------------------------------------------------
+| Configurações de formulários
+|--------------------------------------------------------------------------
+*/
+.main-form-input, .main-input, .main-label{
+    text-align: left;
+    width: 100%;
+    height: 25%;
+}
+
+.main-form-aside{
+    display: flex;
+    margin-bottom: var(--margin-1);
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8%;
+}
+
+.main-form-input .password{
+    color: var(--main-input-color);
+    font-size: var(--smaller-font-size);
+    float: right;
+    margin-bottom: var(--margin-3);
+}
+
+.aside{
+    width: 100%;
+    margin-left: var(--b-2);
+}
+
+/* Fundo claro */
+.label-dark{
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    font-size: var(--normal-font-size);
+}
+
+.input-dark{
+    text-decoration: none;
+    background-color: transparent;
+    height: 30px;
+    border: 0;
+    border-bottom: 2px solid LightGray;
+    margin-bottom: 3%;
+}
+
+.input-dark:focus{
+    caret-color: LightGray;
+    outline: 0;
+}
+
+.input-dark:placeholder {
+    font-family: var(--title-font);
+    font-style: var(--font-medium);
+    line-height: 600px;
+    color: LightGray;
+}
+
+.input-sexo-dark{
+    outline: none;
+    box-shadow: 0 0 0 0;
+    cursor: pointer;
+}
+
+.main-form-obrigatorio{
+    margin: var(--margin-0-5);
+    color: var(--second-sec-color);
+}
+
+/* Fundo escuro */
+.label-light{
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--main-input-color);
+    font-size: var(--normal-font-size);
+}
+
+.input-light{
+    text-decoration: none;
+    background-color: transparent;
+    height: 30px;
+    border: 0;
+    color: var(--main-input-color);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 1);
+    margin-bottom: 3%;
+}
+
+.input-light:focus{
+    caret-color: hsla(0, 0%, 100%);
+    outline: 0;
+}
+
+.input-light:placeholder {
+    font-family: var(--title-font);
+    font-style: var(--font-medium);
+    line-height: 600px;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.input-sexo-light{
+    color: hsla(0, 0%, 100%, 0.7);
+    outline: none;
+    box-shadow: 0 0 0 0;
+    cursor: pointer;
+}
+/* --------------------------------------------------------------------------- */
+
 .form-input{
     text-align: left;
     width: 100%;
@@ -249,297 +379,21 @@ dialog p{
     text-align: center;
 }
 
-.active{
-    display: flex !important;
-}
-
-.inactive{
-    display: none !important;
-}
-
-.italic{
-    font-style: italic;
-}
-/* ========================================================== LOGIN CSS ========================================================== */
-
-#main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.content{
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 90%;
-}
-
-.content-login{
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 90%;
-}
-
-.content::before{
-    content: "";
-    position: absolute;
-    background-color: var(--container-color);
-    width: 50%;
-    height: 100%;
-    border-radius: 5% 0% 0% 5%;
-    left: 0%;
-}
-
-.content-login::before{
-    content: "";
-    position: absolute;
-    background-color: var(--container-color);
-    width: 50%;
-    height: 100%;
-    border-radius: 0% 5% 5% 0%;
-    left: 50%;
-}
-
-.main-section-cadastro{
-    display: flex;
-    width: 80%;
-    position: relative;
-    /*overflow: hidden;*/
-}
-
-.main-first-content{
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    z-index: var(--z-fixed);
-}
-
-.main-second-content{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.login .main-second-content{
-    width: 100%;
-}
-
-.main-section-cadastro .main-second-content {
-    z-index: var(--z-fixed);
-}
-
-.main-first-content{
-    z-index: var(--z-fixed);
-    flex: 1 0 auto;
-    align-items: center;
-    text-align: center;
-}
-
-.second-section-login{
-    position: absolute;
-    display: flex;
-}
-
-.second-section-login .main-second-content{
-    z-index: var(--z-modal);
-}
-
-.main-second-content{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    flex: 2 0 auto;
-    border-radius: 0% 5% 5% 0%;
-    background-color: var(--main-body-color-alt);
-}
-
-#cadastro_part2{
-    display: none;
-    transition: 1s;
-}
-
-
-#cadastro_part3{
-    display: none;
-}
-
-.main-logo{
-    width: 281px;
-    height: 368px;
-    margin: auto;
-}
-
-.main-welcome-text{
-    text-align: center;
-}
-
-.main-title{
-    font-size: var(--big-font-size);
-}
-
-.main-subtitle{
-    font-size: var(--h3-font-size);
-}
-
-.main-description{
-    margin-bottom: var(--margin-1);
-    font-family: var(--body-font);
-    line-height: 115%;
-    font-size: var(--h4-font-size);
-}
-
-.main-copy{
-    bottom: 0;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 115%;
-    margin-top: var(--margin-2);
-    color: rgba(0, 0, 0, 0.5);
-}
-
+/*
+|--------------------------------------------------------------------------
+| Padrões de designer
+|--------------------------------------------------------------------------
+*/
+/* Títulos */
 .main-title-second{
     font-size: var(--big-font-size);
     color: hsl(var(--main-color), 100%, 75%);
 }
 
-.main-subtitle-second{
-    font-size: var(--h3-font-size);
-    color: hsla(var(--main-color), 100%, 75%, 0.7);
-}
-
-label[for="id-input-Termos-Condicoes"]{
-    color: var(--main-input-color);
-    font-size: var(--small-font-size);
-}
-
-label[for="id-input-Termos-Condicoes"] b{
-    font-weight: var(--font-semi-bold);
-    color: var(--main-first-color-alt);
-}
-
-.btn-vermelho{
-    height: fit-content;
-    width: fit-content;
-    border-radius: 8px;
-    background-color: var(--second-sec-color);
-    color: rgb(255, 255, 255);
-    padding: 0.3rem 2.2rem;
-    border: none;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-}
-
-.btn-vermelho:hover{
-    transition: 0.5s;
-    background-color: rgba(224, 29, 33, 0.8);
-}
-
-.aside{
-    width: 100%;
-    margin-left: var(--b-2);
-}
-
-.main-desc-cadastro{
-    margin: auto;
-    font-size: var(--h4-font-size);
-    color: var(--main-input-color);
-}
-  
+/* Botões */
 .main-btn{
     border: none;
     margin: auto;
-    /* margin-bottom: var(--margin-3); */
+    margin-bottom: var(--margin-3);
     margin-top: var(--margin-3);
 }
-
-.switch_container {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.switch_text {
-    color: #fff;
-    margin-left: auto;
-    margin-right: 10px;
-}
-
-.switch {
-    position: absolute;
-    opacity: 0;
-}
-
-.switch + label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-    width: 50px;
-    height: 26px;
-    background-color: #dddddd;
-    border-radius: 26px;
-    transition: background 0.4s;
-}
-
-.switch + label:before,
-.switch + label:after {
-    display: block;
-    position: absolute;
-    content: "";
-}
-
-.switch + label:before {
-    top: 2px;
-    left: 2px;
-    bottom: 2px;
-    right: 2px;
-    background-color: hsla(220, 5%, 11%);
-    border-radius: 26px;
-    transition: background 0.4s;
-}
-
-.switch + label:after {
-    top: 4px;
-    left: 4px;
-    bottom: 4px;
-    width: 16px;
-    background-color: #dddddd;
-    border-radius: 24px;
-    transition: margin 0.4s, background 0.4s;
-}
-
-.switch-input:checked + label::after {
-    background-color: hsl(216, 100%, 85%);
-}
-
-.switch:checked + label:after {
-    margin-left: 32px;
-    transform: translateX(-35%);
-    background-color: hsl(216, 100%, 85%);
-} 
-
-#manutencao{
-    margin: auto auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-@media (max-width: 1280px) {
-    .main-logo{
-        width: 150px;
-        height: 200px;
-    }
-  }

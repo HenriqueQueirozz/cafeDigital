@@ -14,7 +14,6 @@ use App\Models\CafeContato;
 class AcessoController extends Controller
 {
     public function authenticacao(Request $request){
-        $user = $request->all();
         if(empty($request['input-Id']) && $request['input-Email']){
             $credentials = $request->validate(
                 [
@@ -22,9 +21,9 @@ class AcessoController extends Controller
                     'input-Pass' => ['required'],
                 ],
                 [
-                    'input-Email.required' => 'O campo email é obrigatório!',
-                    'input-Email.email' => 'O email não é válido!',
-                    'input-Pass.required' => 'O campo senha é obrigatório!'
+                    'input-Email.required' => 'O campo E-mail é obrigatório!',
+                    'input-Email.email' => 'O E-mail não é válido!',
+                    'input-Pass.required' => 'O campo Senha é obrigatório!'
                 ]
             );
 
@@ -40,8 +39,7 @@ class AcessoController extends Controller
                 ],
                 [
                     'input-Id.required' => 'O campo ID é obrigatório!',
-                    'input-Id.email' => 'O ID não é válido!',
-                    'input-Pass.required' => 'O campo senha é obrigatório!'
+                    'input-Pass.required' => 'O campo Senha é obrigatório!'
                 ]
             );
 
@@ -82,7 +80,11 @@ class AcessoController extends Controller
                 return redirect('login');
             }
         }else{
-            return redirect()->back()->with('erro', 'Email ou senha inválida.');
+            if(empty($request['input-Id']) && $request['input-Email']){
+                return redirect()->back()->with('erro', 'E-mail ou senha inválida.');
+            }else{
+                return redirect()->back()->with('erro', 'ID ou senha inválida.');
+            }
         }
     }
 
@@ -97,11 +99,24 @@ class AcessoController extends Controller
         $CafeUsuarioController = new CafeUsuarioController;
         $CafeEnderecoController = new CafeEnderecoController;
 
-        $user = $request->all();
-        $user = $CafeUsuarioController->tratamentoDeDados($user);
+        if(isset($request['input-Email'])){
+            $credentials = $request->validate(
+                [
+                    'input-Nome' => ['required'],
+                    'input-Email' => ['required', 'email'],
+                    'input-Senha' => ['required'],
+                    'input-ConfirmeSenha' => ['required'],
+                ],
+                [
+                    'input-Nome.required' => 'O campo Nome é obrigatório!',
+                    'input-Email.required' => 'O campo E-mail é obrigatório!',
+                    'input-Email.email' => 'O E-mail não é válido!',
+                    'input-Senha.required' => 'O campo Senha é obrigatório!',
+                    'input-ConfirmeSenha.required' => 'O campo de confirmação de senha é obrigatório!',
+                ]
+            );
 
-        if(isset($user['input-Email'])){
-            $emailExistente = $CafeUsuarioController->getUsuarioByEmail($user['input-Email']);
+            $emailExistente = $CafeUsuarioController->getUsuarioByEmail($request['input-Email']);
 
             if(!$emailExistente){
                 $codigoExistente = true;
@@ -112,10 +127,10 @@ class AcessoController extends Controller
                 }
 
                 // Dados da conta
-                $cafeUsuario['nome_usu']               = $user['input-Nome'];
-                $cafeUsuario['email_usu']              = $user['input-Email'];
+                $cafeUsuario['nome_usu']               = $request['input-Nome'];
+                $cafeUsuario['email_usu']              = $request['input-Email'];
                 $cafeUsuario['codigo_usu']             = $codigo;
-                $cafeUsuario['password']               = bcrypt($user['input-Senha']);
+                $cafeUsuario['password']               = bcrypt($request['input-Senha']);
                 $cafeUsuario['fk_idAberturaEtapa_usu'] = 2;
                 $cafeUsuario = User::create($cafeUsuario);
     
@@ -134,8 +149,30 @@ class AcessoController extends Controller
             return redirect('cadastro'); 
         }
 
+        $user = $request->all();
+        $user = $CafeUsuarioController->tratamentoDeDados($user);
+
         switch ($etapa){
             case 2:
+                $credentials = $request->validate(
+                    [
+                        'input-Cpf' => ['required'],
+                        'input-Rg' => ['required'],
+                        'input-Data' => ['required'],
+                        'input-Sexo' => ['required'],
+                        'input-Tel' => ['required'],
+                        'input-Cel' => ['required'],
+                    ],
+                    [
+                        'input-Cpf.required' => 'O campo Cpf é obrigatório!',
+                        'input-Rg.required' => 'O campo Rg é obrigatório!',
+                        'input-Data.required' => 'O campo Data de Nascimento é obrigatório!',
+                        'input-Sexo.required' => 'O campo Sexo é obrigatório!',
+                        'input-Tel.required' => 'O campo Telefone é obrigatório!',
+                        'input-Cel.required' => 'O campo Celular de senha é obrigatório!',
+                    ]
+                );
+
                 // Dados do usuário
                 $CafeContato = new CafeContato;
 
@@ -163,6 +200,23 @@ class AcessoController extends Controller
                 return redirect('dados-de-endereco');
                 break;
             case 3:
+                $credentials = $request->validate(
+                    [
+                        'input-Cpe' => ['required'],
+                        'input-Bairro' => ['required'],
+                        'input-Log' => ['required'],
+                        'input-Num' => ['required'],
+                        'input-Comp' => ['required'],
+                    ],
+                    [
+                        'input-Cpe.required' => 'O campo CEP é obrigatório!',
+                        'input-Bairro.required' => 'O campo Bairro é obrigatório!',
+                        'input-Log.required' => 'O campo Logradouro é obrigatório!',
+                        'input-Num.required' => 'O campo Número é obrigatório!',
+                        'input-Comp.required' => 'O campo Complemento é obrigatório!',
+                    ]
+                );
+
                 // Endereço
                 $CafeEndereco = new CafeEndereco();
                 $informacoesCidade = $CafeEnderecoController->getCidadeByCodigoIbge($user['input-Ibge']);
@@ -184,7 +238,7 @@ class AcessoController extends Controller
                 break;
             case 4:
                 // Escolha de plano
-                $cafeUsuario->fk_idTipoPerfil_usu       = 1;
+                $cafeUsuario->fk_idTipoPerfil_usu       = $user['input-Plano'];
                 $cafeUsuario->fk_idAberturaEtapa_usu    = 5;
 
                 $cafeUsuario->save();

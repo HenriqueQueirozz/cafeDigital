@@ -5,11 +5,10 @@
 
 <!-- CSS -->   
 <link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/choice-plan.css"> 
-<link rel="stylesheet" href="./css/bootstrap.css">
-<link rel="stylesheet" href="./css/landing.css">
-<link rel="stylesheet" href="./css/layout_cadastro.css">
-<link rel="stylesheet" href="./css/form.css">
+
+<!-- <link rel="stylesheet" href="./css/choice-plan.css"> 
+<link rel="stylesheet" href="./css/layout_cadastro.css"> -->
+
 
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>

@@ -3,15 +3,35 @@
     <head>
         <title>Café Digital</title>
         @include('configuracoes_head')
+        <link rel="stylesheet" href="./css/acesso.css"> 
     </head>
     <body>
         <!-- Div de todo o conteúdo -->
         <div id="main">
             <!-- Segunda tela: Login -->
-            <div class="content-login main-section-cadastro">
-                <div class="main-second-content bg-mainBodyColorAlt opacity-95" style="border-radius: 5% 0% 0% 5%;">
-                    <div class="main-content" style="width: 100%; text-align: center;">
+            <div class="content">
+                <div class="main-session bg-mainBodyColorAlt opacity-95">
+                    <div class="main-content second-session">
                         <h1 class="main-title-second">Entre em sua conta!</h2>
+
+                        @if($mensagem = Session::get('erro'))
+                            <div class="flex justify-center mt-10"> 
+                                <div class="w-96 bg-red-300 py-3 rounded-md">
+                                    {{ $mensagem }}
+                                </div>
+                            </div>
+                        @endif
+
+                        @if($errors->any())
+                            <div class="flex justify-center mt-10"> 
+                                <div class="w-96 bg-red-300 py-3 rounded-md">
+                                    @foreach($errors->all() as $error)
+                                        {{ $error }} <br>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
+
                         <form method="POST" action="{{ route('authenticacao') }}" class="main-form">
                             @csrf
                             
@@ -22,27 +42,29 @@
                             </div>
                             
                             <div class="main-form-input" id="div-id">
-                                <label for="id-input-Id" class="main-label">ID:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input" type="number" id="id-input-Id" name="input-Id">
+                                <label for="id-input-Id" class="main-label label-light">ID:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input input-light" type="number" id="id-input-Id" name="input-Id">
                             </div>
                               
                             <div class="main-form-input" id="div-email" style="display: none;">
-                                <label for="id-input-Email" class="main-label">E-mail:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input" type="text" id="id-input-Email" name="input-Email">
+                                <label for="id-input-Email" class="main-label label-light">E-mail:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input input-light" type="text" id="id-input-Email" name="input-Email">
                             </div>                              
                             
                             <div class="main-form-input password">
-                                <label for="id-input-Pass" class="main-label">Senha:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input" type="password" id="id-input-Pass" name="input-Pass">
+                                <label for="id-input-Pass" class="main-label label-light">Senha:<span class="main-form-obrigatorio">*</span></label>
+                                <br><input class="main-input input-light" type="password" id="id-input-Pass" name="input-Pass">
                                 <h2 class="main-desc-cadastro"><a href="#" class="text-primary-200 m-2 hover:text-primary-400 password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
-                            <button class="btn main-btn btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Entrar</button>
+
+                            <button class="btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Entrar</button>
                             <h2 class="main-desc-cadastro">Não tem uma conta? <a href="{{ route('cadastro') }}" class="main-input-link text-primary-200 m-2 hover:text-primary-400">Cadastre-se!</a></h2>
                         </form>
                     </div>
                 </div>
-                <div class="main-first-content">
-                    <div class="main-content">
+
+                <div class="main-session bg-containerColor opacity-95">
+                    <div class="main-content first-session">
                         <div class="main-welcome-text">
                             <h2 class="main-subtitle text-base">Bem vindo de volta!</h2>
                             <h1 class="text-4xl main-title">Café Digital</h2>
