@@ -25,5 +25,6 @@ Route::get('/app/conteudos',            [ConteudoController::class, 'index']);
 Route::get('/app/cadastro-associado',   [UsuarioController::class, 'cadastro_associado']);
 Route::get('/app/mapa-associados',      [UsuarioController::class, 'mapa_associados']);
 Route::get('/app/historico-pagamento',  [HistoricoPagamentoController::class, 'index']);
+Route::get('/app/gerenciamento-conteudos',   function () {return view('app.gerenciamento-conteudos');});
 
 Route::post('/app',  [UsuarioController::class, 'store']);
