@@ -25,6 +25,7 @@ return new class extends Migration
             $table->unsignedBigInteger('fk_idAberturaEtapa_usu')->default(1);
             $table->unsignedBigInteger('fk_idFotoPerfil_usu')->nullable();
             $table->unsignedBigInteger('fk_idEndereco_usu')->nullable();
+            $table->unsignedBigInteger('fk_idUsuarioIndicacao')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

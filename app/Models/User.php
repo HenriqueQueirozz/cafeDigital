@@ -34,6 +34,7 @@ class User extends Authenticatable
         'fk_idAberturaEtapa_usu',
         'fk_idFotoPerfil_usu',
         'fk_idEndereco_usu',
+        'fk_idUsuarioIndicacao',
     ];
 
     /**

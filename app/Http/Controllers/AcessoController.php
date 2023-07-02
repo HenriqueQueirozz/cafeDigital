@@ -237,8 +237,20 @@ class AcessoController extends Controller
                 return redirect('escolha-de-plano');
                 break;
             case 4:
+                if(empty($user['input-Codigo'])){
+                    $usuarioIndicacao = false;
+                }else{
+                    $codigoExistente = $CafeUsuarioController->getUsuarioByCodigo($user['input-Codigo']);
+                    if($codigoExistente){
+                        $usuarioIndicacao = $codigoExistente['id'];
+                    }else{
+                        return redirect()->back()->with('erro', 'O código de indicação informado não foi localizado, por favor informe um código válido.');
+                    }
+                }
+
                 // Escolha de plano
                 $cafeUsuario->fk_idTipoPerfil_usu       = $user['input-Plano'];
+                $cafeUsuario->fk_idUsuarioIndicacao     = $usuarioIndicacao;
                 $cafeUsuario->fk_idAberturaEtapa_usu    = 5;
 
                 $cafeUsuario->save();

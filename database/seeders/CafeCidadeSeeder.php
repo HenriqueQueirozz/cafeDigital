@@ -13,5 +13,8 @@ class CafeCidadeSeeder extends Seeder
      */
     public function run(): void
     {
+        // DB::table('cafe_cidades')->insert([
+
+        // ]);
     }
 }

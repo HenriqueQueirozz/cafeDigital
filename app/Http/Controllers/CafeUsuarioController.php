@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class CafeUsuarioController extends Controller
 {
@@ -18,6 +19,16 @@ class CafeUsuarioController extends Controller
 
     public function getUsuarioByCodigo($codigo) {
         $usuarios = DB::table('cafe_usuarios')->where('codigo_usu', $codigo)->get();
+ 
+        if(isset($usuarios[0])){
+            return $usuarios;
+        }else{
+            return false;
+        }
+    }
+
+    public function getUsuarioByIndicacao($codigo) {
+        $usuarios = DB::table('cafe_usuarios')->where('fk_idUsuarioIndicacao', $codigo)->get();
  
         if(isset($usuarios[0])){
             return $usuarios;
@@ -61,7 +72,18 @@ class CafeUsuarioController extends Controller
     }
 
     public function mapa_associados(){
-        return view('app.associados');
+        $user = Auth::user();
+
+        $UsuarioIndicador = $this->getUsuarioByCodigo($user['fk_idUsuarioIndicacao']);
+        $UsuariosIndicados = $this->getUsuarioByIndicacao($user['codigo_usu']);
+
+        print_r('<pre>');
+        print_r($UsuarioIndicador);
+        print_r('<hr>');
+        print_r($UsuariosIndicados);
+        exit;
+        
+        return view('app.associados', );
     }
 
 
