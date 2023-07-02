@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('cafe_usuarios', function (Blueprint $table) {
             $table->foreign('fk_idAberturaEtapa_usu')->references('id_eta')->on('cafe_abertura_etapas');
+            $table->foreign('fk_idUsuarioIndicacao')->references('id')->on('cafe_usuarios');
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('cafe_usuarios', function (Blueprint $table) {
             $table->dropForeign(['fk_idAberturaEtapa_usu']);
+            $table->dropForeign(['fk_idUsuarioIndicacao']);
         });
     }
 };
