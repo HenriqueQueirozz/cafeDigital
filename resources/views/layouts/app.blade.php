@@ -2,9 +2,10 @@
 <html lang="pt-br">
     <head>
         <title>@yield('title')</title>
+        <link rel="stylesheet" href="css/app.css">
         @include('configuracoes_head')
     </head>
-    <body>
+    <body class="truncate"><!-- POSSIVELMENTE VAI DAR PROBLEMA -->
         <nav class="flex justify-between bg-primary-400 w-100 h-16">
             <div class="p-5">
                 <div>
@@ -18,8 +19,30 @@
                 <i class="bi bi-arrow-right text-white ml-2 hover:text-primary-200"></i>   
             </div>
         </nav>
-        <img src="src/PerfilAuto.png" class="fixed top-0 left-100 right-0 m-5 w-20 border-solid border-4	rounded-full border-primary-600 ">
-        <a href="{{ route('logout') }}">Sair</a>
+        <img src="src/PerfilAuto.png" class="fixed top-0 left-100 right-0 m-5 w-20 border-solid border-4	rounded-full border-primary-600">
+        <ul class="app-menu w-60 h-full bg-primary-400 text-mainInputColor text-base flex flex-col text-center">
+            <li class="app-item mt-12">
+                <i class="app-icon bi bi-person-circle"></i><br>
+                Meu Perfil
+            </li>
+            <li class="app-item">
+                <i class="app-icon bi bi-diagram-3-fill"></i><br>
+                Associados
+            </li>
+            <li class="app-item">
+                <i class="app-icon bi bi-handbag"></i><br>
+                Financeiro
+            </li>
+            <div class="fixed bottom-0">
+                <li class="app-item">
+                    <i class="app-icon bi bi-chat-dots"></i>
+                    <a href="#">Entre em contato</a>
+                </li>
+                <li class="app-item">
+                    <a href="{{ route('logout') }}"><i class="app-icon bi bi-box-arrow-left"></i>Sair</a>
+                </li>
+            </div>
+        </ul>
         @yield('content')
         @include('configuracoes_script')
     </body>
