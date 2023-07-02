@@ -15,6 +15,7 @@ var inputCPE = document.getElementById("id-input-Cpe");
 var inputLog = document.getElementById("id-input-Log");
 var inputBairro = document.getElementById("id-input-Bairro");
 var inputIbge = document.getElementById("id-input-Ibge");
+var inputCidade = document.getElementById("id-input-Cidade");
 
 if(inputCPE){
     inputCPE.addEventListener('blur', function(){
@@ -47,6 +48,7 @@ if(inputCPE){
                     if(!data.erro){
                         inputLog.value = data.logradouro;
                         inputBairro.value = data.bairro;
+                        inputCidade.value = data.localidade+"-"+data.uf;
                         inputIbge.value = data.ibge;
                     }
                 } else {

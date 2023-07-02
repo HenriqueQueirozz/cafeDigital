@@ -29,25 +29,29 @@
                 </div>
                 <div class="main-form-input aside">
                     <label for="id-input-Bairro" class="main-label label-dark">Bairro:<span class="main-form-obrigatorio">*</span></label>
-                    <br><input class="main-input input-dark" type="text" id="id-input-Bairro" name="input-Bairro" placeholder="Exemplo II" maxlength="20">
+                    <br><input class="main-input input-dark" type="text" id="id-input-Bairro" name="input-Bairro" maxlength="20">
                 </div>
             </div>
             <div class="main-form-aside">
                 <div class="main-form-input">
+                    <label for="id-input-Cidade" class="main-label label-dark">Cidade:<span class="main-form-obrigatorio">*</span></label>
+                    <br><input class="main-input input-dark" type="text" id="id-input-Cidade" name="input-Cidade" maxlength="20">
+                </div>
+                <div class="main-form-input aside">
                     <label for="id-input-Log" class="main-label label-dark">Logradouro:<span class="main-form-obrigatorio">*</span></label>
-                    <br><input class="main-input input-dark" type="text" id="id-input-Log" name="input-Log" placeholder="Rua: Example II" max="80">
+                    <br><input class="main-input input-dark" type="text" id="id-input-Log" name="input-Log" max="80">
                 </div>
                 <div class="main-form-input aside">
                     <label for="id-input-Num" class="main-label label-dark">Número:<span class="main-form-obrigatorio">*</span></label>
-                    <br><input class="main-input input-dark" type="number" id="id-input-Num" name="input-Num" placeholder="000" maxlength="10">
+                    <br><input class="main-input input-dark" type="number" id="id-input-Num" name="input-Num" maxlength="10">
                 </div>
             </div>
-            <div class="main-form-input">
-                <label for="id-input-Comp" class="main-label label-dark">Complemento:</label>
-                <br><input class="main-input input-dark" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
+            <div class="main-form-aside">
+                <div class="main-form-input">
+                    <label for="id-input-Comp" class="main-label label-dark">Complemento:</label>
+                    <br><input class="main-input input-dark" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
+                </div>
             </div>
-            
-
             <!-- <div class="main-form-input mb-1 mt-0-75">
                 <input type="checkbox" name="input-Termos-Condicoes" id="id-input-Termos-Condicoes">
                 <label for="id-input-Termos-Condicoes">Aceito os <b>Termos & Condições de uso</b></label>
