@@ -101,6 +101,7 @@
     --z-modal: 10000;
 }
 
+
 /*
 |--------------------------------------------------------------------------
 | Configurações gerais
@@ -156,6 +157,14 @@ h4{
 
 ul{
     list-style: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--main-body-color-alt) inset;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--main-input-color) !important;
 }
 
 a, a:visited{
@@ -385,6 +394,7 @@ dialog p{
 | Padrões de designer
 |--------------------------------------------------------------------------
 */
+
 /* Títulos */
 .main-title-second{
     font-size: var(--big-font-size);
