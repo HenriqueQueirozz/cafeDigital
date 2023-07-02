@@ -6,7 +6,6 @@
 #main{
     height: 100vh;
     width: 100vw;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +19,6 @@
 
 .main-session{
     width: 50%;
-    display: flex;
     text-align: center;
 }
 
@@ -145,85 +143,6 @@
     color: var(--main-input-color);
 }
 
-/* .login .main-second-content{
-    width: 100%;
-}
-
-.main-section .main-second-content {
-    z-index: var(--z-fixed);
-}
-
-.main-first-content{
-    z-index: var(--z-fixed);
-    flex: 1 0 auto;
-    align-items: center;
-    text-align: center;
-}
-
-.second-section-login{
-    position: absolute;
-    display: flex;
-}
-
-.second-section-login .main-second-content{
-    z-index: var(--z-modal);
-}
-
-.main-second-content{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    flex: 2 0 auto;
-    border-radius: 0% 5% 5% 0%;
-    background-color: var(--main-body-color-alt);
-}
-
-#cadastro_part2{
-    display: none;
-    transition: 1s;
-}
-
-#cadastro_part3{
-    display: none;
-}
-
-
-.main-subtitle-second{
-    font-size: var(--h3-font-size);
-    color: hsla(var(--main-color), 100%, 75%, 0.7);
-}
-
-label[for="id-input-Termos-Condicoes"]{
-    color: var(--main-input-color);
-    font-size: var(--small-font-size);
-}
-
-label[for="id-input-Termos-Condicoes"] b{
-    font-weight: var(--font-semi-bold);
-    color: var(--main-first-color-alt);
-}
-
-.btn-vermelho{
-    height: fit-content;
-    width: fit-content;
-    border-radius: 8px;
-    background-color: var(--second-sec-color);
-    color: rgb(255, 255, 255);
-    padding: 0.3rem 2.2rem;
-    border: none;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-}
-
-.btn-vermelho:hover{
-    transition: 0.5s;
-    background-color: rgba(224, 29, 33, 0.8);
-}
-
-
 @media (max-width: 1280px) {
     .main-logo{
         width: 150px;
@@ -231,6 +150,10 @@ label[for="id-input-Termos-Condicoes"] b{
     }
 }
 
-input[type="date"]{
-    color: hsla(0, 0%, 100%, 0.7);
-} */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--main-body-color-alt) inset;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--main-input-color) !important;
+}

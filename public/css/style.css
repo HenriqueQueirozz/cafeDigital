@@ -159,14 +159,6 @@ ul{
     list-style: none;
 }
 
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px var(--main-body-color-alt) inset;
-}
-
-input:-webkit-autofill {
-    -webkit-text-fill-color: var(--main-input-color) !important;
-}
-
 a, a:visited{
     text-decoration: none;
     font-weight: var(--font-medium);
@@ -175,6 +167,24 @@ a, a:visited{
 img{
     max-width: 100%;
     height: auto;
+}
+
+/* ============== Botões ============== */
+.btn-vermelho{
+    height: fit-content;
+    width: fit-content;
+    padding: 0.3rem 2.2rem;
+    border-radius: 8px;
+    background-color: var(--second-sec-color);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.btn-vermelho:hover{
+    transition: 0.3s;
+    background-color: #EC777A;
 }
 
 /*
@@ -242,7 +252,7 @@ dialog p{
 .main-form-input, .main-input, .main-label{
     text-align: left;
     width: 100%;
-    height: 25%;
+    height: 15%;
     margin-bottom: 10px;
 }
 

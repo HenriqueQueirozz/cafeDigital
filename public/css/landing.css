@@ -258,7 +258,6 @@ section{
     flex-direction: column; 
     justify-content: center;
     gap: var(--margin-2);
-    padding: 2rem 10rem;
 }
 
 .contato-title{
@@ -267,7 +266,6 @@ section{
 
 .form-group{
     display: flex;
-    flex-direction: column;
     gap: 0.3rem;
 }
 
@@ -280,8 +278,7 @@ section{
 .form-group input{
     border: none;
     background: transparent;
-    border-bottom: 2px solid #FFFFFF;
-    padding: 0.5rem 0.5rem 0.5rem 0;
+    border-bottom: 2px solid #1B1C1E;
     color: rgba(0, 0, 0, 0.7);
     font-size: var(--smaller-font-size);
 }
@@ -293,7 +290,7 @@ section{
 }
 
 .form-group input::placeholder {
-    color: rgba(0, 0, 0, 0.7);
+    color: #112542;
     font-size: var(--smaller-font-size);
 }
 
@@ -304,7 +301,7 @@ section{
 }
 
 .contato-box .form-group{
-    width: 45%;
+    width: 70%;
 }
 
 /* ============== Rodapé ============== */
@@ -331,26 +328,8 @@ footer p {
 }
 
 footer .copyright{
-    color: rgba(0, 0, 0, 0.5);
+    color: #B3D1FF;
     font-size: var(--smaller-font-size);
     font-family: var(--body-font);
     text-align: center;
-}
-
-/* ============== Botões ============== */
-.btn-vermelho{
-    height: fit-content;
-    width: fit-content;
-    padding: 0.3rem 2.2rem;
-    border-radius: 8px;
-    background-color: var(--second-sec-color);
-    color: rgb(255, 255, 255);
-    border: none;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-}
-
-.btn-vermelho:hover{
-    transition: 0.5s;
-    background-color: rgba(224, 29, 33, 0.8);
 }
