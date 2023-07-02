@@ -1,0 +1,236 @@
+/*
+|--------------------------------------------------------------------------
+| Configurações gerais de LOGIN e CADASTRO
+|--------------------------------------------------------------------------
+*/
+#main{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.main-session{
+    width: 50%;
+    display: flex;
+    text-align: center;
+}
+
+.main-content{
+    max-height: 70%;
+    min-height: 70%;
+    margin: auto;
+}
+
+.first-session{}
+.second-session{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.main-welcome-text{
+    text-align: center;
+}
+
+.main-title{
+    font-size: var(--big-font-size);
+}
+
+.main-subtitle{
+    font-size: var(--h3-font-size);
+}
+
+.main-logo{
+    width: 281px;
+    height: 368px;
+    margin: auto;
+}
+
+.main-description{
+    margin-bottom: var(--margin-1);
+    font-family: var(--body-font);
+    line-height: 115%;
+    font-size: var(--h4-font-size);
+}
+.main-copy{
+    bottom: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 115%;
+    margin-top: var(--margin-2);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.switch_container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.switch_text {
+    color: #fff;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.switch {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    width: 50px;
+    height: 26px;
+    background-color: #dddddd;
+    border-radius: 26px;
+    transition: background 0.4s;
+}
+
+.switch + label:before,
+.switch + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+
+.switch + label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: hsla(220, 5%, 11%);
+    border-radius: 26px;
+    transition: background 0.4s;
+}
+
+.switch + label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 16px;
+    background-color: #dddddd;
+    border-radius: 24px;
+    transition: margin 0.4s, background 0.4s;
+}
+
+.switch-input:checked + label::after {
+    background-color: hsl(216, 100%, 85%);
+}
+
+.switch:checked + label:after {
+    margin-left: 32px;
+    transform: translateX(-35%);
+    background-color: hsl(216, 100%, 85%);
+} 
+
+.main-desc-cadastro{
+    margin: auto;
+    font-size: var(--h4-font-size);
+    color: var(--main-input-color);
+}
+
+/* .login .main-second-content{
+    width: 100%;
+}
+
+.main-section .main-second-content {
+    z-index: var(--z-fixed);
+}
+
+.main-first-content{
+    z-index: var(--z-fixed);
+    flex: 1 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.second-section-login{
+    position: absolute;
+    display: flex;
+}
+
+.second-section-login .main-second-content{
+    z-index: var(--z-modal);
+}
+
+.main-second-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex: 2 0 auto;
+    border-radius: 0% 5% 5% 0%;
+    background-color: var(--main-body-color-alt);
+}
+
+#cadastro_part2{
+    display: none;
+    transition: 1s;
+}
+
+#cadastro_part3{
+    display: none;
+}
+
+
+.main-subtitle-second{
+    font-size: var(--h3-font-size);
+    color: hsla(var(--main-color), 100%, 75%, 0.7);
+}
+
+label[for="id-input-Termos-Condicoes"]{
+    color: var(--main-input-color);
+    font-size: var(--small-font-size);
+}
+
+label[for="id-input-Termos-Condicoes"] b{
+    font-weight: var(--font-semi-bold);
+    color: var(--main-first-color-alt);
+}
+
+.btn-vermelho{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 8px;
+    background-color: var(--second-sec-color);
+    color: rgb(255, 255, 255);
+    padding: 0.3rem 2.2rem;
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.btn-vermelho:hover{
+    transition: 0.5s;
+    background-color: rgba(224, 29, 33, 0.8);
+}
+
+
+@media (max-width: 1280px) {
+    .main-logo{
+        width: 150px;
+        height: 200px;
+    }
+}
+
+input[type="date"]{
+    color: hsla(0, 0%, 100%, 0.7);
+} */

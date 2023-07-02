@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('cafe_historico_pagamentos', function (Blueprint $table) {
-            $table->foreign('fk_idUsuario_hp')->references('id_usu')->on('cafe_usuarios');
+            $table->foreign('fk_idUsuario_hp')->references('id')->on('cafe_usuarios');
         });
     }
 

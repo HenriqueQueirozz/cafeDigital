@@ -19,11 +19,11 @@ class CafeTipoPerfilSeeder extends Seeder
                 'descricao_tp' => 'Administrador do sistema'
             ],
             [
-                'nome_tp' => 'Dono do clube',
+                'nome_tp' => 'Dono do Clube',
                 'descricao_tp' => 'Usuário que gerencia um clube'
             ],
             [
-                'nome_tp' => 'Associado',
+                'nome_tp' => 'Frater',
                 'descricao_tp' => 'Usuário comum'
              ]
         ]);

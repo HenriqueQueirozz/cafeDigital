@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('cafe_cidades', function (Blueprint $table) {
             $table->id('id_cid');
             $table->string('nome_cid', 35);
+            $table->string('ibge_cid');
+            $table->unsignedBigInteger('fk_idEstado_end');
             $table->timestamps();
         });
     }

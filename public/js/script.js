@@ -1,32 +1,20 @@
-var btnEnviar = document.getElementById("main-enviarCadastro");
-var btnContinuar = document.getElementById("main-continuarCadastro");
-var btnFinalizar = document.getElementById("main-finalizarCadastro");
-var container1 = document.getElementById("cadastro_part1");
-var container2 = document.getElementById("cadastro_part2");
-var container3 = document.getElementById("cadastro_part3");
+/*
+|--------------------------------------------------------------------------
+|   Máscaras de formulários
+|--------------------------------------------------------------------------
+*/
+$("#id-input-Cpf").mask("000.000.000-00");
+$("#id-input-Rg").mask("00.000.000-0");
+$("#id-input-Tel").mask("(00) 0000-0000");
+$("#id-input-Cel").mask("(00) 00000-0000");
+$("#id-input-Data").mask("00/00/0000");
+$("#id-input-Cpe").mask("00000-000");
 
+// Preenchimento automático
 var inputCPE = document.getElementById("id-input-Cpe");
 var inputLog = document.getElementById("id-input-Log");
-var inputBairro = document.getElementById("id-input-Bairro")
-
-var switchFlat = document.getElementById("switch-flat");
-var divId = document.getElementById("div-id");
-var divEmail = document.getElementById("div-email");
-var switchLabel = document.querySelector(".switch_text");
-
-function Enviar(){
-    container1.classList.add("inactive"); 
-    container2.classList.remove("inactive"); container2.classList.add("active");
-}
-
-function Continuar(){
-    container2.classList.remove("active"); container2.classList.add("inactive");
-    container3.classList.remove("inactive"); container3.classList.add("active");
-}
-
-function Finalizar(){
-    window.location.href = "../../manutencao";
-}
+var inputBairro = document.getElementById("id-input-Bairro");
+var inputIbge = document.getElementById("id-input-Ibge");
 
 if(inputCPE){
     inputCPE.addEventListener('blur', function(){
@@ -59,6 +47,7 @@ if(inputCPE){
                     if(!data.erro){
                         inputLog.value = data.logradouro;
                         inputBairro.value = data.bairro;
+                        inputIbge.value = data.ibge;
                     }
                 } else {
                     // Houve um problema com o pedido.;
@@ -69,24 +58,30 @@ if(inputCPE){
     });
 }
 
-if(switchFlat){
-    switchFlat.addEventListener("change", function() {
-        if (switchFlat.checked) {
-        divId.style.display = "none";
-        divEmail.style.display = "block";
-        } else {
-        divId.style.display = "block";
-        divEmail.style.display = "none";
-        }
-    });
+/*
+|--------------------------------------------------------------------------
+|   Modais e popUps
+|--------------------------------------------------------------------------
+*/
+// Criando o elemento para efeito de Fade
+const divFade = document.createElement('div');
+divFade.id = 'fade';
 
-    switchFlat.addEventListener("change", function() {
-        if (switchFlat.checked) {
-        // Se o switch estiver marcado, altera o texto da label para "Entrar com o E-mail?"
-        switchLabel.textContent = "Entrar com o ID?";
-        } else {
-        // Se o switch não estiver marcado, altera o texto da label para "Entrar com o ID?"
-        switchLabel.textContent = "Entrar com o E-mail?";
-        }
-    });
+// Adicionando o elemento a página
+const divMain = document.getElementById("main");
+document.body.insertBefore(divFade, divMain);
+
+// Declarando a variável do elemento 
+var fade = document.getElementById('fade');
+
+function abrirDialog(dialog_id){    
+    var dialog = document.getElementById(dialog_id);
+    dialog.setAttribute("open", "");
+    fade.style.display = "block";
+}
+
+function fecharDialog(dialog_id){
+    var dialog = document.getElementById(dialog_id);
+    dialog.removeAttribute("open");
+    fade.style.display = "none";
 }

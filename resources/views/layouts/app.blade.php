@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt-br">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        @vite('resources/css/app.css')
         <title>@yield('title')</title>
-
-        <!-- Fonts -->
+        @include('configuracoes_head')
     </head>
     <body>
-        <ul>
+        <!-- <ul>
             <li class="text-3xl font-bold underline"><a href="/app/conteudos">Conteúdos</a></li>
             <li><a href="/app/cadastro-associado">Cadastro de associados</a></li>
             <li><a href="/app/mapa-associados">Mapa de associados</a></li>
             <li><a href="/app/historico-pagamento">Histórico de pagamentos</a></li>
-        </ul>
+        </ul> -->
+        <a href="{{ route('logout') }}">Sair</a>
         @yield('content')
+        @include('configuracoes_script')
     </body>
 </html>

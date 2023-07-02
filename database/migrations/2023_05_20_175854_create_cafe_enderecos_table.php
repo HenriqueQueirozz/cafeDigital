@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('bairro_end', 45);
             $table->char('numero_end', 4);
             $table->char('cep_end', 8);
-            $table->text('complemento_end');
-            $table->unsignedBigInteger('fk_idEstado_end');
+            $table->text('complemento_end')->nullable();
             $table->unsignedBigInteger('fk_idCidade_end');
             $table->timestamps();
         });
