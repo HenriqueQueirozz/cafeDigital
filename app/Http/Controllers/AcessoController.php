@@ -169,7 +169,7 @@ class AcessoController extends Controller
                         'input-Data.required' => 'O campo Data de Nascimento é obrigatório!',
                         'input-Sexo.required' => 'O campo Sexo é obrigatório!',
                         'input-Tel.required' => 'O campo Telefone é obrigatório!',
-                        'input-Cel.required' => 'O campo Celular de senha é obrigatório!',
+                        'input-Cel.required' => 'O campo Celular é obrigatório!',
                     ]
                 );
 
