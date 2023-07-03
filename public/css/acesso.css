@@ -28,7 +28,6 @@
     margin: auto;
 }
 
-.first-session{}
 .second-session{
     width: 90%;
     display: flex;
@@ -46,6 +45,14 @@
 
 .main-subtitle{
     font-size: var(--h3-font-size);
+}
+
+.main-input-link{
+    border-bottom: 1px solid #1b1c1e93;
+}
+
+.main-input-link:hover{
+    transition: 0.3s;
 }
 
 .main-logo{

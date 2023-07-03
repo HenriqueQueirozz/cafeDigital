@@ -21,7 +21,7 @@
                         </figure>
                         <p class="main-description text-base lg:text-sm 2xl:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
                         <p class="main-description text-base lg:text-sm 2xl:text-base">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
-                        <a href="{{ route('login') }}" id="signin" class="main-input-link text-base lg:text-sm ">Logue com sua conta agora mesmo!</a>
+                        <a href="{{ route('login') }}" id="signin" class="main-input-link text-base lg:text-sm hover:bg-primary-200 hover:p-2 hover:rounded-lg">Logue com sua conta agora mesmo!</a>
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
