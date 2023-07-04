@@ -17,7 +17,7 @@
     "env": {
         "APP_NAME": "Cafe Digital",
         "APP_ENV": "production",
-        "APP_KEY": "base64:IWDOY0IPeG3tNyg/OrvnlzB0ViaRbHEjLp1NdIl5roc=",
+        "APP_KEY": "base64:py7EfM+l2N3WQBxIyHF2IaNSKADIOKU7gS3xhRPQd6E=",
         "APP_DEBUG": "false",
         "APP_URL": "https://café-digital-seven.vercel.app",
         "VERCEL_DEMO_MODE": "true",
