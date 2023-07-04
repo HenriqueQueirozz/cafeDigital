@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
+use App\Models\User;
 class CafeUsuarioController extends Controller
 {
     public function getUsuarioByEmail($email) {
@@ -71,19 +72,37 @@ class CafeUsuarioController extends Controller
         return $dados_validados;
     }
 
+    public function getUsuarioDados($usuario){
+        $dados_usuario['id']                    = $usuario->id;
+        $dados_usuario['nome_usu']              = $usuario->nome_usu;
+        $dados_usuario['dataNascimento_usu']    = $usuario->dataNascimento_usu;
+        $dados_usuario['email_usu']             = $usuario->email_usu;
+        $dados_usuario['sexo_usu']              = $usuario->sexo_usu;
+        $dados_usuario['codigo_usu']            = $usuario->codigo_usu;
+        $dados_usuario['fk_idUsuarioIndicacao'] = $usuario->fk_idUsuarioIndicacao;
+
+        return $dados_usuario;
+    }
+
     public function mapa_associados(){
-        $user = Auth::user();
+        $UsuarioAtual = $this->getUsuarioDados(Auth::user());
+        $UsuarioIndicador = $this->getUsuarioDados(User::find($UsuarioAtual['fk_idUsuarioIndicacao']));
+        $UsuariosIndicados = $this->getUsuarioByIndicacao($UsuarioAtual['id']);
 
-        $UsuarioIndicador = $this->getUsuarioByCodigo($user['fk_idUsuarioIndicacao']);
-        $UsuariosIndicados = $this->getUsuarioByIndicacao($user['codigo_usu']);
+        $arrayIndicados = [];
+        foreach ($UsuariosIndicados as $usuario){
+            array_push($arrayIndicados, $this->getUsuarioDados($usuario));
+        }
 
-        print_r('<pre>');
-        print_r($UsuarioIndicador);
-        print_r('<hr>');
-        print_r($UsuariosIndicados);
-        exit;
+        // print_r('<pre>');
+        // print_r($UsuarioAtual);
+        // print_r('<hr>');
+        // print_r($UsuarioIndicador);
+        // print_r('<hr>');
+        // print_r($arrayIndicados);
+        // exit;
         
-        return view('app.associados', );
+        return view('app.associados', []);
     }
 
 
