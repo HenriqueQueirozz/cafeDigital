@@ -17,6 +17,7 @@
     "env": {
         "APP_NAME": "Vercel Laravel",
         "APP_ENV": "production",
+        "APP_KEY": "base64:py7EfM+l2N3WQBxIyHF2IaNSKADIOKU7gS3xhRPQd6E=",
         "APP_DEBUG": "false",
         "APP_URL": "cafe-digital-seven.vercel.app",
         "VERCEL_DEMO_MODE": "true",
