@@ -26,22 +26,11 @@
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
-        "CACHE_DRIVER": "database",
+        "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "file",
+        "SESSION_DRIVER": "array",
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
-        "NODE_PATH": "node",
-        "MYSQL_ATTR_SSL_KEY": "./ssl/DigiCertGlobalRootCA.crt.pem",
-        "DB_CONNECTION": "mysql",
-        "DB_HOST": "cafe-digital.mysql.database.azure.com",
-        "DB_PORT": "3306",
-        "DB_DATABASE": "cafedigital",
-        "DB_USERNAME": "cafeAdmin",
-        "DB_PASSWORD": "8q9!tT!6^J94",
-        "BROADCAST_DRIVER": "log",
-        "FILESYSTEM_DISK": "local",
-        "QUEUE_CONNECTION": "sync",
-        "SESSION_LIFETIME": "120"
+        "NODE_PATH": "node"
     }
 }
