@@ -15,9 +15,9 @@
         }
     ],
     "env": {
-        "APP_NAME": "CafeDigital",
+        "APP_NAME": "Cafe Digital",
         "APP_ENV": "production",
-        "APP_KEY": "base64:g10qnsLQf9K6EwmtIaiusKJRDQro9SZGBNmzGDbBvmA=",
+        "APP_KEY": "base64:IWDOY0IPeG3tNyg/OrvnlzB0ViaRbHEjLp1NdIl5roc=",
         "APP_DEBUG": "false",
         "APP_URL": "https://café-digital-seven.vercel.app",
         "VERCEL_DEMO_MODE": "true",
@@ -26,11 +26,22 @@
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
-        "CACHE_DRIVER": "array",
+        "CACHE_DRIVER": "database",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "array",
+        "SESSION_DRIVER": "file",
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
-        "NODE_PATH": "node"
+        "NODE_PATH": "node",
+        "MYSQL_ATTR_SSL_KEY": "./ssl/DigiCertGlobalRootCA.crt.pem",
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "cafe-digital.mysql.database.azure.com",
+        "DB_PORT": "3306",
+        "DB_DATABASE": "cafedigital",
+        "DB_USERNAME": "cafeAdmin",
+        "DB_PASSWORD": "8q9!tT!6^J94",
+        "BROADCAST_DRIVER": "log",
+        "FILESYSTEM_DISK": "local",
+        "QUEUE_CONNECTION": "sync",
+        "SESSION_LIFETIME": "120"
     }
 }
