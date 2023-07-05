@@ -1,36 +1,27 @@
 {
     "version": 2,
-    "builds": [
-        { "src": "/api/index.php", "use": "vercel-php@0.6.0" },
-        { "src": "/public/**", "use": "@vercel/static" }
-    ],
-    "routes": [
-        {
-            "src": "/(css|js|src)/(.*)",
-            "dest": "public/$1/$2"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
-    ],
+    "framework": null,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.3.1" }
+    },
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+    }],
     "env": {
-        "APP_NAME": "Vercel Laravel",
         "APP_ENV": "production",
-        "APP_KEY": "base64:8f7AJcvDlFgoKLT5nN7Pj0NXtJ6SrJ1FS9domRjjlXE=",
-        "APP_DEBUG": "false",
-        "APP_URL": "cafe-digital-seven.vercel.app",
-        "VERCEL_DEMO_MODE": "true",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://yourproductionurl.com",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "array",
-        "VIEW_COMPILED_PATH": "/tmp/views",
-        "SSR_TEMP_PATH": "/tmp/ssr",
-        "NODE_PATH": "node"
+        "SESSION_DRIVER": "cookie"
     }
 }
