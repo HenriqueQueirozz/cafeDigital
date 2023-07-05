@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.open{
+    margin-left: 10rem;
+}
+
+.open-menu:hover{
+    color: #AABEDB;
+}

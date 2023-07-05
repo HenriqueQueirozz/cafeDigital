@@ -111,7 +111,7 @@
                         <p class="secao2-text text-base xl:leading-loose text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet, lectus ac dictum <b>bibendum, orci lacus sagittis</b> ante, vitae tristique massa orci venenatis ligula.</p>
                     </div>
                 </div>
-                <a href="#" class="text-base font-bold">Converse com nossos especialistas agora mesmo<i class="bi bi-caret-right-fill"></i></a>
+                <a href="#" class="text-base font-bold hover:border-solid hover:border-b-2 hover:border-secondary-300">Converse com nossos especialistas agora mesmo<i class="bi bi-caret-right-fill"></i></a>
             </section>
             <section id="planos" class="mb-40">
                 <h1 class="planos-title section-title text-2xl font-bold">Conheça nossos Planos!</h1>
@@ -176,12 +176,16 @@
                 <h2 class="contato-title text-3xl font-bold">Seja informado sobre as novidades!</h2>
                 <div class="form-group">
                     <div>
-                        <label for="">Nome para contato:</label>
-                        <input class="text-base w-full" type="text" name="" id="" placeholder="Seu nome aqui!">
+                        <label for="">Nome para contato: *</label>
+                        <input class="text-base w-full" type="text" name="" id="#" placeholder="Seu nome aqui!">
                     </div>
-                    <div class="ml-5">
-                        <label for="">E-mail:</label>
-                        <input class="text-base w-full" type="text" name="" id="" placeholder="example@exemple.com">
+                    <div class="ml-12">
+                        <label for="">E-mail: *</label>
+                        <input class="text-base w-full" type="text" name="" id="#" placeholder="example@exemple.com">
+                    </div>
+                    <div class="ml-12">
+                        <label for="">Telefone:</label>
+                        <input class="text-base w-full" type="text" name="" id="#" placeholder="(00) 00000-0000">
                     </div>
                 </div>
                 <div class="contato-box">
