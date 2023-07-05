@@ -87,3 +87,24 @@ function fecharDialog(dialog_id){
     dialog.removeAttribute("open");
     fade.style.display = "none";
 }
+
+// Criando o elemento para notificação
+const btn = document.getElementById("enviar");
+const divMessage = document.querySelector(".alert");
+
+const msg = "teste de alerta !!!";
+
+function ativar(msg) {
+  const message = document.createElement("div");
+  message.classList.add("message");
+  message.innerText = msg;
+  divMessage.appendChild(message);
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 3000);
+}
+
+btn.addEventListener("click", () => {
+  ativar(msg);
+});
