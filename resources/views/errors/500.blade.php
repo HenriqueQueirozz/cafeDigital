@@ -1,4 +1,3 @@
-
 @extends('layouts.erros')
 <div class='c'>
     <div class='_erro'>500</div>
