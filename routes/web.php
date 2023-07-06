@@ -5,14 +5,13 @@ use App\Http\Controllers\AcessoController;
 use App\Http\Controllers\CafeUsuarioController;
 use App\Http\Controllers\ConteudoController;
 use App\Http\Controllers\HistoricoPagamentoController;
-
 use App\Http\Controllers\GerenciamentoConteudosController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 */
-
 Route::get('/',                         function () {return view('index');})->name('landing');
 Route::get('/manutencao',               function () {return view('manutencao');})->name('manutencao');
 
@@ -50,3 +49,17 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/v1/logout',                [AcessoController::class, 'logout'])->name('logout');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Errors Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/401',                         function () {return view('errors.401');});
+Route::get('/402',                         function () {return view('errors.402');});
+Route::get('/403',                         function () {return view('errors.403');});
+Route::get('/404',                         function () {return view('errors.404');});
+Route::get('/419',                         function () {return view('errors.419');});
+Route::get('/429',                         function () {return view('errors.429');});
+Route::get('/500',                         function () {return view('errors.500');});
+Route::get('/503',                         function () {return view('errors.503');});

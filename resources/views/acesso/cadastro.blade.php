@@ -13,7 +13,7 @@
                 <div class="main-session bg-containerColor opacity-95">
                     <div class="main-content first-session">
                         <div class="main-welcome-text">
-                            <h2 class="main-subtitle">Bem vindo ao</h2>
+                            <h2 class="main-subtitle mt-14 xl:mt-28">Bem vindo ao</h2>
                             <h1 class="main-title text-4xl">Café Digital</h2>
                         </div>
                         <figure>
@@ -21,14 +21,14 @@
                         </figure>
                         <p class="main-description text-base lg:text-sm 2xl:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
                         <p class="main-description text-base lg:text-sm 2xl:text-base">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
-                        <a href="{{ route('login') }}" id="signin" class="main-input-link text-base lg:text-sm hover:bg-primary-200 hover:p-2 hover:rounded-lg mt-5">Logue com sua conta agora mesmo!</a>
+                        <a href="{{ route('login') }}" id="signin" class="main-input-link text-base lg:text-sm hover:bg-primary-200 hover:p-2 hover:rounded-lg">Logue com sua conta agora mesmo!</a>
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
 
                 <div class="main-session bg-mainBodyColorAlt opacity-95">
                     <div class="main-content second-session">
-                        <h1 class="main-title-second mt-6">Crie sua conta</h2>
+                        <h1 class="main-title-second mt-14 xl:mt-28">Crie sua conta</h2>
                         @if($mensagem = Session::get('erro'))
                             <div class="flex justify-center mt-10"> 
                                 <div class="w-96 bg-red-300 py-3 rounded-md">
@@ -68,8 +68,9 @@
                                 <input class="main-input input-light" type="password" id="id-input-ConfirmeSenha" name="input-ConfirmeSenha" placeholder="Confirme sua senha" maxlength="15">
                             </div>
     
-                            <button class="btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Enviar</button>
+                            <button class="btn-vermelho main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" id="enviar">Enviar</button>
                             <h2 class="main-desc-cadastro text-base lg:text-sm">Já tem uma conta? <a href="/login" class="main-input-link hover:text-primary-400">Clique aqui para Logar</a></h2>
+                            <div class="alert"></div>
                         </form>
                     </div>
                 </div>

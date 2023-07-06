@@ -19,7 +19,7 @@
                     <ul>
                         <li><a href="#sobre" title="Sobre">Sobre</a></li>
                         <li><a class="highlight-option transition delay-150 duration-300 ease-in-out" href="/cadastro" title="Cadastrar-se">Cadastrar-se</a></li>
-                        <li><a href="/login"><button class="btn w-100 h-8 rounded-lg pr-10 pl-10 text-mainInputColor bg-secondary-400 hover:bg-primary-200 transition-all" title="Conectar-se">Conectar-se</button></a></li>
+                        <li><a href="/login"><button class="btn-vermelho w-100 h-8 rounded-lg pr-10 pl-10 text-mainInputColor bg-secondary-400" title="Conectar-se">Conectar-se</button></a></li>
                     </ul>
             </nav>
         </header>
@@ -174,22 +174,23 @@
             </svg>
             <section id="contato">
                 <h2 class="contato-title text-3xl font-bold">Seja informado sobre as novidades!</h2>
-
                 <div class="form-group">
-                    <label for="">Nome para contato:</label>
-                    <input class="contato-input text-base" type="text" name="" id="" placeholder="Seu nome aqui!">
-                </div>
-                <div class="form-group">
-                    <label for="">E-mail:</label>
-                    <input class="contato-input text-base" type="text" name="" id="" placeholder="example@exemple.com">
+                    <div>
+                        <label for="">Nome para contato:</label>
+                        <input class="text-base w-full" type="text" name="" id="" placeholder="Seu nome aqui!">
+                    </div>
+                    <div class="ml-5">
+                        <label for="">E-mail:</label>
+                        <input class="text-base w-full" type="text" name="" id="" placeholder="example@exemple.com">
+                    </div>
                 </div>
                 <div class="contato-box">
                     <div class="form-group">
-                        <label for="">Tenho interesse em:</label>
-                        <input class="contato-input text-base" type="text" name="" id="" placeholder="Sou programador!">
+                        <label for="">Tenho&nbsp;interesse:</label><br>
+                        <input class="text-base  w-full" type="text" name="" id="" placeholder="Sou programador!">
                     </div>
                     <button class="btn-vermelho">Cadastrar Contato</button>
-                </div>
+                </div>       
             </section>
         </main>
         <footer id="landing-footer">
@@ -199,14 +200,11 @@
                     <div class="rounded-full bg-mainInputColor p-1.5 px-3 items-center hover:text-primary-200 cursor-pointer"><i class="bi bi-facebook"></i></div>
                     <div class="rounded-full bg-mainInputColor p-1.5 px-3 items-center hover:text-primary-200 cursor-pointer"><i class="bi bi-instagram"></i></div>
                 </div>
-                <div class="my-1">
+                <div class="my-5">
                     <div class="footer-box mb-1">
                         <p class="text-base">Informações</p>
                         <p class="text-base	">Suporte</p>
                         <p class="text-base	">Entre em contato</p>
-                    </div>
-                    <div class="footer-box">
-                        <p class="text-sm">Termos de uso e condições de uso</p>
                     </div>
                 </div>
 

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,26 +21,23 @@ class CafeUsuarioSeeder extends Seeder
                 'email_usu' => 'admin@gmail.com',
                 'codigo_usu' => '100001',
                 'sexo_usu' => 'M',
-                'password' => 'admin@123',
+                'password' => Hash::make('admin@123'),
                 'cpf_usu' => '57419171009',
                 'rg_usu' => '312094267',
                 'fk_idTipoPerfil_usu' => '1',
                 'fk_idAberturaEtapa_usu' => '6',
-                'fk_idEndereco_usu' => '1'
             ],
             [
                 'nome_usu' => 'Dono',
-                'dataNascimento_usu' => '1944-14-04',
+                'dataNascimento_usu' => '1944-04-14',
                 'email_usu' => 'dono@gmail.com',
                 'codigo_usu' => '100002',
                 'sexo_usu' => 'F',
-                'password' => 'dono@123',
+                'password' => Hash::make('dono@123'),
                 'cpf_usu' => '17563844953',
                 'rg_usu' => '471426210',
                 'fk_idTipoPerfil_usu' => '2',
                 'fk_idAberturaEtapa_usu' => '6',
-                'fk_idEndereco_usu' => '2',
-                'fk_idUsuarioIndicacao' => '100001',
             ],
             [
                 'nome_usu' => 'Frater',
@@ -47,13 +45,11 @@ class CafeUsuarioSeeder extends Seeder
                 'email_usu' => 'frater@gmail.com',
                 'codigo_usu' => '100003',
                 'sexo_usu' => 'M',
-                'password' => 'frater@123',
+                'password' => Hash::make('frater@123'),
                 'cpf_usu' => '72752353154',
                 'rg_usu' => '368414498',
                 'fk_idTipoPerfil_usu' => '3',
                 'fk_idAberturaEtapa_usu' => '6',
-                'fk_idEndereco_usu' => '3',
-                'fk_idUsuarioIndicacao' => '100002',
             ]
         ]);
     }
