@@ -87,3 +87,19 @@ function fecharDialog(dialog_id){
     dialog.removeAttribute("open");
     fade.style.display = "none";
 }
+
+/*
+|--------------------------------------------------------------------------
+|   App blade - Nav Menu - All Pages
+|--------------------------------------------------------------------------
+*/
+
+function MudarEstado(div) {
+    console.log("Olá!");
+    var display = document.getElementById(div).style.display;
+
+    if(display == "none")
+        document.getElementById(div).style.display = 'block';
+    else
+        document.getElementById(div).style.display = 'none';
+}
