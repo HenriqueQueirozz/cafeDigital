@@ -1,5 +1,8 @@
-@extends('errors.minimal')
-
-@section('title', __('Server Error'))
-@section('code', '500')
-@section('message', __('Server Error'))
+@extends('layouts.erros')
+<div class='c'>
+    <div class='_erro'>500</div>
+    <hr>
+    <div class='_1'>COMUNICAÇÃO ENCERRADA</div>
+    <div class='_2'>ERRO INTERNO NO SERVIDOR</div>
+    <a class='btn' href='#'>VOLTAR PARA HOME</a>
+</div>

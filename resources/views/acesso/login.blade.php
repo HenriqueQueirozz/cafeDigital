@@ -12,7 +12,7 @@
             <div class="content">
                 <div class="main-session bg-mainBodyColorAlt opacity-95">
                     <div class="main-content second-session">
-                        <h1 class="main-title-second">Entre em sua conta!</h2>
+                        <h1 class="main-title-second mt-14 xl:mt-28">Entre em sua conta!</h2>
 
                         @if($mensagem = Session::get('erro'))
                             <div class="flex justify-center mt-10"> 
@@ -57,7 +57,7 @@
                                 <h2 class="main-desc-cadastro"><a href="#" class="text-primary-200 m-2 hover:text-primary-400 password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
 
-                            <button class="btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Entrar</button>
+                            <button class="btn-vermelho main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Entrar</button>
                             <h2 class="main-desc-cadastro">Não tem uma conta? <a href="{{ route('cadastro') }}" class="main-input-link text-primary-200 m-2 hover:text-primary-400">Cadastre-se!</a></h2>
                         </form>
                     </div>
@@ -66,7 +66,7 @@
                 <div class="main-session bg-containerColor opacity-95">
                     <div class="main-content first-session">
                         <div class="main-welcome-text">
-                            <h2 class="main-subtitle text-base">Bem vindo de volta!</h2>
+                            <h2 class="main-subtitle text-base mt-14 xl:mt-28">Bem vindo de volta!</h2>
                             <h1 class="text-4xl main-title">Café Digital</h2>
                         </div>
                         <figure>
