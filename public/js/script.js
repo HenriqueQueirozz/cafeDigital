@@ -88,6 +88,7 @@ function fecharDialog(dialog_id){
     fade.style.display = "none";
 }
 
+<<<<<<< HEAD
 /*
 |--------------------------------------------------------------------------
 |   App blade - Nav Menu - All Pages
@@ -103,3 +104,25 @@ function MudarEstado(div) {
     else
         document.getElementById(div).style.display = 'none';
 }
+=======
+// Criando o elemento para notificação
+const btn = document.getElementById("enviar");
+const divMessage = document.querySelector(".alert");
+
+const msg = "teste de alerta !!!";
+
+function ativar(msg) {
+  const message = document.createElement("div");
+  message.classList.add("message");
+  message.innerText = msg;
+  divMessage.appendChild(message);
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 3000);
+}
+
+btn.addEventListener("click", () => {
+  ativar(msg);
+});
+>>>>>>> 8db9378264947f08f31bc86a2e078d636f1119f0

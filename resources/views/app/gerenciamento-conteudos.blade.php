@@ -3,10 +3,15 @@
 
 @section('content')
     <div class="container">
-        <h1>Adicionar/Editar Conteúdo</h1>
+        <h1>Adicionar Conteúdo</h1>
 
         <form action = "/app" method = "POST">
             @csrf
+
+            <div class="form-group">
+                <label for = "link">Link:</label>
+                <input type = "text" name = "link" id = "link" class = "form-control" value = "">
+            </div>
 
             <div class="form-group">
                 <label for = "titulo">Título:</label>
@@ -18,7 +23,7 @@
                 <textarea name = "descricao" id = "descricao" class = "form-control"></textarea>
             </div>
 
-            <button type = "submit" class="">Salvar</button>
+            <button type = "submit" class = "">Salvar</button>
         </form>
     </div>
 @endsection
