@@ -56,8 +56,7 @@
                     <br><input class="main-input input-dark" type="text" id="id-input-Cel" name="input-Cel" placeholder="(00)00000-0000" maxlength="13">
                 </div>
             </div>
-
-            <button class="btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Avançar</button>
+            <button class="btn-vermelho w-100 h-12 rounded-lg pr-20 pl-20 m-auto text-mainInputColor bg-red-600" type="submit">Avançar</button>
         </form>
     </div>
 @endsection

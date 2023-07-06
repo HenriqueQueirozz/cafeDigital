@@ -49,7 +49,7 @@
             <div class="main-form-aside">
                 <div class="main-form-input">
                     <label for="id-input-Comp" class="main-label label-dark">Complemento:</label>
-                    <br><input class="main-input input-dark" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
+                    <br><input class="btn-vermelho input-dark" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
                 </div>
             </div>
             <!-- <div class="main-form-input mb-1 mt-0-75">
