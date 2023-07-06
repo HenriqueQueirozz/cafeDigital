@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
+use App\Models\CafeEndereco;
+use App\Models\CafeCidade;
+use App\Models\CafeEstado;
 class CafeUsuarioController extends Controller
 {
     public function getUsuarioByEmail($email) {
@@ -105,5 +108,13 @@ class CafeUsuarioController extends Controller
         return view('app.associados', []);
     }
 
+    public function meu_perfil(){
+        User::find($UsuarioAtual['fk_idUsuarioIndicacao']);
+        CafeEstado::find($UsuarioAtual['fk_idUsuarioIndicacao']);
+        CafeCidade::find($UsuarioAtual['fk_idUsuarioIndicacao']);
+        CafeEndereco::find($UsuarioAtual['fk_idUsuarioIndicacao']);
+
+        return view('app.meu-perfil', []);
+    }
 
 }

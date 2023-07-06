@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Mapa de associados')
+@section('title', 'Início')
 
 @section('content')
-    <h1>-</h1>
+
 @endsection

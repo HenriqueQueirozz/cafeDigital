@@ -21,8 +21,6 @@ Route::get('/cadastro',                 function () {return view('acesso.cadastr
 Route::post('/v1/authenticacao',         [AcessoController::class, 'authenticacao'])->name('authenticacao');
 Route::post('/v1/register',              [AcessoController::class, 'register'])->name('register');
 
-Route::post('/app', [GerenciamentoConteudosController::class, 'store'])->name('conteudos.store');
-
 Route::middleware('auth')->group(function () {
     /*
     |--------------------------------------------------------------------------
@@ -40,11 +38,14 @@ Route::middleware('auth')->group(function () {
     |--------------------------------------------------------------------------
     */
     Route::middleware('cadastrado')->group(function () {
-        Route::get('/app',                      function () {return view('app.home');})->name('app.home');
-        Route::get('/app/conteudos',            [ConteudoController::class, 'index'])->name('app.conteudos');
-        Route::get('/app/gerenciamento-conteudos',   function () {return view('app.gerenciamento-conteudos');});
-        Route::get('/app/mapa-associados',      [CafeUsuarioController::class, 'mapa_associados'])->name('app.associados');
-        Route::get('/app/historico-pagamento',  [HistoricoPagamentoController::class, 'index'])->name('app.historico-pagamento');
+        Route::get('/app',                          function () {return view('app.home');})->name('app.home');
+        Route::get('/app/meu-perfil',               [CafeUsuarioController::class, 'meu_perfil'])->name('app.meu-perfil');
+        Route::get('/app/conteudos',                [ConteudoController::class, 'index'])->name('app.conteudos');
+        Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');})->name('app.gerenciar-conteudos');
+        Route::get('/app/mapa-associados',          [CafeUsuarioController::class, 'mapa_associados'])->name('app.associados');
+        Route::get('/app/historico-pagamento',      [HistoricoPagamentoController::class, 'index'])->name('app.historico-pagamento');
+
+        Route::post('/v1/salvar-conteudos',         [GerenciamentoConteudosController::class, 'store'])->name('conteudos.store');
     });
 
     Route::get('/v1/logout',                [AcessoController::class, 'logout'])->name('logout');
@@ -55,11 +56,11 @@ Route::middleware('auth')->group(function () {
 | Errors Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/401',                         function () {return view('errors.401');});
-Route::get('/402',                         function () {return view('errors.402');});
-Route::get('/403',                         function () {return view('errors.403');});
-Route::get('/404',                         function () {return view('errors.404');});
-Route::get('/419',                         function () {return view('errors.419');});
-Route::get('/429',                         function () {return view('errors.429');});
-Route::get('/500',                         function () {return view('errors.500');});
-Route::get('/503',                         function () {return view('errors.503');});
+// Route::get('/401',                         function () {return view('errors.401');});
+// Route::get('/402',                         function () {return view('errors.402');});
+// Route::get('/403',                         function () {return view('errors.403');});
+// Route::get('/404',                         function () {return view('errors.404');});
+// Route::get('/419',                         function () {return view('errors.419');});
+// Route::get('/429',                         function () {return view('errors.429');});
+// Route::get('/500',                         function () {return view('errors.500');});
+// Route::get('/503',                         function () {return view('errors.503');});

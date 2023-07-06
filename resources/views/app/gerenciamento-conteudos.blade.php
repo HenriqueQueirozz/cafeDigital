@@ -5,7 +5,7 @@
     <div class="container">
         <h1>Adicionar Conteúdo</h1>
 
-        <form action = "/app" method = "POST">
+        <form action="{{ route('conteudos.store') }}" method="POST">
             @csrf
 
             <div class="form-group">
@@ -23,7 +23,7 @@
                 <textarea name = "descricao" id = "descricao" class = "form-control"></textarea>
             </div>
 
-            <button type = "submit" class = "">Salvar</button>
+            <button type = "submit">Salvar</button>
         </form>
     </div>
 @endsection
