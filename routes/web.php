@@ -5,6 +5,8 @@ use App\Http\Controllers\AcessoController;
 use App\Http\Controllers\CafeUsuarioController;
 use App\Http\Controllers\ConteudoController;
 use App\Http\Controllers\HistoricoPagamentoController;
+
+use App\Http\Controllers\GerenciamentoConteudosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +21,8 @@ Route::get('/cadastro',                 function () {return view('acesso.cadastr
 
 Route::post('/v1/authenticacao',         [AcessoController::class, 'authenticacao'])->name('authenticacao');
 Route::post('/v1/register',              [AcessoController::class, 'register'])->name('register');
+
+Route::post('/app', [GerenciamentoConteudosController::class, 'store'])->name('conteudos.store');
 
 Route::middleware('auth')->group(function () {
     /*
