@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/app',                      function () {return view('app.home');})->name('app.home');
         Route::get('/app/conteudos',            [ConteudoController::class, 'index'])->name('app.conteudos');
         Route::get('/app/gerenciamento-conteudos',   function () {return view('app.gerenciamento-conteudos');});
-        Route::get('/app/mapa-associados',      [CafeUsuarioController::class, 'mapa_associados'])->name('app.associados');
+        Route::get('/app/mapa-associados',      [CafeUsuarioController::class, 'mapa_associados'])->name('mapa-associados');
         Route::get('/app/historico-pagamento',  [HistoricoPagamentoController::class, 'index'])->name('app.historico-pagamento');
     });
 
