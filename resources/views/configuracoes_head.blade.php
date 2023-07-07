@@ -4,11 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- CSS -->   
-<link rel="stylesheet" href="./css/style.css">
-
-<!-- <link rel="stylesheet" href="./css/choice-plan.css"> 
-<link rel="stylesheet" href="./css/layout_cadastro.css"> -->
-
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>

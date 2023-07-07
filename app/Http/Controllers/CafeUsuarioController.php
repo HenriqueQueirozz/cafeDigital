@@ -9,6 +9,8 @@ use App\Models\User;
 use App\Models\CafeEndereco;
 use App\Models\CafeCidade;
 use App\Models\CafeEstado;
+use App\Models\CafeContato;
+use App\Models\CafeTipoPerfil;
 class CafeUsuarioController extends Controller
 {
     public function getUsuarioByEmail($email) {
@@ -109,12 +111,41 @@ class CafeUsuarioController extends Controller
     }
 
     public function meu_perfil(){
-        User::find($UsuarioAtual['fk_idUsuarioIndicacao']);
-        CafeEstado::find($UsuarioAtual['fk_idUsuarioIndicacao']);
-        CafeCidade::find($UsuarioAtual['fk_idUsuarioIndicacao']);
-        CafeEndereco::find($UsuarioAtual['fk_idUsuarioIndicacao']);
+        
+        $UsuarioConta = CafeTipoPerfil::find(Auth::user()->fk_idTipoPerfil_usu);
+        $UsuarioEndereco = CafeEndereco::find(Auth::user()->fk_idEndereco_usu);
+        $UsuarioCidade   = CafeCidade::find($UsuarioEndereco->fk_idCidade_end);
+        $UsuarioEstado   = CafeEstado::find($UsuarioCidade->fk_idEstado_end);
+        $Contato_telefone  = DB::table('cafe_contatos')->where('fk_idUsuario_con', Auth::user()->id)->where('tipo_con', 'Telefone')->get()[0];
+        $Contato_celular   = DB::table('cafe_contatos')->where('fk_idUsuario_con', Auth::user()->id)->where('tipo_con', 'Celular')->get()[0];
 
-        return view('app.meu-perfil', []);
+        $Dados_gerais = [];
+
+        $Dados_gerais['id'] = Auth::user()->codigo_usu;
+        $Dados_gerais['nome'] = Auth::user()->nome_usu;
+        $Dados_gerais['cpf'] = Auth::user()->cpf_usu;
+        $Dados_gerais['email'] = Auth::user()->email_usu;
+        $Dados_gerais['sexo'] = Auth::user()->sexo_usu;
+        $Dados_gerais['rg'] = Auth::user()->rg_usu;
+        $Dados_gerais['data_nascimento'] = Auth::user()->dataNascimento_usu;
+        $Dados_gerais['conta'] = $UsuarioConta->nome_tp;
+
+        $Dados_gerais['cidade'] = $UsuarioCidade->nome_cid;
+        $Dados_gerais['estado'] = $UsuarioEstado->nome_est;
+        $Dados_gerais['cep'] = $UsuarioEndereco->cep_end;
+        $Dados_gerais['rua'] = $UsuarioEndereco->rua_end;
+        $Dados_gerais['bairro'] = $UsuarioEndereco->bairro_end;
+        $Dados_gerais['numero'] = $UsuarioEndereco->numero_end;
+        $Dados_gerais['complemento'] = $UsuarioEndereco->complemento_end;
+
+        $Dados_gerais['celular'] = $Contato_celular->contato_con;
+        $Dados_gerais['telefone'] = $Contato_telefone->contato_con;
+
+        // print_r('<pre>');
+        // print_r($Dados_gerais);
+        // exit;
+
+        return view('app.meu-perfil', ['Dados_gerais' => $Dados_gerais]);
     }
 
 }

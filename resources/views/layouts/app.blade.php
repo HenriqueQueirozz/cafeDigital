@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <title>@yield('title')</title>
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @include('configuracoes_head')
     </head>
     <body class="truncate"><!-- POSSIVELMENTE VAI DAR PROBLEMA -->
@@ -22,16 +22,22 @@
             <div id="app-menu-conteudo" class="app-menu bg-primary-300 w-60" style="height: 100vh">
                 <ul class="lg:w-30 text-mainInputColor text-base flex flex-col text-center">
                     <li class="app-item mt-12 md:text-xs">
-                        <i class="app-icon bi bi-person-circle"></i><br>
-                        Meu Perfil
+                        <a href="{{ route('app.meu-perfil') }}">
+                            <i class="app-icon bi bi-person-circle"></i><br>
+                            Meu Perfil
+                        </a>
                     </li>
                     <li class="app-item md:text-xs">
-                        <i class="app-icon bi bi-diagram-3-fill"></i><br>
-                        Associados
+                        <a href="{{ route('app.associados') }}">
+                            <i class="app-icon bi bi-diagram-3-fill"></i><br>
+                            Associados
+                        </a>
                     </li>
                     <li class="app-item md:text-xs">
-                        <i class="app-icon bi bi-handbag"></i><br>
-                        Financeiro
+                        <a href="{{ route('app.historico-pagamento') }}">
+                            <i class="app-icon bi bi-handbag"></i><br>
+                            Financeiro
+                        </a>
                     </li>
                     <div class="fixed bottom-0">
                         <li class="app-item md:text-xs justify-items-center text-center">

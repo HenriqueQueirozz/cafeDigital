@@ -11,7 +11,7 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     protected $table = 'cafe_usuarios';
-    // protected $primaryKey = 'flight_id';
+    
 
     use HasApiTokens, HasFactory, Notifiable;
 
