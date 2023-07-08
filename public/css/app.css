@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
     --bar-width: 20px;
     --bar-height: 2px;
@@ -9,10 +8,10 @@
     --foreground: #ffffff;
     --background: rgb(255, 255, 255);
     --hamburger-margin: 8px;
-    --animation-timing: 4s ease-in-out;
+    --animation-timing: 0.5s ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  }
-
+}
+  
 .app-item{
     margin: 1.2rem;
 }
@@ -103,4 +102,73 @@
 
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;
+}
+
+.main-form-input, .main-input, .main-label{
+    text-align: left;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+}
+
+.main-form-aside{
+    display: flex;
+    margin-bottom: var(--margin-1);
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8%;
+}
+
+.main-form-input{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.main-form-input .password{
+    color: var(--main-input-color);
+    font-size: var(--smaller-font-size);
+    float: right;
+    margin-bottom: var(--margin-3);
+}
+
+.aside{
+    width: 100%;
+    margin-left: var(--b-2);
+}
+
+
+.label-light{
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #EEF3FC;
+    font-size: var(--normal-font-size);
+}
+
+.input-light{
+    text-decoration: none;
+    background-color: transparent;
+    height: 30px;
+    border: 0;
+    color: var(--main-input-color);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 1);
+    margin-bottom: 3%;
+}
+
+.input-light:focus{
+    caret-color: hsla(0, 0%, 100%);
+    outline: 0;
+}
+
+.input-light:placeholder {
+    font-family: var(--title-font);
+    font-style: var(--font-medium);
+    line-height: 600px;
+    color: hsla(0, 0%, 100%, 0.7);
 }

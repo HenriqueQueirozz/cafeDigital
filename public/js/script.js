@@ -88,6 +88,10 @@ function fecharDialog(dialog_id){
     fade.style.display = "none";
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 16b213ffc2e025b6fdd2d1fffd9c2e7672ed4f0c
 /*
 |--------------------------------------------------------------------------
 |   App blade - Nav Menu - All Pages
@@ -103,6 +107,10 @@ function MudarEstado(div) {
     else
         document.getElementById(div).style.display = 'none';
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 16b213ffc2e025b6fdd2d1fffd9c2e7672ed4f0c
 // Criando o elemento para notificação
 const btn = document.getElementById("enviar");
 const divMessage = document.querySelector(".alert");
