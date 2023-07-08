@@ -34,29 +34,24 @@
 
                         <form method="POST" action="{{ route('authenticacao') }}" class="main-form">
                             @csrf
-                            
                             <div class="switch_container">
                                 <label for="switch-flat" class="switch_text">Entrar com o E-mail?</label>
                                 <input id="switch-flat" class="switch switch--flat" type="checkbox"/>
                                 <label for="switch-flat"></label>
                             </div>
-                            
                             <div class="main-form-input" id="div-id">
                                 <label for="id-input-Id" class="main-label label-light">ID:<span class="main-form-obrigatorio">*</span></label>
                                 <br><input class="main-input input-light" type="number" id="id-input-Id" name="input-Id">
                             </div>
-                              
                             <div class="main-form-input" id="div-email" style="display: none;">
                                 <label for="id-input-Email" class="main-label label-light">E-mail:<span class="main-form-obrigatorio">*</span></label>
                                 <br><input class="main-input input-light" type="text" id="id-input-Email" name="input-Email">
                             </div>                              
-                            
                             <div class="main-form-input password">
                                 <label for="id-input-Pass" class="main-label label-light">Senha:<span class="main-form-obrigatorio">*</span></label>
                                 <br><input class="main-input input-light" type="password" id="id-input-Pass" name="input-Pass">
                                 <h2 class="main-desc-cadastro"><a href="#" class="text-primary-200 m-2 hover:text-primary-400 password" onclick="abrirDialog('EsqueciSenha');">Esqueceu a senha?</a></h2>
                             </div>
-
                             <button class="btn-vermelho main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Entrar</button>
                             <h2 class="main-desc-cadastro">Não tem uma conta? <a href="{{ route('cadastro') }}" class="main-input-link text-primary-200 m-2 hover:text-primary-400">Cadastre-se!</a></h2>
                         </form>
