@@ -122,22 +122,38 @@ function MudarEstadoImagem(div) {
 }
 
 // Criando o elemento para notificação
-const btn = document.getElementById("enviar");
-const divMessage = document.querySelector(".alert");
+function notify(){
+    const btn = document.getElementById("enviar");
+    const divMessage = document.querySelector(".alert");
 
-const msg = "teste de alerta !!!";
+    const msg = "teste de alerta !!!";
 
-function ativar(msg) {
-  const message = document.createElement("div");
-  message.classList.add("message");
-  message.innerText = msg;
-  divMessage.appendChild(message);
+    function ativar(msg) {
+    const message = document.createElement("div");
+    message.classList.add("message");
+    message.innerText = msg;
+    divMessage.appendChild(message);
 
-  setTimeout(() => {
-    message.style.display = "none";
-  }, 3000);
+    setTimeout(() => {
+        message.style.display = "none";
+    }, 3000);
+    }
+
+    btn.addEventListener("click", () => {
+    ativar(msg);
+    });
 }
 
-btn.addEventListener("click", () => {
-  ativar(msg);
-});
+// Validar senha
+function validarSenha(){
+    const senha = document.querySelector('input[name=input-Senha]');
+    const confirma = document.querySelector('input[name=input-ConfirmeSenha]');
+
+    if (senha.value === confirma.value){
+        confirma.setCustomValidity("");
+    }
+    else{
+        confirma.setCustomValidity("Senhas diferentes!");
+    }
+
+}
