@@ -9,8 +9,8 @@
 
 @section('content')
     <div class="float-right">
-        <div id="home-conteudo" class="text-ellipsis overflow-hidden m-8">
-            <h1 class="text-2xl mb-2">Dados de Usuário</h1>
+        <div id="home-conteudo" class="text-ellipsis overflow-hidden m-8 2xl">
+            <h1 class="text-2xl mb-2 2xl:text-3xl xl:text-xl">Dados de Usuário</h1>
             <div class="home-column bg-mainBodyColorAlt grid lg:grid-cols-4 sm:grid-cols-2 lg:pt-4 lg:pb-8 2xl:pt-8 2xl:pb-16">
                 <div class="main-form-input" id="div-id"><br>
                     <label for="id-input-Id" class="main-label label-light">ID:</label>
@@ -44,7 +44,7 @@
                     <a href="#" class="text-primary-0 text-sm hover:text-secondary-200">Alterar senha?</a>
                 </div>
             </div>
-            <h1 class="text-2xl xl:mt-4 2xl:mt-24 mb-2">Dados Gerais</h1>
+            <h1 class="text-2xl xl:mt-4 2xl:mt-24 mb-2 2xl:text-3xl xl:text-xl">Dados Gerais</h1>
             <div class="home-column bg-mainBodyColorAlt grid lg:grid-cols-4 sm:grid-cols-2 lg:pt-4 lg:pb-8 2xl:pt-8 2xl:pb-16">
                 <div class="main-form-input"><br>
                     <label for="id-input-Cpe" class="main-label label-light">CPE:</label>
@@ -74,7 +74,7 @@
                     <label for="id-input-Tel" class="main-label label-light">Telefone:</label>
                     <br><input class="main-input input-light" type="text" id="id-input-Tel" name="input-Tel" placeholder="(00) 0000-0000" maxlength="13" value="{{ $Dados_gerais['telefone'] }}" readonly>
                 </div>
-                <div class="main-form-input mb-8"><br>
+                <div class="main-form-input mb-4"><br>
                     <label for="id-input-Nome" class="main-label label-light">Cadastro em:</label>
                     <br><input class="main-input input-light" type="text" id="id-input-Nome" name="input-Nome" placeholder="00-00-0000" maxlength="100" readonly>
                 </div>
