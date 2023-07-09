@@ -25,7 +25,7 @@ module.exports = {
       },
 
       colors:{
-
+        
         containerColor: '#B3D1FF',
         mainInputColor: '#EEF3FC',
         mainBodyColorAlt: '#1B1C1E',

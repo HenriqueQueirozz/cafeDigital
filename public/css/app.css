@@ -323,3 +323,11 @@ hr{
 .signature{
     background-color: #FECC59;
 }
+
+.conteudo-card{
+    width: 12rem;
+    border-radius: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
