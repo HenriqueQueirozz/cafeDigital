@@ -16,9 +16,18 @@
         <div class="flex">
             <img src="src/PerfilAuto.png" onclick="MudarEstadoImagem('app-modal-opcoes')" class="fixed top-0 left-100 right-0 m-5 w-20 border-solid border-4 rounded-full border-secondary-500" id="perfilImagem">
             <div id="app-modal-opcoes" class="w-64 fixed top-24 left-100 right-0 m-5 bg-secondary-0 rounded-lg z-10" style="display: none">
-                <div class="flex border-b-2 border-mainInputColor">
-                    <a href="#" class="app-modal"><p>Alterar foto do perfil</p></a>
-                    <i class="app-icon text-base bi bi-image-fill"></i>
+                <div class="flex flex-col">
+                    <div id="upload-image" class="flex flex-col upload-image m-auto mt-5" style="display: none;">
+                        <label class="picture" for="picture__input" tabIndex="0">
+                            <span class="picture__image"></span>
+                        </label>
+                        <input type="file" name="picture__input" id="picture__input" onclick="ExibirSalvar();" required>
+                        <button id="upload-image-salvar" type="submit" style="display: none;" class="pl-2 pr-2">Salvar</button>
+                    </div>
+                    <div class="flex border-b-2 border-mainInputColor">
+                        <a href="#" class="app-modal" onclick="MudarEstadoUpload('upload-image')"><p>Alterar foto do perfil</p></a>
+                        <i class="app-icon text-base bi bi-image-fill"></i>
+                    </div>
                 </div>
                 <div class="flex border-b-2 border-mainInputColor">
                     <a href="#" class="app-modal"><p>Editar dados do cadastro</p></a>
@@ -60,7 +69,7 @@
                     </div>
                 </ul>
             </div>
-            <div class="app-content">
+            <div class="app-content mt-auto mb-auto">
                 @yield('content')
             </div>
         </div>

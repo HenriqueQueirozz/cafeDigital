@@ -141,6 +141,48 @@ hr{
     translate: 0;
 }
 
+#picture__input {
+    display: none;
+  }
+  
+  .picture {
+    width: 200px;
+    height: 250px;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .picture:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+  }
+  
+  .picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .picture__img {
+    max-width: 100%;
+  }  
+
 /*
 |--------------------------------------------------------------------------
 |                                  HOME CSS
@@ -216,6 +258,20 @@ hr{
     font-style: var(--font-medium);
     line-height: 600px;
     color: hsla(0, 0%, 100%, 0.7);
+}
+
+#upload-image-salvar{
+    font-size: 0.7rem;
+    margin-top: 2%;
+    border-radius: 0.75rem;
+    text-align: end;
+    background-color: #31c48d;
+    border: 0.4px solid #1B1C1E;
+}
+
+#upload-image-salvar:hover{
+    transition: 0.4s;
+    background-color: #bcf0da;
 }
 
 /*
