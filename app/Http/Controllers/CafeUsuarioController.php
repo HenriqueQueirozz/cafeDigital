@@ -91,7 +91,12 @@ class CafeUsuarioController extends Controller
 
     public function mapa_associados(){
         $UsuarioAtual = $this->getUsuarioDados(Auth::user());
-        $UsuarioIndicador = $this->getUsuarioDados(User::find($UsuarioAtual['fk_idUsuarioIndicacao']));
+        if($UsuarioAtual['fk_idUsuarioIndicacao']){
+            $UsuarioIndicador = $this->getUsuarioDados(User::find($UsuarioAtual['fk_idUsuarioIndicacao']));
+        }
+        else{
+            $UsuarioIndicador = '';
+        }
         $UsuariosIndicados = $this->getUsuarioByIndicacao($UsuarioAtual['id']);
 
         $arrayIndicados = [];
@@ -99,15 +104,7 @@ class CafeUsuarioController extends Controller
             array_push($arrayIndicados, $this->getUsuarioDados($usuario));
         }
 
-        // print_r('<pre>');
-        // print_r($UsuarioAtual);
-        // print_r('<hr>');
-        // print_r($UsuarioIndicador);
-        // print_r('<hr>');
-        // print_r($arrayIndicados);
-        // exit;
-        
-        return view('app.associados', []);
+        return view('app.mapa-associados', ['UsuarioAtual' => $UsuarioAtual, 'UsuarioIndicador' => $UsuarioIndicador, 'UsuariosIndicados' => $arrayIndicados]);
     }
 
     public function meu_perfil(){
@@ -145,7 +142,7 @@ class CafeUsuarioController extends Controller
         // print_r($Dados_gerais);
         // exit;
 
-        return view('app.meu-perfil', ['Dados_gerais' => $Dados_gerais]);
+        return view('app.home', ['Dados_gerais' => $Dados_gerais]);
     }
 
 }

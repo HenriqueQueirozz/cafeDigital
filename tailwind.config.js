@@ -8,6 +8,10 @@ module.exports = {
   theme: {
     extend: {
       
+      blur: {
+        sm: '0.2px',
+      },
+
       screens: {
         sm: '480px',
         md: '768px',

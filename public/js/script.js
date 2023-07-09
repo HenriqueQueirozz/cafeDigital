@@ -94,14 +94,31 @@ function fecharDialog(dialog_id){
 |--------------------------------------------------------------------------
 */
 
-function MudarEstado(div) {
-    console.log("Olá!");
+function MudarEstadoNav(div) {
     var display = document.getElementById(div).style.display;
 
-    if(display == "none")
+    if(display == "none"){
         document.getElementById(div).style.display = 'block';
-    else
+    }
+
+    else{
         document.getElementById(div).style.display = 'none';
+    }
+}
+
+function MudarEstadoImagem(div) {
+    var display = document.getElementById(div).style.display;
+    var conteudo = document.getElementById("home-conteudo");
+
+    if(display == "none"){
+        document.getElementById(div).style.display = 'block';
+        conteudo.classList.add("blur-sm");
+    }
+
+    else{
+        document.getElementById(div).style.display = 'none';
+        conteudo.classList.remove("blur-sm");
+    }
 }
 
 // Criando o elemento para notificação
