@@ -18,11 +18,14 @@
             <div id="app-modal-opcoes" class="w-64 fixed top-24 left-100 right-0 m-5 bg-secondary-0 rounded-lg z-10" style="display: none">
                 <div class="flex flex-col">
                     <div id="upload-image" class="flex flex-col upload-image m-auto mt-5" style="display: none;">
-                        <label class="picture" for="picture__input" tabIndex="0">
-                            <span class="picture__image"></span>
-                        </label>
-                        <input type="file" name="picture__input" id="picture__input" onclick="ExibirSalvar();" required>
-                        <button id="upload-image-salvar" type="submit" style="display: none;" class="pl-2 pr-2">Salvar</button>
+                        <form method="POST" action="{{ route('v1.salvar_avatar') }}" enctype="multipart/form-data">
+                            @csrf
+                            <label class="picture" for="picture__input" tabIndex="0">
+                                <span class="picture__image"></span>
+                            </label>
+                            <input type="file" name="picture__input" id="picture__input" onclick="ExibirSalvar();" required>
+                            <button id="upload-image-salvar" type="submit" style="display: none;" class="pl-2 pr-2">Salvar</button>
+                        </form>
                     </div>
                     <div class="flex border-b-2 border-mainInputColor">
                         <a href="#" class="app-modal" onclick="MudarEstadoUpload('upload-image')"><p>Alterar foto do perfil</p></a>

@@ -224,7 +224,7 @@ class CafeUsuarioController extends Controller
                 break;
         }
 
-        return view('app.mapa-associados', ['dados_usuario' => $dados_usuario, 'UsuarioIndicador' => $dados_indicador ? $dados_indicador : '', 'UsuariosIndicados' => $array_indicados]);
+        return view('app.mapa-associados', ['dados_usuario' => $dados_usuario, 'dados_indicador' => $dados_indicador ? $dados_indicador : '', 'usuarios_indicados' => $array_indicados]);
     }
 
     public function meu_perfil(Request $request){
@@ -234,7 +234,7 @@ class CafeUsuarioController extends Controller
         return view('app.home', ['dados_usuario' => $dados_usuario, 'editar' => isset($request['editar']) ? true : false]);
     }
 
-    public function store(Request $request){
+    public function salvar_dados_usuarios(Request $request){
         $dados_usuario = $this->getUsuarioDados(Auth::user()->id);
         $dados = $this->tratamentoSQL($request->all());
 
@@ -300,15 +300,15 @@ class CafeUsuarioController extends Controller
 
     }
 
-    public function perfil(Request $request){
+    public function salvar_avatar(Request $request){
         $dados_usuario = $this->getUsuarioDados(Auth::user()->id);
-        if($request->hasFile('image') && $request->file('image')->isValid()){
-            $requestImage = $request->image;
-            
-            $extension = $requestImage->extension();
-            $imageName = md5($requestImage->image->getClientOriginalName().strtotime("now")).".".$extension;        
 
-            $request->image->move(public_path('src/perfil'), $imageName);
+        if($request->hasFile('picture__input') && $request->file('picture__input')->isValid()){
+            $requestImage = $request->picture__input;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName().strtotime("now")).".".$extension;        
+
+            $request->picture__input->move(public_path('src/perfil'), $imageName);
     
             DB::table('cafe_foto_perfis')
                             ->where('id_fp', $dados_usuario['fk_idTipoPerfil_usu'])
@@ -319,7 +319,7 @@ class CafeUsuarioController extends Controller
         return redirect(route('app.home'))->with('sucesso', 'Imagem de perfil atualizados com sucesso');
     }
 
-    public function password(Request $request){
+    public function salvar_senha(Request $request){
         $dados_usuario = $this->getUsuarioDados(Auth::user()->id);
         $dados = $this->tratamentoSQL($request->all());
 
@@ -333,4 +333,54 @@ class CafeUsuarioController extends Controller
         return redirect(route('app.home'))->with('sucesso', 'Senha atualizada com sucesso');
     }
 
+    public function visualizar_mapa_associados(Request $request){
+        // $request['id_usuario']
+        //Usuário Atual
+        $dados_usuario = $this->getUsuarioDados($request['id_usuario']);
+        $dados_usuario = $this->tratamentoTela($dados_usuario);
+
+        //Usuário Indicador
+        $dados_indicador = '';
+        if($dados_usuario['fk_idUsuarioIndicacao']){
+            $dados_indicador = $this->getUsuarioDados($dados_usuario['fk_idUsuarioIndicacao']);
+            $dados_indicador = $this->tratamentoTela($dados_indicador);
+        }
+
+        //Usuários Indicados
+        $usuarios_indicados = $this->getUsuarioByIndicacao($dados_usuario['id']);
+        $array_indicados = [];
+        foreach ($usuarios_indicados as $usuario){
+            $usuario = $this->getUsuarioDados($usuario);
+            $usuario = $this->tratamentoTela($usuario);
+            array_push($array_indicados, $usuario);
+        }
+
+        $array_retorno = [];
+        $array_retorno['dados_usuario'] = $dados_usuario;
+        $array_retorno['dados_indicador'] = $dados_indicador;
+        $array_retorno['usuarios_indicados'] = $array_indicados;
+
+        return $array_retorno;
+    }
+
+    public function visualizar_usuario(Request $request){
+        // $request['id_usuario']
+        $dados_usuario = $this->getUsuarioDados($request['id_usuario']);
+        $dados_usuario = $this->tratamentoTela($dados_usuario);
+
+        return $dados_usuario;
+    }
+
+    public function listar_associado(){
+        $todos_usuarios = User::all();
+
+        $array_indicados = [];
+        foreach ($todos_usuarios as $usuario){
+            $usuario = $this->getUsuarioDados($usuario->id);
+            $usuario = $this->tratamentoTela($usuario);
+            array_push($array_indicados, $usuario);
+        }
+
+        return $array_indicados;
+    }
 }

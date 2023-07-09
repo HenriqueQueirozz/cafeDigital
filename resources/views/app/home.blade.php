@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="float-right">
-        <form method="POST" action="{{ route('usuarios.store') }}">
+        <form method="POST" action="{{ route('v1.salvar_dados_usuarios') }}">
             @csrf
             <div id="home-conteudo" class="text-ellipsis overflow-hidden m-8">
                 @if($mensagem = Session::get('erro'))
@@ -115,9 +115,3 @@
         </form>
     </div>
 @endsection
-
-<!-- <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-    @csrf
-
-    <input type="file" name="image" id="image">
-</form> -->
