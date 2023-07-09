@@ -18,7 +18,12 @@
     --animation-timing: 0.5s ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
-  
+
+.app-content{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .app-item{
     margin: 1.2rem;
 }
@@ -218,3 +223,46 @@ hr{
 |                             MAPA DE ASSOCIADOS
 |--------------------------------------------------------------------------
 */
+
+.mapa-conteudo{
+    width: 100%;
+    /* overflow: visible;
+    text-overflow: ellipsis;
+    white-space: normal; */
+    background-color: #1B1C1E;
+}
+
+.mapa-card{
+    width: 12rem;
+    border-radius: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mapa-imagem{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mapa-status{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 0.75rem;
+    background-color: #333;
+
+}
+
+.acept-invite{
+    background-color: #B3D1FF;
+}
+
+.signature{
+    background-color: #FECC59;
+}

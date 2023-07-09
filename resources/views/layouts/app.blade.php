@@ -60,7 +60,7 @@
                     </div>
                 </ul>
             </div>
-            <div style="margin-left: auto; margin-right: auto;">
+            <div class="app-content">
                 @yield('content')
             </div>
         </div>
