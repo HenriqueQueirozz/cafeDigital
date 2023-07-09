@@ -14,7 +14,7 @@
 
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <div class="mapa-conteudo p-20 mt-5 ml-5 flex">
+    <div class="mapa-conteudo p-20 ml-5 flex">
         <div class="mt-auto mb-auto">
             <h1 id="mapa-competencia" class="2xl:text-xl lg:text-xl text-center text-mainInputColor">Competência </h1><!-- Gerar ano -->
             <div class="w-56">
