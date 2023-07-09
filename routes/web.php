@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/v1/salvar-senha',             [CafeUsuarioController::class, 'salvar_senha']          )->name('v1.salvar_senha');
         Route::post('/v1/salvar-dados-usuarios',    [CafeUsuarioController::class, 'salvar_dados_usuarios'] )->name('v1.salvar_dados_usuarios');
         Route::post('/v1/visualizar-usuario',       [CafeUsuarioController::class, 'visualizar_usuario']    )->name('v1.visualizar_usuario');
-        Route::post('/v1/salvar-dados-usuarios',    [CafeUsuarioController::class, 'listar_associado']      )->name('v1.listar_associado');
+        Route::post('/v1/listar-associado',         [CafeUsuarioController::class, 'listar_associado']           )->name('v1.listar_associado');
 
         Route::middleware('admin')->group(function () {
             Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');}   )->name('app.gerenciar-conteudos');
