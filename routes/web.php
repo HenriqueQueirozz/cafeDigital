@@ -12,14 +12,14 @@ use App\Http\Controllers\GerenciamentoConteudosController;
 | Web Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/',                         function () {return view('index');})->name('landing');
-Route::get('/manutencao',               function () {return view('manutencao');})->name('manutencao');
+Route::get('/',                         function () {return view('index');}             )->name('landing');
+Route::get('/manutencao',               function () {return view('manutencao');}        )->name('manutencao');
 
-Route::get('/login',                    function () {return view('acesso.login');})->name('login');
-Route::get('/cadastro',                 function () {return view('acesso.cadastro');})->name('cadastro');
+Route::get('/login',                    function () {return view('acesso.login');}      )->name('login');
+Route::get('/cadastro',                 function () {return view('acesso.cadastro');}   )->name('cadastro');
 
-Route::post('/v1/authenticacao',         [AcessoController::class, 'authenticacao'])->name('authenticacao');
-Route::post('/v1/register',              [AcessoController::class, 'register'])->name('register');
+Route::post('/v1/authenticacao',         [AcessoController::class, 'authenticacao']     )->name('authenticacao');
+Route::post('/v1/register',              [AcessoController::class, 'register']          )->name('register');
 
 Route::middleware('auth')->group(function () {
     /*
@@ -27,10 +27,10 @@ Route::middleware('auth')->group(function () {
     | Routas de Acesso
     |--------------------------------------------------------------------------
     */
-    Route::get('/dados-do-usuario',     function () {return view('acesso.passo_2');})->name('dados-do-usuario')->middleware('cadastro_passo_2');
-    Route::get('/dados-de-endereco',    function () {return view('acesso.passo_3');})->name('dados-de-endereco')->middleware('cadastro_passo_3');
-    Route::get('/escolha-de-plano',     function () {return view('acesso.passo_4');})->name('escolha-de-plano')->middleware('cadastro_passo_4');
-    Route::get('/pagamento',            function () {return view('acesso.passo_5');})->name('pagamento')->middleware('cadastro_passo_5');
+    Route::get('/dados-do-usuario',     function () {return view('acesso.passo_2');}    )->name('dados-do-usuario')->middleware('cadastro_passo_2');
+    Route::get('/dados-de-endereco',    function () {return view('acesso.passo_3');}    )->name('dados-de-endereco')->middleware('cadastro_passo_3');
+    Route::get('/escolha-de-plano',     function () {return view('acesso.passo_4');}    )->name('escolha-de-plano')->middleware('cadastro_passo_4');
+    Route::get('/pagamento',            function () {return view('acesso.passo_5');}    )->name('pagamento')->middleware('cadastro_passo_5');
 
     /*
     |--------------------------------------------------------------------------
@@ -38,16 +38,24 @@ Route::middleware('auth')->group(function () {
     |--------------------------------------------------------------------------
     */
     Route::middleware('cadastrado')->group(function () {
-        Route::get('/app',                          [CafeUsuarioController::class, 'meu_perfil'])->name('app.home');
-        Route::get('/app/conteudos',                [ConteudoController::class, 'index'])->name('app.conteudos');
-        Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');})->name('app.gerenciar-conteudos');
-        Route::get('/app/mapa-associados',          [CafeUsuarioController::class, 'mapa_associados'])->name('app.associados');
-        Route::get('/app/historico-pagamento',      [HistoricoPagamentoController::class, 'index'])->name('app.historico-pagamento');
+        Route::get('/app',                          [CafeUsuarioController::class, 'meu_perfil']            )->name('app.home');
+        Route::get('/app/conteudos',                [ConteudoController::class, 'index']                    )->name('app.conteudos');
+        Route::get('/app/mapa-associados',          [CafeUsuarioController::class, 'mapa_associados']       )->name('app.associados');
+        Route::get('/app/historico-pagamento',      [HistoricoPagamentoController::class, 'index']          )->name('app.historico-pagamento');
+        
+        Route::post('/v1/salvar-avatar',            [CafeUsuarioController::class, 'salvar_avatar']         )->name('v1.salvar_avatar');
+        Route::post('/v1/salvar-senha',             [CafeUsuarioController::class, 'salvar_senha']          )->name('v1.salvar_senha');
+        Route::post('/v1/salvar-dados-usuarios',    [CafeUsuarioController::class, 'salvar_dados_usuarios'] )->name('v1.salvar_dados_usuarios');
+        Route::post('/v1/visualizar-usuario',       [CafeUsuarioController::class, 'visualizar_usuario']    )->name('v1.visualizar_usuario');
+        Route::post('/v1/salvar-dados-usuarios',    [CafeUsuarioController::class, 'listar_associado']      )->name('v1.listar_associado');
 
-        Route::post('/v1/salvar-conteudos',         [GerenciamentoConteudosController::class, 'store'])->name('conteudos.store');
+        Route::middleware('admin')->group(function () {
+            Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');}   )->name('app.gerenciar-conteudos');
+            Route::post('/v1/salvar-conteudos',         [GerenciamentoConteudosController::class, 'store']          )->name('conteudos.store');
+        });
     });
 
-    Route::get('/v1/logout',                [AcessoController::class, 'logout'])->name('logout');
+    Route::get('/v1/logout',                        [AcessoController::class, 'logout']                     )->name('logout');
 });
 
 /*

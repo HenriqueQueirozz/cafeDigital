@@ -14,15 +14,18 @@
             </div>
         </nav>
         <div class="flex">
-            <img src="src/PerfilAuto.png" onclick="MudarEstadoImagem('app-modal-opcoes')" class="fixed top-0 left-100 right-0 m-5 w-20 border-solid border-4 rounded-full border-secondary-500 cursor-pointer" id="perfilImagem">
+
+            <img src="src/perfil/{{ $dados_usuario['nomeFoto_fp'] }}" onclick="MudarEstadoImagem('app-modal-opcoes')" class="fixed top-0 left-100 right-0 m-5 w-20 border-solid border-4 rounded-full border-secondary-500 cursor-pointer" id="perfilImagem">
             <div id="app-modal-opcoes" class="w-64 fixed top-24 left-100 right-0 m-5 bg-secondary-0 rounded-lg z-10" style="display: none">
                 <div class="flex flex-col">
                     <div id="upload-image" class="flex flex-col upload-image m-auto mt-5" style="display: none;">
+                      <form method="POST" action="{{ route('v1.salvar_avatar') }}" enctype="multipart/form-data">
                         <label class="picture" for="picture__input" tabIndex="0">
                             <span class="picture__image"></span>
                         </label>
                         <input type="file" name="picture__input" id="picture__input" onclick="ExibirSalvar();" required>
                         <button id="upload-image-salvar" type="submit" style="display: none;" class="pl-2 pr-2 2xl:text-lg">Salvar</button>
+                      </form>
                     </div>
                     <div class="flex border-b-2 border-mainInputColor">
                         <a href="#" class="app-modal" onclick="MudarEstadoUpload('upload-image')"><p>Alterar foto do perfil</p></a>
@@ -30,7 +33,7 @@
                     </div>
                 </div>
                 <div class="flex border-b-2 border-mainInputColor">
-                    <a href="#" class="app-modal"><p>Editar dados do cadastro</p></a>
+                    <a href="{{ route('app.home') }}?editar" class="app-modal"><p>Editar dados do cadastro</p></a>
                     <i class="app-icon text-base bi bi-pencil"></i>
                 </div>
                 <div class="flex hover:text-secondary-200">
@@ -43,19 +46,19 @@
             <div id="app-menu-conteudo" class="app-menu bg-primary-300 w-60" style="height: 100vh">
                 <ul class="lg:w-30 text-mainInputColor text-base flex flex-col text-center">
                     <li class="app-item mt-12 md:text-xs meu-perfil">
-                        <a href="{{ route("app.home") }}"><i class="app-icon bi bi-person-circle"></i></a><br>
+                        <a href="{{ route('app.home') }}"><i class="app-icon bi bi-person-circle"></i></a><br>
                         Meu Perfil
                     </li>
                     <li class="app-item md:text-xs associados">
-                        <a href="{{ route("app.associados") }}"><i class="app-icon bi bi-diagram-3-fill"></i></a><br>
+                        <a href="{{ route('app.associados') }}"><i class="app-icon bi bi-diagram-3-fill"></i></a><br>
                         Associados
                     </li>
                     <li class="app-item md:text-xs conteudos">
-                        <a href="{{ route("app.conteudos") }}"><i class="app-icon bi bi-archive"></i></i></a><br>
+                        <a href="{{ route('app.conteudos') }}"><i class="app-icon bi bi-archive"></i></i></a><br>
                         Conteudos
                     </li>
                     <li class="app-item md:text-xs financeiro">
-                        <a href="{{ route("app.historico-pagamento") }}"><i class="app-icon bi bi-handbag"></i></a><br>
+                        <a href="{{ route('app.historico-pagamento') }}"><i class="app-icon bi bi-handbag"></i></a><br>
                         Financeiro
                     </li>
                     <div class="fixed bottom-0">
