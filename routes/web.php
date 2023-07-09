@@ -40,11 +40,17 @@ Route::middleware('auth')->group(function () {
     Route::middleware('cadastrado')->group(function () {
         Route::get('/app',                          [CafeUsuarioController::class, 'meu_perfil'])->name('app.home');
         Route::get('/app/conteudos',                [ConteudoController::class, 'index'])->name('app.conteudos');
-        Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');})->name('app.gerenciar-conteudos');
         Route::get('/app/mapa-associados',          [CafeUsuarioController::class, 'mapa_associados'])->name('app.associados');
         Route::get('/app/historico-pagamento',      [HistoricoPagamentoController::class, 'index'])->name('app.historico-pagamento');
+        
+        Route::post('/v1/salvar-avatar',            [CafeUsuarioController::class, 'perfil'])->name('usuarios.perfil');
+        Route::post('/v1/salvar-senha',             [CafeUsuarioController::class, 'password'])->name('usuarios.password');
+        Route::post('/v1/salvar-dados-usuarios',    [CafeUsuarioController::class, 'store'])->name('usuarios.store');
 
-        Route::post('/v1/salvar-conteudos',         [GerenciamentoConteudosController::class, 'store'])->name('conteudos.store');
+        Route::middleware('admin')->group(function () {
+            Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');})->name('app.gerenciar-conteudos');
+            Route::post('/v1/salvar-conteudos',         [GerenciamentoConteudosController::class, 'store'])->name('conteudos.store');
+        });
     });
 
     Route::get('/v1/logout',                [AcessoController::class, 'logout'])->name('logout');

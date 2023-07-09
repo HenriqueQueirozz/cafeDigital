@@ -26,6 +26,8 @@ class CafeUsuarioSeeder extends Seeder
                 'rg_usu' => '312094267',
                 'fk_idTipoPerfil_usu' => '1',
                 'fk_idAberturaEtapa_usu' => '6',
+                'fk_idFotoPerfil_usu' => '1',
+                'created_at' => '2023-07-09 13:12:17',
             ],
             [
                 'nome_usu' => 'Dono',
@@ -38,6 +40,8 @@ class CafeUsuarioSeeder extends Seeder
                 'rg_usu' => '471426210',
                 'fk_idTipoPerfil_usu' => '2',
                 'fk_idAberturaEtapa_usu' => '6',
+                'fk_idFotoPerfil_usu' => '2',
+                'created_at' => '2023-07-09 13:12:17',
             ],
             [
                 'nome_usu' => 'Frater',
@@ -50,6 +54,8 @@ class CafeUsuarioSeeder extends Seeder
                 'rg_usu' => '368414498',
                 'fk_idTipoPerfil_usu' => '3',
                 'fk_idAberturaEtapa_usu' => '6',
+                'fk_idFotoPerfil_usu' => '3',
+                'created_at' => '2023-07-09 13:12:17',
             ]
         ]);
     }

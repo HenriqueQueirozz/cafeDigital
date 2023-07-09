@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\CafeEndereco;
 use App\Models\CafeContato;
+use App\Models\CafeFotoPerfil;
 
 class AcessoController extends Controller
 {
@@ -126,12 +127,15 @@ class AcessoController extends Controller
                     $codigoExistente = $CafeUsuarioController->getUsuarioByCodigo($codigo);
                 }
 
+                $CafeFotoPerfil = CafeFotoPerfil::create();
+
                 // Dados da conta
                 $cafeUsuario['nome_usu']               = $request['input-Nome'];
                 $cafeUsuario['email_usu']              = $request['input-Email'];
                 $cafeUsuario['codigo_usu']             = $codigo;
                 $cafeUsuario['password']               = bcrypt($request['input-Senha']);
                 $cafeUsuario['fk_idAberturaEtapa_usu'] = 2;
+                $cafeUsuario['fk_idFotoPerfil_usu']    = $CafeFotoPerfil->id_fp;
                 $cafeUsuario = User::create($cafeUsuario);
     
                 Auth::login($cafeUsuario);
@@ -150,7 +154,7 @@ class AcessoController extends Controller
         }
 
         $user = $request->all();
-        $user = $CafeUsuarioController->tratamentoDeDados($user);
+        $user = $CafeUsuarioController->tratamentoSQL($user);
 
         switch ($etapa){
             case 2:
