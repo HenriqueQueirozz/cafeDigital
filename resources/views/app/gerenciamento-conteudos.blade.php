@@ -1,6 +1,17 @@
 @extends('layouts.app')
 @section('title', 'Gerenciamento de Conteúdos')
 
+<style>
+    .conteudos{
+        color: #AABEDB;
+    }
+
+    #perfilImagem{
+        display: none;
+    }
+
+</style>
+
 @section('content')
     <div class="container">
         <h1>Adicionar Conteúdo</h1>

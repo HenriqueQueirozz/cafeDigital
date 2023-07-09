@@ -38,8 +38,7 @@ Route::middleware('auth')->group(function () {
     |--------------------------------------------------------------------------
     */
     Route::middleware('cadastrado')->group(function () {
-        Route::get('/app',                          function () {return view('app.home');})->name('app.home');
-        Route::get('/app/meu-perfil',               [CafeUsuarioController::class, 'meu_perfil'])->name('app.meu-perfil');
+        Route::get('/app',                          [CafeUsuarioController::class, 'meu_perfil'])->name('app.home');
         Route::get('/app/conteudos',                [ConteudoController::class, 'index'])->name('app.conteudos');
         Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');})->name('app.gerenciar-conteudos');
         Route::get('/app/mapa-associados',          [CafeUsuarioController::class, 'mapa_associados'])->name('app.associados');

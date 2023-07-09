@@ -1,6 +1,17 @@
 @extends('layouts.app')
 @section('title', 'Conteúdos')
 
+<style>
+    .conteudos{
+        color: #AABEDB;
+    }
+
+    #perfilImagem{
+        display: none;
+    }
+
+</style>
+
 @section('content')
     <h1>Conteúdos</h1>
 

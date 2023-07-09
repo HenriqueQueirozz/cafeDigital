@@ -94,33 +94,111 @@ function fecharDialog(dialog_id){
 |--------------------------------------------------------------------------
 */
 
-function MudarEstado(div) {
-    console.log("Olá!");
+function MudarEstadoNav(div) {
     var display = document.getElementById(div).style.display;
 
-    if(display == "none")
+    if(display == "none"){
         document.getElementById(div).style.display = 'block';
-    else
+    }
+
+    else{
         document.getElementById(div).style.display = 'none';
+    }
+}
+
+function MudarEstadoImagem(div) {
+    var display = document.getElementById(div).style.display;
+    var conteudo = document.getElementById("home-conteudo");
+
+    if(display == "none"){
+        document.getElementById(div).style.display = 'block';
+        conteudo.classList.add("blur-sm");
+    }
+
+    else{
+        document.getElementById(div).style.display = 'none';
+        conteudo.classList.remove("blur-sm");
+    }
 }
 
 // Criando o elemento para notificação
-const btn = document.getElementById("enviar");
-const divMessage = document.querySelector(".alert");
+function notify(){
+    const btn = document.getElementById("enviar");
+    const divMessage = document.querySelector(".alert");
 
-const msg = "teste de alerta !!!";
+    const msg = "teste de alerta !!!";
 
-function ativar(msg) {
-  const message = document.createElement("div");
-  message.classList.add("message");
-  message.innerText = msg;
-  divMessage.appendChild(message);
+    function ativar(msg) {
+    const message = document.createElement("div");
+    message.classList.add("message");
+    message.innerText = msg;
+    divMessage.appendChild(message);
 
-  setTimeout(() => {
-    message.style.display = "none";
-  }, 3000);
+    setTimeout(() => {
+        message.style.display = "none";
+    }, 3000);
+    }
+
+    btn.addEventListener("click", () => {
+    ativar(msg);
+    });
 }
 
-btn.addEventListener("click", () => {
-  ativar(msg);
-});
+// Validar senha
+function validarSenha(){
+    const senha = document.querySelector('input[name=input-Senha]');
+    const confirma = document.querySelector('input[name=input-ConfirmeSenha]');
+    if (senha.value === confirma.value){
+        confirma.setCustomValidity("");
+    }
+    else{
+        confirma.setCustomValidity("Senhas diferentes!");
+    }
+}
+
+// Validar senha
+
+function validarCPF(){
+    const cpf = document.querySelector('input[name=input-Cpf]');
+    condicoesCPF(cpf);
+    if (condicoesCPF == true){
+        cpf.setCustomValidity("");
+    }
+    else{
+        cpf.setCustomValidity("CPF Inválido!");
+    }
+}
+
+function condicoesCPF(cpf){
+    console.log("Olá!")
+    if (cpf == '') return false;
+    if (cpf.length != 11 ||
+        cpf == "00000000000" ||
+        cpf == "11111111111" ||
+        cpf == "22222222222" ||
+        cpf == "33333333333" ||
+        cpf == "44444444444" ||
+        cpf == "55555555555" ||
+        cpf == "66666666666" ||
+        cpf == "77777777777" ||
+        cpf == "88888888888" ||
+        cpf == "99999999999")
+        return false;
+    add = 0;
+    for (i = 0; i < 9; i++)
+        add += parseInt(cpf.charAt(i)) * (10 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(9)))
+        return false;
+    add = 0;
+    for (i = 0; i < 10; i++)
+        add += parseInt(cpf.charAt(i)) * (11 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(10)))
+        return false;
+    return true;
+}

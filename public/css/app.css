@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+|--------------------------------------------------------------------------
+|                                  GLOBAL
+|--------------------------------------------------------------------------
+*/
+
 :root {
     --bar-width: 20px;
     --bar-height: 2px;
@@ -21,8 +28,33 @@
     font-size: 2.5rem;
 }
 
+@media (min-width: 976px) {
+    .app-item{
+        margin: 1rem;
+    }
+
+    .app-icon{
+        font-size: 1.7rem;
+    }
+}
+
 .app-item:hover{
     color: #AABEDB;
+}
+
+.app-modal{
+    padding: 0.75rem;
+    text-align: end;
+    color: #1B1C1E;
+}
+
+.app-modal:hover{
+    font-weight: bold;
+}
+
+hr{
+    color: #FFFFFF;
+    margin: 1rem;
 }
   
 .hamburger-menu {
@@ -104,6 +136,11 @@
     translate: 0;
 }
 
+/*
+|--------------------------------------------------------------------------
+|                                  HOME CSS
+|--------------------------------------------------------------------------
+*/
 .main-form-input, .main-input, .main-label{
     text-align: left;
     width: 100%;
@@ -140,6 +177,9 @@
     margin-left: var(--b-2);
 }
 
+.home-column{
+    border-radius: 0.5rem;
+}
 
 .label-light{
     font-family: var(--title-font);
@@ -172,3 +212,9 @@
     line-height: 600px;
     color: hsla(0, 0%, 100%, 0.7);
 }
+
+/*
+|--------------------------------------------------------------------------
+|                             MAPA DE ASSOCIADOS
+|--------------------------------------------------------------------------
+*/
