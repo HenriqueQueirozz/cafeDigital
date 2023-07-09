@@ -16,4 +16,17 @@ class CafeEnderecoController extends Controller
             return false;
         }
     }
+
+    public function getCidade($nome_cidade, $uf) {
+        $cidade = DB::table('cafe_cidades')
+                        ->join('cafe_estados', 'cafe_cidades.fk_idEstado_end', '=', 'cafe_estados.id_est')
+                        ->where('nome_cid', $nome_cidade)
+                        ->where('uf_est', $uf)->first();
+
+        if(isset($cidade)){
+            return get_object_vars($cidade);
+        }else{
+            return false;
+        }
+    }
 }

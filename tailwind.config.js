@@ -8,6 +8,10 @@ module.exports = {
   theme: {
     extend: {
       
+      blur: {
+        sm: '0.2px',
+      },
+
       screens: {
         sm: '480px',
         md: '768px',
@@ -21,7 +25,7 @@ module.exports = {
       },
 
       colors:{
-
+        
         containerColor: '#B3D1FF',
         mainInputColor: '#EEF3FC',
         mainBodyColorAlt: '#1B1C1E',

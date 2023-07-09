@@ -19,17 +19,14 @@
 
         <form method="POST" action="{{ route('register') }}" class="main-form">
             @csrf
-
             <div class="main-form-input">
                 <label for="id-input-Cpf" class="main-label label-dark">Documento CPF:<span class="main-form-obrigatorio">*</span></label>
-                <br><input class="main-input input-dark" type="text" id="id-input-Cpf" name="input-Cpf" placeholder="000.000.000-00" maxlength="11">
+                <br><input class="main-input input-dark" type="text" id="id-input-Cpf" name="input-Cpf" placeholder="000.000.000-00" maxlength="11" required onchange="validarCPF()">
             </div>
-
             <div class="main-form-input">
                 <label for="id-input-Rg" class="main-label label-dark">Registro Geral:<span class="main-form-obrigatorio">*</span></label>
                 <br><input class="main-input input-dark" type="text" id="id-input-Rg" name="input-Rg" placeholder="00.000.000-0" maxlength="9">
             </div>
-
             <div class="main-form-aside">
                 <div class="main-form-input">
                     <label for="id-input-Data" class="main-label label-dark">Data de Nascimento:<span class="main-form-obrigatorio">*</span></label>

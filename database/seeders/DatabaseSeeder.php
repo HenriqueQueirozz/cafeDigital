@@ -33,9 +33,16 @@ class DatabaseSeeder extends Seeder
                 'nome_cid' => 'Vitória',
                 'ibge_cid' => '3205309',
                 'fk_idEstado_end' => '8',
-            ]
+            ],
+            [
+                'id_cid'=>'1',
+                'ibge_cid'=>'3529005',
+                'nome_cid'=>'Marília',
+                'fk_idEstado_end'=> '25'
+            ],
         ]);
         
+        $this->call(CafeFotoPerfilSeeder ::class);
         // $this->call(CafeCidadeSeeder ::class);
         $this->call(CafeUsuarioSeeder ::class);
         $this->call(CafeEnderecoSeeder ::class);

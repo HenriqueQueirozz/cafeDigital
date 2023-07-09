@@ -13,7 +13,7 @@
                 <div class="main-session bg-containerColor opacity-95">
                     <div class="main-content first-session">
                         <div class="main-welcome-text">
-                            <h2 class="main-subtitle mt-14 xl:mt-28">Bem vindo ao</h2>
+                            <h2 class="main-subtitle mt-14 2xl:mt-28">Bem vindo ao</h2>
                             <h1 class="main-title text-4xl">Café Digital</h2>
                         </div>
                         <figure>
@@ -25,10 +25,9 @@
                         <p class="main-copy">©Copyright - CaféDigital 2023</p>
                     </div>
                 </div>
-
                 <div class="main-session bg-mainBodyColorAlt opacity-95">
                     <div class="main-content second-session">
-                        <h1 class="main-title-second mt-14 xl:mt-28">Crie sua conta</h2>
+                        <h1 class="main-title-second mt-14 2xl:mt-28">Crie sua conta</h2>
                         @if($mensagem = Session::get('erro'))
                             <div class="flex justify-center mt-10"> 
                                 <div class="w-96 bg-red-300 py-3 rounded-md">
@@ -36,7 +35,6 @@
                                 </div>
                             </div>
                         @endif
-
                         @if($errors->any())
                             <div class="flex justify-center mt-10"> 
                                 <div class="w-96 bg-red-300 py-3 rounded-md">
@@ -46,29 +44,25 @@
                                 </div>
                             </div>
                         @endif
-                        
                         <form method="POST" action="{{ route('register') }}" class="main-form">
                             @csrf
-                            
                             <div class="main-form-input"><br>
                                 <label for="id-input-Nome" class="main-label label-light">Nome:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input input-light" type="text" id="id-input-Nome" name="input-Nome" placeholder="Example" maxlength="100">
+                                <br><input class="main-input input-light" type="text" id="id-input-Nome" name="input-Nome" placeholder="Examplo" maxlength="100">
                             </div>
                             <div class="main-form-input">
                                 <label for="id-input-Email" class="main-label label-light">E-mail:<span class="main-form-obrigatorio">*</span></label>
-                                <br><input class="main-input input-light" type="text" id="id-input-Email" name="input-Email" placeholder="example@example.com" maxlength="50">
+                                <br><input class="main-input input-light" type="text" id="id-input-Email" name="input-Email" placeholder="examplo@examplo.com" maxlength="50">
                             </div>
-    
                             <div class="main-form-input">
                                 <label for="id-input-Senha" class="main-label label-light">Senha de acesso:<span class="main-form-obrigatorio">*</span></label>
-                                <input class="main-input input-light" type="password" id="id-input-Senha" name="input-Senha" placeholder="Sua senha aqui" maxlength="15">
+                                <input class="main-input input-light" type="password" id="id-input-Senha" name="input-Senha" placeholder="Sua senha aqui" minlength="8" maxlength="15" required onchange="validarSenha();">
                             </div>
                             <div class="main-form-input">
                                 <label for="id-input-ConfirmeSenha" class="main-label label-light">Confirme a senha:<span class="main-form-obrigatorio">*</span></label>
-                                <input class="main-input input-light" type="password" id="id-input-ConfirmeSenha" name="input-ConfirmeSenha" placeholder="Confirme sua senha" maxlength="15">
+                                <input class="main-input input-light" type="password" id="id-input-ConfirmeSenha" name="input-ConfirmeSenha" placeholder="Confirme sua senha" minlength="8" maxlength="15" required onchange="validarSenha();">
                             </div>
-    
-                            <button class="btn-vermelho main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" id="enviar">Enviar</button>
+                            <button class="btn-vermelho main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" id="enviar" onsubmit="notify()">Enviar</button>
                             <h2 class="main-desc-cadastro text-base lg:text-sm">Já tem uma conta? <a href="/login" class="main-input-link hover:text-primary-400">Clique aqui para Logar</a></h2>
                             <div class="alert"></div>
                         </form>
@@ -77,5 +71,6 @@
             </div>
         </div>
         @include('configuracoes_script')
+        <script src="../../../public/js/login.js"></script>
     </body>
 </html>

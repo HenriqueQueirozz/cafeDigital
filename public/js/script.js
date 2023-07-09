@@ -94,32 +94,166 @@ function fecharDialog(dialog_id){
 |--------------------------------------------------------------------------
 */
 
-function MudarEstado(div) {
-    console.log("Olá!");
+function MudarEstadoNav(div) {
     var display = document.getElementById(div).style.display;
 
-    if(display == "none")
+    if(display == "none"){
         document.getElementById(div).style.display = 'block';
-    else
+    }
+
+    else{
         document.getElementById(div).style.display = 'none';
-}
-// Criando o elemento para notificação
-const btn = document.getElementById("enviar");
-const divMessage = document.querySelector(".alert");
-
-const msg = "teste de alerta !!!";
-
-function ativar(msg) {
-  const message = document.createElement("div");
-  message.classList.add("message");
-  message.innerText = msg;
-  divMessage.appendChild(message);
-
-  setTimeout(() => {
-    message.style.display = "none";
-  }, 3000);
+    }
 }
 
-btn.addEventListener("click", () => {
-  ativar(msg);
+function MudarEstadoUpload(div) {
+    var display = document.getElementById(div).style.display;
+
+    if(display == "none"){
+        document.getElementById(div).style.display = 'block';
+    }
+
+    else{
+        document.getElementById(div).style.display = 'none';
+    }
+}
+
+function MudarEstadoImagem(div) {
+    var display = document.getElementById(div).style.display;
+    var conteudo = document.getElementById("home-conteudo");
+
+    if(display == "none"){
+        document.getElementById(div).style.display = 'block';
+        conteudo.classList.add("blur-sm");
+    }
+
+    else{
+        document.getElementById(div).style.display = 'none';
+        conteudo.classList.remove("blur-sm");
+    }
+}
+
+// Upar uma foto para o perfil
+const inputFile = document.querySelector("#picture__input");
+const pictureImage = document.querySelector(".picture__image");
+const pictureImageTxt = "Escolha uma imagem!";
+pictureImage.innerHTML = pictureImageTxt;
+
+inputFile.addEventListener("change", function (e) {
+    const inputTarget = e.target;
+    const file = inputTarget.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.addEventListener("load", function (e) {
+            const readerTarget = e.target;
+
+            const img = document.createElement("img");
+            img.src = readerTarget.result;
+            img.classList.add("picture__img");
+
+            pictureImage.innerHTML = "";
+            pictureImage.appendChild(img);
+        });
+        reader.readAsDataURL(file);
+    }
+    else{
+        pictureImage.innerHTML = pictureImageTxt;
+    }
 });
+
+//Opção para salvar a foto
+function ExibirSalvar(){
+    const btnSalvar = document.getElementById("upload-image-salvar");
+    btnSalvar.style.display = 'block';
+}
+
+//Ao enviar o formulário...
+const btnEnviar = document.getElementById("upload-image-salvar");
+btnEnviar.addEventListener("submit", () =>{
+    alert("Sucesso!");
+    btnEnviar.style.display = 'none';
+});
+
+// Criando o elemento para notificação
+function notify(){
+    const btn = document.getElementById("enviar");
+    const divMessage = document.querySelector(".alert");
+
+    const msg = "teste de alerta !!!";
+
+    function ativar(msg) {
+    const message = document.createElement("div");
+    message.classList.add("message");
+    message.innerText = msg;
+    divMessage.appendChild(message);
+
+    setTimeout(() => {
+        message.style.display = "none";
+    }, 3000);
+    }
+
+    btn.addEventListener("click", () => {
+        ativar(msg);
+    });
+}
+
+// Validar senha
+function validarSenha(){
+    const senha = document.querySelector('input[name=input-Senha]');
+    const confirma = document.querySelector('input[name=input-ConfirmeSenha]');
+    if (senha.value === confirma.value){
+        confirma.setCustomValidity("");
+    }
+    else{
+        confirma.setCustomValidity("Senhas diferentes!");
+    }
+}
+
+// Validar senha
+
+function validarCPF(){
+    const cpf = document.querySelector('input[name=input-Cpf]');
+    condicoesCPF(cpf);
+    if (condicoesCPF == true){
+        cpf.setCustomValidity("");
+    }
+    else{
+        cpf.setCustomValidity("CPF Inválido!");
+    }
+}
+
+function condicoesCPF(cpf){
+    console.log("Olá!")
+    if (cpf == '') return false;
+    if (cpf.length != 11 ||
+        cpf == "00000000000" ||
+        cpf == "11111111111" ||
+        cpf == "22222222222" ||
+        cpf == "33333333333" ||
+        cpf == "44444444444" ||
+        cpf == "55555555555" ||
+        cpf == "66666666666" ||
+        cpf == "77777777777" ||
+        cpf == "88888888888" ||
+        cpf == "99999999999")
+        return false;
+    add = 0;
+    for (i = 0; i < 9; i++)
+        add += parseInt(cpf.charAt(i)) * (10 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(9)))
+        return false;
+    add = 0;
+    for (i = 0; i < 10; i++)
+        add += parseInt(cpf.charAt(i)) * (11 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(10)))
+        return false;
+    return true;
+}

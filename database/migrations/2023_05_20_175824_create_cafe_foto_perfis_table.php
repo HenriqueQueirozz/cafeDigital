@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cafe_foto_perfis', function (Blueprint $table) {
             $table->id('id_fp');
-            $table->string('nomeFoto_fp', 40);
+            $table->string('nomeFoto_fp', 40)->default('PerfilAuto.png');
             $table->timestamps();
         });
     }

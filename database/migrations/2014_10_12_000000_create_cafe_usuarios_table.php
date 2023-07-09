@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('dataNascimento_usu')->nullable();
             $table->string('email_usu')->unique();
             $table->string('codigo_usu')->unique()->nullable();
-            $table->enum('sexo_usu', ['M', 'F', '0'])->nullable();
+            $table->enum('sexo_usu', ['M', 'F', 'O'])->nullable();
             $table->string('password');
             $table->char('cpf_usu', 11)->unique()->nullable();
             $table->char('rg_usu', 9)->unique()->nullable();
