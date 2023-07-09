@@ -106,6 +106,18 @@ function MudarEstadoNav(div) {
     }
 }
 
+function MudarEstadoUpload(div) {
+    var display = document.getElementById(div).style.display;
+
+    if(display == "none"){
+        document.getElementById(div).style.display = 'block';
+    }
+
+    else{
+        document.getElementById(div).style.display = 'none';
+    }
+}
+
 function MudarEstadoImagem(div) {
     var display = document.getElementById(div).style.display;
     var conteudo = document.getElementById("home-conteudo");
@@ -120,6 +132,49 @@ function MudarEstadoImagem(div) {
         conteudo.classList.remove("blur-sm");
     }
 }
+
+// Upar uma foto para o perfil
+const inputFile = document.querySelector("#picture__input");
+const pictureImage = document.querySelector(".picture__image");
+const pictureImageTxt = "Escolha uma imagem!";
+pictureImage.innerHTML = pictureImageTxt;
+
+inputFile.addEventListener("change", function (e) {
+    const inputTarget = e.target;
+    const file = inputTarget.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.addEventListener("load", function (e) {
+            const readerTarget = e.target;
+
+            const img = document.createElement("img");
+            img.src = readerTarget.result;
+            img.classList.add("picture__img");
+
+            pictureImage.innerHTML = "";
+            pictureImage.appendChild(img);
+        });
+        reader.readAsDataURL(file);
+    }
+    else{
+        pictureImage.innerHTML = pictureImageTxt;
+    }
+});
+
+//Opção para salvar a foto
+function ExibirSalvar(){
+    const btnSalvar = document.getElementById("upload-image-salvar");
+    btnSalvar.style.display = 'block';
+}
+
+//Ao enviar o formulário...
+const btnEnviar = document.getElementById("upload-image-salvar");
+btnEnviar.addEventListener("submit", () =>{
+    alert("Sucesso!");
+    btnEnviar.style.display = 'none';
+});
 
 // Criando o elemento para notificação
 function notify(){
@@ -140,7 +195,7 @@ function notify(){
     }
 
     btn.addEventListener("click", () => {
-    ativar(msg);
+        ativar(msg);
     });
 }
 
