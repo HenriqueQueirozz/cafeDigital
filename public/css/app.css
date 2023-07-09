@@ -181,6 +181,7 @@ hr{
   
   .picture__img {
     max-width: 100%;
+    border-radius: 50%;
   }  
 
 /*
@@ -321,4 +322,12 @@ hr{
 
 .signature{
     background-color: #FECC59;
+}
+
+.conteudo-card{
+    width: 12rem;
+    border-radius: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
