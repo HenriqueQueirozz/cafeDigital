@@ -61,7 +61,7 @@
                     <div class="fixed bottom-0">
                         <li class="app-item md:text-xs justify-items-center text-center">
                             <i class="app-icon bi bi-chat-dots text-base ml-8"></i>
-                            <a href="https://api.whatsapp.com/send/?phone=5514996283799&text=Ol%C3%A1%21+Cheguei+atrav%C3%A9s+do+site.+Pode+me+ajudar%3F&type=phone_number&app_absent=0" class="md:text-xs">Entre em contato</a>
+                            <a href="https://api.whatsapp.com/send/?phone=5514998598589&text=Ol%C3%A1%21+Cheguei+atrav%C3%A9s+do+site.+Pode+me+ajudar%3F&type=phone_number&app_absent=0" class="md:text-xs">Entre em contato</a>
                         </li>
                         <li class="app-item justify-items-center text-center ml-8 hover:text-secondary-200">
                             <a href="{{ route('logout') }}" class="md:text-xs"><i class="app-icon bi bi-box-arrow-left text-base"></i>Sair</a>
