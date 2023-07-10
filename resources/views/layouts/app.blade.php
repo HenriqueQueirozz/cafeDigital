@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <title>@yield('title')</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="./css/app.css">
         @include('configuracoes_head')
     </head>
     <body class="truncate"><!-- POSSIVELMENTE VAI DAR PROBLEMA -->

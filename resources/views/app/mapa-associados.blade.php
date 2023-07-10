@@ -64,5 +64,5 @@
             </div> -->
         </div>
     </div>
-    <script src="{{ asset('js/mapa-associados.js') }}"></script>
+    <script src="./js/mapa-associados.js"></script>
 @endsection
