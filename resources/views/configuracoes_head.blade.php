@@ -10,6 +10,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
      tailwind.config = {
+        content: [
+            "./resources/**/*.blade.php",
+            "./resources/**/*.js",
+            "./resources/**/*.vue",
+        ],
         theme: {
             extend: {
             
