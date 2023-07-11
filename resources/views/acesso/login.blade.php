@@ -80,18 +80,23 @@
                 <div class="head-dialog">
                     <h3>Encontre sua conta</h3>
                 </div>
-                <div class="main-dialog">
-                    <div class="dialog-content">
-                        <p>Insira seu e-mail ou número de celular para procurar a sua conta.</p>
-                        <div class="form-input">
-                            <input class="control-input" type="text" id="id-input-EsqueciSenha" name="input-EsqueciSenha" placeholder="Email ou número de celular">
-                        </div>  
+                <form method="POST" action="{{ route('redefinir_senha') }}">
+                    @csrf
+                    <div class="main-dialog">
+                        <div class="dialog-content">
+                            
+                                <p>Insira seu e-mail ou número de celular para procurar a sua conta.</p>
+                                <div class="form-input">
+                                    <input class="control-input" type="text" id="id-input-EsqueciSenha" name="input-EsqueciSenha" placeholder="Email ou número de celular">
+                                </div>  
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="foot-dialog">
-                    <button class="hover:text-secondary-400" onclick="fecharDialog('EsqueciSenha');">Cancelar</button>
-                    <button class="w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-primary-400" onclick="esqueciSenha();">Pesquisar</button>
-                </div>
+                    <div class="foot-dialog">
+                        <button class="hover:text-secondary-400" onclick="fecharDialog('EsqueciSenha');">Cancelar</button>
+                        <button class="w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-primary-400" type="submit">Pesquisar</button>
+                    </div>
+                </form>
             </dialog>
         </div>
         @include('configuracoes_script')

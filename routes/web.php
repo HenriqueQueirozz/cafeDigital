@@ -20,6 +20,7 @@ Route::get('/cadastro',                 function () {return view('acesso.cadastr
 
 Route::post('/v1/authenticacao',         [AcessoController::class, 'authenticacao']     )->name('authenticacao');
 Route::post('/v1/register',              [AcessoController::class, 'register']          )->name('register');
+Route::post('/v1/redefinir-senha',        [AcessoController::class, 'redefinir_senha']   )->middleware('guest')->name('redefir_senha');
 
 Route::middleware('auth')->group(function () {
     /*
@@ -47,7 +48,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/v1/salvar-senha',             [CafeUsuarioController::class, 'salvar_senha']          )->name('v1.salvar_senha');
         Route::post('/v1/salvar-dados-usuarios',    [CafeUsuarioController::class, 'salvar_dados_usuarios'] )->name('v1.salvar_dados_usuarios');
         Route::post('/v1/visualizar-usuario',       [CafeUsuarioController::class, 'visualizar_usuario']    )->name('v1.visualizar_usuario');
-        Route::post('/v1/listar-associado',         [CafeUsuarioController::class, 'listar_associado']           )->name('v1.listar_associado');
+        Route::post('/v1/listar-associado',         [CafeUsuarioController::class, 'listar_associado']      )->name('v1.listar_associado');
 
         Route::middleware('admin')->group(function () {
             Route::get('/app/gerenciamento-conteudos',  function () {return view('app.gerenciamento-conteudos');}   )->name('app.gerenciar-conteudos');

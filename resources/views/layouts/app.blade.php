@@ -19,7 +19,7 @@
             <div id="app-modal-opcoes" class="w-64 fixed top-24 left-100 right-0 m-5 bg-secondary-0 rounded-lg z-10" style="display: none">
                 <div class="flex flex-col">
                     <div id="upload-image" class="flex flex-col upload-image m-auto mt-5" style="display: none;">
-                      <form method="POST" action="{{ route('v1.salvar_avatar') }}" enctype="multipart/form-data">
+                      <form method="POST" action="{{ route('avatar') }}" enctype="multipart/form-data">
                         <label class="picture" for="picture__input" tabIndex="0">
                             <span class="picture__image"></span>
                         </label>
