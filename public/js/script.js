@@ -181,11 +181,11 @@ function notify(){
     const btn = document.getElementById("enviar");
     const divMessage = document.querySelector(".alert");
 
-    const msg = "teste de alerta !!!";
+    const msg = "Sucesso!";
 
     function ativar(msg) {
     const message = document.createElement("div");
-    message.classList.add("message");
+    message.classList.add("message", "message-sucess");
     message.innerText = msg;
     divMessage.appendChild(message);
 
@@ -197,6 +197,11 @@ function notify(){
     btn.addEventListener("click", () => {
         ativar(msg);
     });
+}
+
+function RemoverMensagem(){
+    const divMensagem = document.getElementById("message-div");
+    divMensagem.style.display = 'none';
 }
 
 // Validar senha
@@ -216,7 +221,7 @@ function validarSenha(){
 function validarCPF(){
     const cpf = document.querySelector('input[name=input-Cpf]');
     condicoesCPF(cpf);
-    if (condicoesCPF == true){
+    if (condicoesCPF){
         cpf.setCustomValidity("");
     }
     else{

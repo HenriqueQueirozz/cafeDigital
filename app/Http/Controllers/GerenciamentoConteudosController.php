@@ -21,6 +21,8 @@ class GerenciamentoConteudosController extends Controller
             'descricao_con' => $descricao,
         ]);
 
+        session()->flash('success', 'Conteúdo adicionado com sucesso!');
+    
         return redirect()->back()->with('success', 'Conteúdo adicionado com sucesso!');
     }
 }
