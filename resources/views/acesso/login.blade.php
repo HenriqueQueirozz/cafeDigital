@@ -82,8 +82,6 @@
                 <div class="head-dialog">
                     <h3>Encontre sua conta</h3>
                 </div>
-                <form method="POST" action="{{ route('redefinir_senha') }}">
-                    @csrf
                     <div class="main-dialog">
                         <div class="dialog-content">
                             
@@ -98,7 +96,6 @@
                         <button class="hover:text-secondary-400" onclick="fecharDialog('EsqueciSenha');">Cancelar</button>
                         <button class="w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-primary-400" type="submit">Pesquisar</button>
                     </div>
-                </form>
             </dialog>
         </div>
         @include('configuracoes_script')

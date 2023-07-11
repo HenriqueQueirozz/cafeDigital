@@ -15,7 +15,7 @@
             </div>
         </nav>
         <div class="flex">
-            <img src="src/perfil/{{ $dados_usuario['nomeFoto_fp'] }}" onclick="MudarEstadoImagem('app-modal-opcoes')" class="fixed top-0 left-100 right-0 m-5 w-20 border-solid border-4 rounded-full border-secondary-500 cursor-pointer" id="perfilImagem">
+            <img src="src/perfil/{{ session('nomeFoto_fp') }}" onclick="MudarEstadoImagem('app-modal-opcoes')" class="fixed top-0 left-100 right-0 m-5 w-20 border-solid border-4 rounded-full border-secondary-500 cursor-pointer" id="perfilImagem">
             <div id="app-modal-opcoes" class="w-64 fixed top-24 left-100 right-0 m-5 bg-secondary-0 rounded-lg z-10" style="display: none">
                 <div class="flex flex-col">
                     <div id="upload-image" class="flex flex-col upload-image m-auto mt-5" style="display: none;">

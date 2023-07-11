@@ -194,7 +194,7 @@ class CafeUsuarioController extends Controller
 
         switch($dados_usuario['fk_idTipoPerfil_usu']){
             case '1':
-                $todos_usuarios = User::all();
+                $todos_usuarios = DB::table('cafe_usuarios')->where('fk_idAberturaEtapa_usu', 6)->get();
 
                 $array_indicados = [];
                 foreach ($todos_usuarios as $usuario){
@@ -314,6 +314,7 @@ class CafeUsuarioController extends Controller
                             ->where('id_fp', $dados_usuario['fk_idTipoPerfil_usu'])
                             ->update(['nomeFoto_fp' => $imageName]);
 
+            session(['nomeFoto_fp' => $imageName]);
         }
 
         return redirect(route('app.home'))->with('sucesso', 'Imagem de perfil atualizados com sucesso');

@@ -20,7 +20,7 @@ Route::get('/cadastro',                 function () {return view('acesso.cadastr
 
 Route::post('/v1/authenticacao',         [AcessoController::class, 'authenticacao']     )->name('authenticacao');
 Route::post('/v1/register',              [AcessoController::class, 'register']          )->name('register');
-Route::post('/v1/redefinir-senha',        [AcessoController::class, 'redefinir_senha']   )->middleware('guest')->name('redefir_senha');
+// Route::post('/v1/redefinir-senha',        [AcessoController::class, 'redefinir_senha']   )->middleware('guest')->name('redefir_senha');
 
 Route::middleware('auth')->group(function () {
     /*

@@ -20,6 +20,8 @@ use Illuminate\Support\Str;
 class AcessoController extends Controller
 {
     public function authenticacao(Request $request){
+        $CafeUsuarioController = new CafeUsuarioController;
+
         if(empty($request['input-Id']) && $request['input-Email']){
             $credentials = $request->validate(
                 [
@@ -57,6 +59,14 @@ class AcessoController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+
+            $dados_usuario = $CafeUsuarioController->getUsuarioDados(auth()->user()->id);
+            session([
+                'id' => $dados_usuario['id'],
+                'nome_usu' => $dados_usuario['nome_usu'],
+                'nomeFoto_fp' => $dados_usuario['nomeFoto_fp'],
+            ]);
+
             if(auth()->check()){
                 $etapa = auth()->user()->fk_idAberturaEtapa_usu;
                     
@@ -144,6 +154,13 @@ class AcessoController extends Controller
                 $cafeUsuario = User::create($cafeUsuario);
     
                 Auth::login($cafeUsuario);
+
+                $dados_usuario = $CafeUsuarioController->getUsuarioDados(auth()->user()->id);
+                session([
+                    'id' => $dados_usuario['id'],
+                    'nome_usu' => $dados_usuario['nome_usu'],
+                    'nomeFoto_fp' => $dados_usuario['nomeFoto_fp'],
+                ]);
     
                 return redirect('dados-do-usuario');
             }else{

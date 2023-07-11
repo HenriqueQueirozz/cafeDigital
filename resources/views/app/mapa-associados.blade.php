@@ -35,6 +35,5 @@
         @endforeach
         </div>
     </div>
-    <script src="{{ asset('js/mapa-associados.css') }}"></script><!-- Local -->
-    <!-- <script src="./js/mapa-associados.js"></script> Produção -->
+    <script src="./js/mapa_associados.js"></script>
 @endsection
