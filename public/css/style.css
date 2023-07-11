@@ -276,6 +276,11 @@ dialog p{
     background-color: rgba(0, 0, 0, 0.5);
     animation: time 3s forwards;
   }
+
+  .message-sucess{
+    background-color: #31c48d;
+  }
+
   @keyframes time {
     0% {
       width: 0;

@@ -21,14 +21,16 @@
                                 </div>
                             </div>
                         @endif
-
+                        
+                        
                         @if($errors->any())
-                            <div class="flex justify-center mt-10"> 
-                                <div class="w-96 bg-red-300 py-3 rounded-md">
-                                    @foreach($errors->all() as $error)
+                            <div class="flex justify-center" id="message-div" style="display: block">
+                                <h3 class="text-2xl text-mainInputColor fixed top-5 right-28 pointer z-10" onclick="RemoverMensagem()">x</h3>
+                                @foreach($errors->all() as $error)
+                                    <div class="message">
                                         {{ $error }} <br>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
                         @endif
 
