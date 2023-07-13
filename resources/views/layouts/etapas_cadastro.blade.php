@@ -3,7 +3,7 @@
     <head>
         <title>@yield('title')</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="./css/layout_cadastro.css">
+        <link rel="stylesheet" href="../css/layout_cadastro.css">
     </head>
     <body>
         <div id="main">

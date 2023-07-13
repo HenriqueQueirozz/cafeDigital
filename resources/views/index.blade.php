@@ -3,7 +3,7 @@
     <head>
         <title>Café Digital</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="./css/landing.css">
+        <link rel="stylesheet" href="../css/landing.css">
     </head>
     <body class="font-body">
         <header id="landing-header">
@@ -14,7 +14,7 @@
                         <li><a href="#funcionamento" title="Funcionamento">Funcionamento</a></li>
                     </ul>
                     <picture>
-                        <img src="./src/IconeCafeDigital.png" alt="Uma xícara de café">
+                        <img src="../src/IconeCafeDigital.png" alt="Uma xícara de café">
                     </picture>
                     <ul>
                         <li><a href="#sobre" title="Sobre">Sobre</a></li>

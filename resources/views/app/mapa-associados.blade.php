@@ -35,5 +35,5 @@
         @endforeach
         </div>
     </div>
-    <script src="./js/mapa_associados.js"></script>
+    <script src="../js/mapa_associados.js"></script>
 @endsection
