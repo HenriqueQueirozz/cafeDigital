@@ -1,13 +1,11 @@
 @extends('layouts.app')
 @section('title', 'Início')
-
-<style>
-    .meu-perfil{
-        color: #AABEDB;
-    }
-</style>
-
 @section('content')
+    <style>
+        .meu-perfil{
+            color: #AABEDB;
+        }
+    </style>
     <div class="float-right">
         <form method="POST" action="{{ route('v1.salvar_dados_usuarios') }}">
             @csrf

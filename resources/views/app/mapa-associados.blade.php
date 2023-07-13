@@ -1,18 +1,16 @@
 @extends('layouts.app')
 @section('title', 'Mapa de associados')
-
-<style>
-    .associados{
-        color: #AABEDB;
-    }
-
-    #perfilImagem{
-        display: none;
-    }
-
-</style>
-
 @section('content')
+    <style>
+        .associados{
+            color: #AABEDB;
+        }
+
+        #perfilImagem{
+            display: none;
+        }
+
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="mapa-conteudo p-16 ml-5 flex 2xl:p-36">
         <div class="mt-auto mb-auto">
@@ -24,7 +22,7 @@
         <div class="mapa-usuarios ml-24 grid gap-3 grid-cols-3 justify-items-center">
         @foreach ($usuarios_indicados as $usuario)
             <div class="col-span-1 mapa-card signature mt-5 p-3">
-                <img src="/src/perfil/{{ $usuario['nomeFoto_fp'] }}" alt="iconePerfil" class="mapa-imagem border-solid border-4 rounded-full border-secondary-500 cursor-pointer">
+                <img src="./public/src/perfil/{{ $usuario['nomeFoto_fp'] }}" alt="iconePerfil" class="mapa-imagem border-solid border-4 rounded-full border-secondary-500 cursor-pointer">
                 <h2 class="text-base">{{ $usuario['nome_usu'] }}</h2>
                 <h3 class="text-sm">{{ $usuario['dataNascimento_usu'] }}</h3>
                 <div class="flex mapa-status items-center">
@@ -35,5 +33,5 @@
         @endforeach
         </div>
     </div>
-    <script src="./js/mapa_associados.js"></script>
+    <script src="./public/js/mapa_associados.js"></script>
 @endsection

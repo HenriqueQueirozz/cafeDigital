@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <title>@yield('title')</title>
-        <link rel="stylesheet" href="css/erros.css">
+        <link rel="stylesheet" href="./public/css/erros.css">
     </head>
     <body>
         <div id="clouds">

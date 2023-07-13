@@ -3,7 +3,7 @@
     <head>
         <title>Café Digital</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="./css/landing.css">
+        <link rel="stylesheet" href="./public/css/landing.css">
     </head>
     <body class="font-body">
         <header id="landing-header">
@@ -14,7 +14,7 @@
                         <li><a href="#funcionamento" title="Funcionamento">Funcionamento</a></li>
                     </ul>
                     <picture>
-                        <img src="./src/IconeCafeDigital.png" alt="Uma xícara de café">
+                        <img src="./public/src/IconeCafeDigital.png" alt="Uma xícara de café">
                     </picture>
                     <ul>
                         <li><a href="#sobre" title="Sobre">Sobre</a></li>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="chamada-image">
-                        <img src="./src/undraw_newspaper.svg" alt="" width="70%">
+                        <img src="./public/src/undraw_newspaper.svg" alt="" width="70%">
                     </div>
                 </div>
             </section>
@@ -70,7 +70,7 @@
             <section id="funcionamento" class="mb-40">
                 <div class="vantagem secao2-direction-end">
                     <div class="imagem-vantagem">
-                        <img src="./src/Vector.png" alt="">
+                        <img src="./public/src/Vector.png" alt="">
                     </div>
                     <div>
                         <h3>consectetur adipiscing elit</h3>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="vantagem secao2-direction-start">
                     <div class="imagem-vantagem">
-                        <img src="./src/Group 4.png" alt="">
+                        <img src="./public/src/Group 4.png" alt="">
                     </div>
                     <div>
                         <h3>consectetur adipiscing elit</h3>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="vantagem secao2-direction-end">
                     <div class="imagem-vantagem">
-                        <img src="./src/Calendar2Week.png" alt="">
+                        <img src="./public/src/Calendar2Week.png" alt="">
                     </div>
                     <div class="secao2-direction-end">
                         <h3>consectetur adipiscing elit</h3>
@@ -153,7 +153,7 @@
 
                 <div>
                     <div class="sobre-image">
-                        <img src="./src/undraw_completed.svg" alt="">
+                        <img src="./public/src/undraw_completed.svg" alt="">
                     </div>
                     <div>
                         <p class="sobre-text text-xl xl:leading-loose text-justify lg:text-base">

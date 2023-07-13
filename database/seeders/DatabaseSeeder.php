@@ -34,12 +34,6 @@ class DatabaseSeeder extends Seeder
                 'ibge_cid' => '3205309',
                 'fk_idEstado_end' => '8',
             ],
-            [
-                'id_cid'=>'1',
-                'ibge_cid'=>'3529005',
-                'nome_cid'=>'Marília',
-                'fk_idEstado_end'=> '25'
-            ],
         ]);
         
         $this->call(CafeFotoPerfilSeeder ::class);

@@ -3,7 +3,7 @@
     <head>
         <title>Manutenção</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="./css/manutencao.css">
+        <link rel="stylesheet" href="./public/css/manutencao.css">
     </head>
     <body>
         <div id="manutencao">

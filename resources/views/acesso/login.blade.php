@@ -3,7 +3,7 @@
     <head>
         <title>Café Digital</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="./css/acesso.css"> 
+        <link rel="stylesheet" href="./public/css/acesso.css"> 
     </head>
     <body>
         <!-- Div de todo o conteúdo -->
@@ -67,7 +67,7 @@
                             <h1 class="text-4xl main-title">Café Digital</h2>
                         </div>
                         <figure>
-                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-14">
+                            <img src="./public/src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-14">
                         </figure>
                         <p class="main-description text-base">Lorem ipsum dolor sit amet,  adipiscing elit.</p>
                         <p class="main-description text-base mb-10">Etiam consectetur consequat in nisl eu faucibus !</p>
@@ -99,6 +99,6 @@
             </dialog>
         </div>
         @include('configuracoes_script')
-        <script src="./js/login.js"></script>
+        <script src="./public/js/login.js"></script>
     </body>
 </html>
