@@ -13,9 +13,13 @@
 </style>
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <h1>Histórico de pagamento</h1>
+    <div id="manutencao">
+        <h1 class="text-4xl font-bold">Em manutenção!</h1><br>
+        <h4>Agradecemos o interesse em nosso site, porém no momento,<br> esta funcionalidade está em desenvolvimento.</h4>
+    </div>
 
+    @if(false)
     @for($i = 0; $i < count($conteudos); $i++)
         <div class="grid gap-3 grid-cols-3 justify-items-center bg-mainBodyColorAlt">
             <div class="conteudo-card text-mainInputColor">
@@ -25,6 +29,7 @@
             </div>
         </div>
     @endfor
+    @endif
 
-    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="./js/script.js"></script>
 @endsection

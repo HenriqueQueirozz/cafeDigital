@@ -1,19 +1,18 @@
 @extends('layouts.app')
 @section('title', 'Mapa de associados')
+
+<style>
+    .associados{
+        color: #AABEDB;
+    }
+
+    #perfilImagem{
+        display: none;
+    }
+
+</style>
+
 @section('content')
-    <style>
-        .associados{
-            color: #AABEDB;
-        }
-
-        #perfilImagem{
-            display: none;
-        }
-
-    </style>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="mapa-conteudo p-16 ml-5 flex 2xl:p-36">
         <div class="mt-auto mb-auto">
@@ -36,6 +35,5 @@
         @endforeach
         </div>
     </div>
-    <script src="{{ asset('js/mapa_associados.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="./js/mapa_associados.js"></script>
 @endsection
