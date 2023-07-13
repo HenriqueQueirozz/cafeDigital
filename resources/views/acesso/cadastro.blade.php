@@ -3,7 +3,7 @@
     <head>
         <title>Café Digital</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="./css/acesso.css"> 
+        <link rel="stylesheet" href="{{ asset('css/acesso.css') }}"> 
     </head>
     <body>
         <!-- Div de todo o conteúdo -->
@@ -17,7 +17,7 @@
                             <h1 class="main-title text-4xl">Café Digital</h2>
                         </div>
                         <figure>
-                            <img src="./src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-16">
+                            <img src="{{ asset('src/LogoCaféDigitalAzul.png') }}" alt="Logo Azul - Café Digital" class="main-logo my-16">
                         </figure>
                         <p class="main-description text-base lg:text-sm 2xl:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam </p>
                         <p class="main-description text-base lg:text-sm 2xl:text-base">consequat in nisl eu faucibus. Aliquam convallis, massa ac congue!</p>
@@ -72,6 +72,6 @@
             </div>
         </div>
         @include('configuracoes_script')
-        <script src="../../../public/js/login.js"></script>
+        <script src="{{ asset('js/login.js') }}"></script>
     </body>
 </html>
