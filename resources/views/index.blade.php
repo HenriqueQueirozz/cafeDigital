@@ -3,7 +3,7 @@
     <head>
         <title>Café Digital</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
+        <link rel="stylesheet" href="./css/landing.css">
     </head>
     <body class="font-body">
         <header id="landing-header">

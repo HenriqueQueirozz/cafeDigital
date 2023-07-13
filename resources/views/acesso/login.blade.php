@@ -3,7 +3,7 @@
     <head>
         <title>Café Digital</title>
         @include('configuracoes_head')
-        <link rel="stylesheet" href="{{ asset('css/acesso.css') }}"> 
+        <link rel="stylesheet" href="./css/acesso.css"> 
     </head>
     <body>
         <!-- Div de todo o conteúdo -->
@@ -99,6 +99,6 @@
             </dialog>
         </div>
         @include('configuracoes_script')
-        <script src="{{ asset('js/login.js') }}"></script>
+        <script src="./js/login.js"></script>
     </body>
 </html>
