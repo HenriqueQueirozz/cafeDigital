@@ -13,6 +13,8 @@
 </style>
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     @for($i = 0; $i < count($conteudos); $i++)
         <div class="grid gap-3 grid-cols-3 justify-items-center bg-mainBodyColorAlt">
@@ -24,4 +26,5 @@
         </div>
     @endfor
 
+    <script src="{{ asset('js/script.js') }}"></script>
 @endsection

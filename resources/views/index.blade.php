@@ -14,7 +14,7 @@
                         <li><a href="#funcionamento" title="Funcionamento">Funcionamento</a></li>
                     </ul>
                     <picture>
-                        <img src="{{ asset('src/IconeCafeDigital.png') }}" alt="Uma xícara de café">
+                        <img src="./src/IconeCafeDigital.png" alt="Uma xícara de café">
                     </picture>
                     <ul>
                         <li><a href="#sobre" title="Sobre">Sobre</a></li>

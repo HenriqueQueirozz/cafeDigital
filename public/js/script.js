@@ -17,38 +17,38 @@ var inputBairro = document.getElementById("id-input-Bairro");
 var inputIbge = document.getElementById("id-input-Ibge");
 var inputCidade = document.getElementById("id-input-Cidade");
 
-if(inputCPE){
-    inputCPE.addEventListener('blur', function(){
-        var CPE = inputCPE.value.replace(/\D/g, '');
-    
-        if (window.XMLHttpRequest) {            // Mozilla, Safari, ...
+if (inputCPE) {
+    inputCPE.addEventListener("blur", function () {
+        var CPE = inputCPE.value.replace(/\D/g, "");
+
+        if (window.XMLHttpRequest) {
+            // Mozilla, Safari, ...
             request = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {      // IE
+        } else if (window.ActiveXObject) {
+            // IE
             try {
                 request = new ActiveXObject("Msxml2.XMLHTTP");
-            }
-            catch (exception) {
+            } catch (exception) {
                 try {
                     request = new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                catch (exception) {}
+                } catch (exception) {}
             }
         }
-    
+
         if (!request) {
             // Não é possível criar uma instância XMLHTTP.;
             return false;
         }
-    
-        request.open("GET", "https://viacep.com.br/ws/"+CPE+"/json/");
-        request.onreadystatechange = function(){
+
+        request.open("GET", "https://viacep.com.br/ws/" + CPE + "/json/");
+        request.onreadystatechange = function () {
             if (request.readyState === 4) {
                 if (request.status >= 200 && request.status < 400) {
                     var data = JSON.parse(request.responseText);
-                    if(!data.erro){
+                    if (!data.erro) {
                         inputLog.value = data.logradouro;
                         inputBairro.value = data.bairro;
-                        inputCidade.value = data.localidade+"-"+data.uf;
+                        inputCidade.value = data.localidade + "-" + data.uf;
                         inputIbge.value = data.ibge;
                     }
                 } else {
@@ -66,23 +66,23 @@ if(inputCPE){
 |--------------------------------------------------------------------------
 */
 // Criando o elemento para efeito de Fade
-const divFade = document.createElement('div');
-divFade.id = 'fade';
+const divFade = document.createElement("div");
+divFade.id = "fade";
 
 // Adicionando o elemento a página
 const divMain = document.getElementById("main");
 document.body.insertBefore(divFade, divMain);
 
-// Declarando a variável do elemento 
-var fade = document.getElementById('fade');
+// Declarando a variável do elemento
+var fade = document.getElementById("fade");
 
-function abrirDialog(dialog_id){    
+function abrirDialog(dialog_id) {
     var dialog = document.getElementById(dialog_id);
     dialog.setAttribute("open", "");
     fade.style.display = "block";
 }
 
-function fecharDialog(dialog_id){
+function fecharDialog(dialog_id) {
     var dialog = document.getElementById(dialog_id);
     dialog.removeAttribute("open");
     fade.style.display = "none";
@@ -97,24 +97,20 @@ function fecharDialog(dialog_id){
 function MudarEstadoNav(div) {
     var display = document.getElementById(div).style.display;
 
-    if(display == "none"){
-        document.getElementById(div).style.display = 'block';
-    }
-
-    else{
-        document.getElementById(div).style.display = 'none';
+    if (display == "none") {
+        document.getElementById(div).style.display = "block";
+    } else {
+        document.getElementById(div).style.display = "none";
     }
 }
 
 function MudarEstadoUpload(div) {
     var display = document.getElementById(div).style.display;
 
-    if(display == "none"){
-        document.getElementById(div).style.display = 'block';
-    }
-
-    else{
-        document.getElementById(div).style.display = 'none';
+    if (display == "none") {
+        document.getElementById(div).style.display = "block";
+    } else {
+        document.getElementById(div).style.display = "none";
     }
 }
 
@@ -122,13 +118,11 @@ function MudarEstadoImagem(div) {
     var display = document.getElementById(div).style.display;
     var conteudo = document.getElementById("home-conteudo");
 
-    if(display == "none"){
-        document.getElementById(div).style.display = 'block';
+    if (display == "none") {
+        document.getElementById(div).style.display = "block";
         conteudo.classList.add("blur-sm");
-    }
-
-    else{
-        document.getElementById(div).style.display = 'none';
+    } else {
+        document.getElementById(div).style.display = "none";
         conteudo.classList.remove("blur-sm");
     }
 }
@@ -137,7 +131,10 @@ function MudarEstadoImagem(div) {
 const inputFile = document.querySelector("#picture__input");
 const pictureImage = document.querySelector(".picture__image");
 const pictureImageTxt = "Escolha uma imagem!";
-pictureImage.innerHTML = pictureImageTxt;
+
+if (pictureImage) {
+    pictureImage.innerHTML = pictureImageTxt;
+}
 
 inputFile.addEventListener("change", function (e) {
     const inputTarget = e.target;
@@ -157,41 +154,40 @@ inputFile.addEventListener("change", function (e) {
             pictureImage.appendChild(img);
         });
         reader.readAsDataURL(file);
-    }
-    else{
+    } else {
         pictureImage.innerHTML = pictureImageTxt;
     }
 });
 
 //Opção para salvar a foto
-function ExibirSalvar(){
+function ExibirSalvar() {
     const btnSalvar = document.getElementById("upload-image-salvar");
-    btnSalvar.style.display = 'block';
+    btnSalvar.style.display = "block";
 }
 
 //Ao enviar o formulário...
 const btnEnviar = document.getElementById("upload-image-salvar");
-btnEnviar.addEventListener("submit", () =>{
+btnEnviar.addEventListener("submit", () => {
     alert("Sucesso!");
-    btnEnviar.style.display = 'none';
+    btnEnviar.style.display = "none";
 });
 
 // Criando o elemento para notificação
-function notify(){
+function notify() {
     const btn = document.getElementById("enviar");
     const divMessage = document.querySelector(".alert");
 
     const msg = "Sucesso!";
 
     function ativar(msg) {
-    const message = document.createElement("div");
-    message.classList.add("message", "message-sucess");
-    message.innerText = msg;
-    divMessage.appendChild(message);
+        const message = document.createElement("div");
+        message.classList.add("message", "message-sucess");
+        message.innerText = msg;
+        divMessage.appendChild(message);
 
-    setTimeout(() => {
-        message.style.display = "none";
-    }, 3000);
+        setTimeout(() => {
+            message.style.display = "none";
+        }, 3000);
     }
 
     btn.addEventListener("click", () => {
@@ -199,40 +195,39 @@ function notify(){
     });
 }
 
-function RemoverMensagem(){
+function RemoverMensagem() {
     const divMensagem = document.getElementById("message-div");
-    divMensagem.style.display = 'none';
+    divMensagem.style.display = "none";
 }
 
 // Validar senha
-function validarSenha(){
-    const senha = document.querySelector('input[name=input-Senha]');
-    const confirma = document.querySelector('input[name=input-ConfirmeSenha]');
-    if (senha.value === confirma.value){
+function validarSenha() {
+    const senha = document.querySelector("input[name=input-Senha]");
+    const confirma = document.querySelector("input[name=input-ConfirmeSenha]");
+    if (senha.value === confirma.value) {
         confirma.setCustomValidity("");
-    }
-    else{
+    } else {
         confirma.setCustomValidity("Senhas diferentes!");
     }
 }
 
 // Validar senha
 
-function validarCPF(){
-    const cpf = document.querySelector('input[name=input-Cpf]');
+function validarCPF() {
+    const cpf = document.querySelector("input[name=input-Cpf]");
     condicoesCPF(cpf);
-    if (condicoesCPF){
+    if (condicoesCPF) {
         cpf.setCustomValidity("");
-    }
-    else{
+    } else {
         cpf.setCustomValidity("CPF Inválido!");
     }
 }
 
-function condicoesCPF(cpf){
-    console.log("Olá!")
-    if (cpf == '') return false;
-    if (cpf.length != 11 ||
+function condicoesCPF(cpf) {
+    console.log("Olá!");
+    if (cpf == "") return false;
+    if (
+        cpf.length != 11 ||
         cpf == "00000000000" ||
         cpf == "11111111111" ||
         cpf == "22222222222" ||
@@ -242,23 +237,18 @@ function condicoesCPF(cpf){
         cpf == "66666666666" ||
         cpf == "77777777777" ||
         cpf == "88888888888" ||
-        cpf == "99999999999")
+        cpf == "99999999999"
+    )
         return false;
     add = 0;
-    for (i = 0; i < 9; i++)
-        add += parseInt(cpf.charAt(i)) * (10 - i);
+    for (i = 0; i < 9; i++) add += parseInt(cpf.charAt(i)) * (10 - i);
     rev = 11 - (add % 11);
-    if (rev == 10 || rev == 11)
-        rev = 0;
-    if (rev != parseInt(cpf.charAt(9)))
-        return false;
+    if (rev == 10 || rev == 11) rev = 0;
+    if (rev != parseInt(cpf.charAt(9))) return false;
     add = 0;
-    for (i = 0; i < 10; i++)
-        add += parseInt(cpf.charAt(i)) * (11 - i);
+    for (i = 0; i < 10; i++) add += parseInt(cpf.charAt(i)) * (11 - i);
     rev = 11 - (add % 11);
-    if (rev == 10 || rev == 11)
-        rev = 0;
-    if (rev != parseInt(cpf.charAt(10)))
-        return false;
+    if (rev == 10 || rev == 11) rev = 0;
+    if (rev != parseInt(cpf.charAt(10))) return false;
     return true;
 }
