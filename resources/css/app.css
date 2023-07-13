@@ -1,3 +1,333 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+|--------------------------------------------------------------------------
+|                                  GLOBAL
+|--------------------------------------------------------------------------
+*/
+
+:root {
+    --bar-width: 20px;
+    --bar-height: 2px;
+    --hamburger-gap: 6px;
+    --foreground: #ffffff;
+    --background: rgb(255, 255, 255);
+    --hamburger-margin: 8px;
+    --animation-timing: 0.5s ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.app-content{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-item{
+    margin: 1.2rem;
+}
+
+.app-icon{
+    margin: 5%;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 976px) {
+    .app-item{
+        margin: 1rem;
+    }
+
+    .app-icon{
+        font-size: 1.7rem;
+    }
+}
+
+.app-item:hover{
+    color: #AABEDB;
+}
+
+.app-modal{
+    padding: 0.75rem;
+    text-align: end;
+    color: #1B1C1E;
+}
+
+.app-modal:hover{
+    font-weight: bold;
+}
+
+hr{
+    color: #FFFFFF;
+    margin: 1rem;
+}
+  
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+    --foreground: white;
+    --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 10rem;
+    min-height: 100vh;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+}
+
+#picture__input {
+    display: none;
+  }
+  
+  .picture {
+    width: 200px;
+    height: 250px;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .picture:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+  }
+  
+  .picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .picture__img {
+    max-width: 100%;
+    border-radius: 50%;
+  }  
+
+/*
+|--------------------------------------------------------------------------
+|                                  HOME CSS
+|--------------------------------------------------------------------------
+*/
+.main-form-input, .main-input, .main-label{
+    text-align: left;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+}
+
+.main-form-aside{
+    display: flex;
+    margin-bottom: var(--margin-1);
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8%;
+}
+
+.main-form-input{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.main-form-input .password{
+    color: var(--main-input-color);
+    font-size: var(--smaller-font-size);
+    float: right;
+    margin-bottom: var(--margin-3);
+}
+
+.aside{
+    width: 100%;
+    margin-left: var(--b-2);
+}
+
+.home-column{
+    border-radius: 0.5rem;
+}
+
+.label-light{
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #EEF3FC;
+    font-size: var(--normal-font-size);
+}
+
+.input-light{
+    text-decoration: none;
+    background-color: transparent;
+    height: 30px;
+    border: 0;
+    color: var(--main-input-color);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 1);
+    margin-bottom: 3%;
+}
+
+.input-light:focus{
+    caret-color: hsla(0, 0%, 100%);
+    outline: 0;
+}
+
+.input-light:placeholder {
+    font-family: var(--title-font);
+    font-style: var(--font-medium);
+    line-height: 600px;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+#upload-image-salvar{
+    font-size: 0.7rem;
+    margin-top: 2%;
+    border-radius: 0.75rem;
+    text-align: end;
+    background-color: #31c48d;
+    border: 0.4px solid #1B1C1E;
+}
+
+#upload-image-salvar:hover{
+    transition: 0.4s;
+    background-color: #bcf0da;
+}
+
+/*
+|--------------------------------------------------------------------------
+|                             MAPA DE ASSOCIADOS
+|--------------------------------------------------------------------------
+*/
+
+.mapa-conteudo{
+    width: 100%;
+    /* overflow: visible;
+    text-overflow: ellipsis;
+    white-space: normal; */
+    background-color: #1B1C1E;
+}
+
+.mapa-card{
+    width: 12rem;
+    border-radius: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mapa-imagem{
+    margin: 1rem auto 1rem auto;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
+.mapa-status{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 0.75rem;
+    background-color: #333;
+
+}
+
+.acept-invite{
+    background-color: #B3D1FF;
+}
+
+.signature{
+    background-color: #FECC59;
+}
+
+.conteudo-card{
+    width: 12rem;
+    border-radius: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

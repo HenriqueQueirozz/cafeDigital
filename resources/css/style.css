@@ -1,0 +1,466 @@
+/*
+|--------------------------------------------------------------------------
+| Configurações de reset e fonts
+|--------------------------------------------------------------------------
+*/
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/*
+|--------------------------------------------------------------------------
+| Configurações root
+|--------------------------------------------------------------------------
+*/
+:root{
+    --header-height: 3rem;
+
+     /* CORES */
+     --main-color: 216;
+     --main-first-color: hsl(var(--main-color), 59%, 41%); /* ----> #2B5CA5*/
+     --main-first-color-alt: hsl(var(--main-color), 100%, 75%);/* ----> #82b4ff*/
+     --main-first-color-lighter: hsl(var(--main-color), 92%, 85%);/* ----> #b6d2fc*/
+     --main-title-color: hsl(var(--main-color), 8%, 15%);/* ----> #232629*/
+     --main-text-color: hsl(var(--main-color), 8%, 45%);/* ----> #6a717c*/
+     --main-text-color-light: hsl(var(--main-color), 8%, 65%);/* ----> #9fa4ad*/
+     --main-input-color: hsl(var(--main-color), 70%, 96%);/* ----> #eef3fc*/
+     --main-body-color: hsl(var(--main-color), 60%, 99%);/* ----> #fbfcfe*/
+     --main-body-color-alt: hsla(220, 5%, 11%);
+ 
+     --second-color: 359;
+     --second-sec-color: hsl(var(--second-color), 77%, 50%); /* ----> #E01D21*/
+     --second-color-alt: hsl(var(--second-color), 100%, 80%); /* ----> #ff999b*/
+     --second-first-color-lighter: hsl(var(--second-color), 92%, 85%); /* ----> #fcb6b7*/
+     --second-title-color: hsl(var(--second-color), 8%, 15%);/* ----> #292323*/
+     --second-text-color: hsl(var(--second-color), 8%, 45%);/* ----> #7c6a6a*/
+     --second-text-color-light: hsl(var(--second-color), 8%, 65%);/* ----> #ad9f9f*/
+     --second-input-color: hsl(var(--second-color), 70%, 96%);/* ----> #fceeee*/
+ 
+     --container-color: hsl(216, 100%, 85%);
+     --body-font: 'Poppins', sans-serif;
+     --title-font: 'Montserrat', sans-serif;
+ 
+     /* BORDAS */
+     --b-0-5: 0.2rem;
+     --b-1: 0.5rem;
+     --b-1-5: 0.7rem;
+     --b-2: 1rem;
+     --b-2-5: 1.2rem;
+ 
+     /* FONTES */
+     --big-font-size: 2rem;
+     --h1-font-size: 1.5rem;
+     --h2-font-size: 1.25rem;
+     --h3-font-size: 1.125rem;
+     --h4-font-size: 1rem;
+     --normal-font-size: 0.9rem;
+     --small-font-size: 0.813rem;
+     --smaller-font-size: 0.75rem;
+ 
+     --font-medium: 500;
+     --font-semi-bold: 600;
+
+    /* BORDAS */
+    --b-0-5: 0.2rem;
+    --b-1: 0.5rem;
+    --b-1-5: 0.7rem;
+    --b-2: 1rem;
+    --b-2-5: 1.2rem;
+
+    /* FONTES */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --h4-font-size: 1rem;
+    --normal-font-size: 0.9rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* MARGINS */
+    --margin-0-25: .25rem;
+    --margin-0-5: .5rem;
+    --margin-0-75: .75rem;
+    --margin-1: 1rem;
+    --margin-2: 2rem;
+    --margin-2-5: 2.5rem;
+    --margin-3: 3rem;
+    --margin-4: 4rem;
+    --margin-5: 5rem;
+
+    /* CAMADAS */
+    --z-outdisplay: -1;
+    --z-bground: 10;
+    --z-tooltip: 100;
+    --z-fixed: 10;
+    --z-fade: 9999;
+    --z-modal: 10000;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Configurações gerais
+|--------------------------------------------------------------------------
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--main-body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4{
+    color: var(--main-title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+select {
+    color: var(--main-title-color);
+}
+  
+select option {
+    color: var(--main-title-color);
+}
+
+h1{
+    font-size: var(--h1-font-size);
+}
+
+h2{
+    font-size: var(--h2-font-size);
+}
+
+h3{
+    font-size: var(--h3-font-size);
+}
+
+h4{
+    font-size: var(--h4-font-size);
+}
+
+ul{
+    list-style: none;
+}
+
+a, a:visited{
+    text-decoration: none;
+    font-weight: var(--font-medium);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============== Botões ============== */
+.btn-vermelho{
+    height: fit-content;
+    width: fit-content;
+    padding: 0.3rem 2.2rem;
+    border-radius: 8px;
+    background-color: var(--second-sec-color);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.btn-vermelho:hover{
+    transition: 0.3s;
+    background-color: #EC777A;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Configurações modais e popUps
+|--------------------------------------------------------------------------
+*/
+#fade{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: var(--z-fade);
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+
+/* Modal médio */
+dialog[open]{
+    display: flex;
+    flex-direction: column;
+
+    z-index: var(--z-modal);
+    margin: auto auto;
+    border: none;
+
+    width: 50vw;
+    border-radius: 0.5rem;
+}
+
+dialog .head-dialog{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+
+    margin-bottom: 0.5rem;
+    border-bottom: solid 0.5px #D3D3D3;
+    padding: 1rem;
+}
+
+dialog .main-dialog{
+    padding: 1.6rem;
+}
+
+dialog .foot-dialog{
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: center;
+    column-gap: 1rem;
+
+    margin-top: 0.5rem;
+    border-top: solid 0.5px #D3D3D3;
+    padding: 0.8rem;
+}
+
+dialog p{
+    line-height: 1.5;
+    width: 100%;
+}
+
+.message {
+    padding: 19px 60px;
+    position: fixed;
+    top: 20px;
+    right: 105px;
+    background-color: #FECC59;
+    border-radius: 3px;
+    color: #FFF5DE;
+    animation: slidein 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  @keyframes slidein {
+    0% {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .message::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: time 3s forwards;
+  }
+
+  .message-sucess{
+    background-color: #31c48d;
+  }
+
+  @keyframes time {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+/*
+|--------------------------------------------------------------------------
+| Configurações de formulários
+|--------------------------------------------------------------------------
+*/
+.main-form-input, .main-input, .main-label{
+    text-align: left;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 10px;
+}
+
+.main-form-aside{
+    display: flex;
+    margin-bottom: var(--margin-1);
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8%;
+}
+
+.main-form-input .password{
+    color: var(--main-input-color);
+    font-size: var(--smaller-font-size);
+    float: right;
+    margin-bottom: var(--margin-3);
+}
+
+.aside{
+    width: 100%;
+    margin-left: var(--b-2);
+}
+
+/* Fundo claro */
+.label-dark{
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    font-size: var(--normal-font-size);
+}
+
+.input-dark{
+    text-decoration: none;
+    background-color: transparent;
+    height: 30px;
+    border: 0;
+    border-bottom: 2px solid LightGray;
+    margin-bottom: 3%;
+}
+
+.input-dark:focus{
+    caret-color: LightGray;
+    outline: 0;
+}
+
+.input-dark:placeholder {
+    font-family: var(--title-font);
+    font-style: var(--font-medium);
+    line-height: 600px;
+    color: LightGray;
+}
+
+.input-sexo-dark{
+    outline: none;
+    box-shadow: 0 0 0 0;
+    cursor: pointer;
+}
+
+.main-form-obrigatorio{
+    margin: var(--margin-0-5);
+    color: var(--second-sec-color);
+}
+
+/* Fundo escuro */
+.label-light{
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--main-input-color);
+    font-size: var(--normal-font-size);
+}
+
+.input-light{
+    text-decoration: none;
+    background-color: transparent;
+    height: 30px;
+    border: 0;
+    color: var(--main-input-color);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 1);
+    margin-bottom: 3%;
+}
+
+.input-light:focus{
+    caret-color: hsla(0, 0%, 100%);
+    outline: 0;
+}
+
+.input-light:placeholder {
+    font-family: var(--title-font);
+    font-style: var(--font-medium);
+    line-height: 600px;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.input-sexo-light{
+    color: hsla(0, 0%, 100%, 0.7);
+    outline: none;
+    box-shadow: 0 0 0 0;
+    cursor: pointer;
+}
+/* --------------------------------------------------------------------------- */
+
+.form-input{
+    text-align: left;
+    width: 100%;
+    height: 25%;
+    margin: var(--margin-0-5) 0;
+}
+
+.control-input{
+    height: 50px;
+    width: 100%;
+    border: solid 2px #D3D3D3;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: black;
+}
+
+.btn-search{
+    background-color: var(--main-first-color);
+    color: rgb(255, 255, 255);
+}
+
+.section-title{
+    font-size: var(--h1-font-size);
+    color: var(--second-sec-color);
+}
+
+.section-subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+}
+
+.section-title,
+.section-subtitle{
+    text-align: center;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Padrões de designer
+|--------------------------------------------------------------------------
+*/
+
+/* Títulos */
+.main-title-second{
+    font-size: var(--big-font-size);
+    color: hsl(var(--main-color), 100%, 75%);
+}
+
+/* Botões */
+.main-btn{
+    border: none;
+    margin: auto;
+    margin-bottom: var(--margin-3);
+    margin-top: var(--margin-3);
+}
