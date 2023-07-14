@@ -67,7 +67,7 @@
                             <h1 class="text-4xl main-title">Café Digital</h2>
                         </div>
                         <figure>
-                            <img src="{{ asset('src/LogoCaféDigitalAzul.png') }}" alt="Logo Azul - Café Digital" class="main-logo my-14">
+                            <img src="../src/LogoCaféDigitalAzul.png" alt="Logo Azul - Café Digital" class="main-logo my-14">
                         </figure>
                         <p class="main-description text-base">Lorem ipsum dolor sit amet,  adipiscing elit.</p>
                         <p class="main-description text-base mb-10">Etiam consectetur consequat in nisl eu faucibus !</p>

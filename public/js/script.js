@@ -169,10 +169,12 @@ function ExibirSalvar() {
 
 //Ao enviar o formulário...
 const btnEnviar = document.getElementById("upload-image-salvar");
-btnEnviar.addEventListener("submit", () => {
-    alert("Sucesso!");
-    btnEnviar.style.display = "none";
-});
+if (btnEnviar) {
+    btnEnviar.addEventListener("submit", () => {
+        alert("Sucesso!");
+        btnEnviar.style.display = "none";
+    });
+}
 
 // Criando o elemento para notificação
 function notify() {
