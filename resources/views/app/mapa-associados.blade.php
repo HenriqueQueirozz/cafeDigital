@@ -21,7 +21,7 @@
                 <canvas id="myChart" class="mapa-grafico"></canvas>
             </div>
         </div>
-        <div class="mapa-usuarios ml-24 grid gap-3 grid-cols-3 justify-items-center">
+        <div class="mapa-usuarios ml-24 grid gap-7 grid-cols-3 justify-items-center">
         @foreach ($usuarios_indicados as $usuario)
             <div class="col-span-1 mapa-card signature mt-5 p-3">
                 <img src="../src/perfil/{{ $usuario['nomeFoto_fp'] }}" alt="iconePerfil" class="mapa-imagem border-solid border-4 rounded-full border-secondary-500 cursor-pointer">

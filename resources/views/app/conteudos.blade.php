@@ -10,26 +10,35 @@
         display: none;
     }
 
+    .conteudo-geral{
+        height: 1200px;
+    }
+
+    .conteudo-card{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 </style>
 
 @section('content')
-    <h1>Histórico de pagamento</h1>
-    <div id="manutencao">
-        <h1 class="text-4xl font-bold">Em manutenção!</h1><br>
-        <h4>Agradecemos o interesse em nosso site, porém no momento,<br> esta funcionalidade está em desenvolvimento.</h4>
-    </div>
-
-    @if(false)
-    @for($i = 0; $i < count($conteudos); $i++)
-        <div class="grid gap-3 grid-cols-3 justify-items-center bg-mainBodyColorAlt">
-            <div class="conteudo-card text-mainInputColor">
-                <h3 class="block">{{$conteudos[$i]['titulo_con']}}</h3>
-                <iframe width="300" height="180" src="{{ $conteudos[$i]['link_con'] }}"></iframe>
-                <p>{{$conteudos[$i]['descricao_con']}}</p>
+        <div class="flex items-center flex-col bg-mainBodyColorAlt">   
+            <div>
+                <h3 class="text-2xl text-mainInputColor text-center m-4">Conteúdos</h3>
             </div>
+            <div class="grid grid-cols-2">
+                @for($i = 0; $i < count($conteudos); $i++)
+                    <div class="conteudo-card text-mainInputColor ml-32 mr-32">
+                        <p class="conteudo-title mt-4 text-base">{{$conteudos[$i]['titulo_con']}}</p><br>
+                        <iframe width="250" height="160" src="{{ $conteudos[$i]['link_con'] }}" class="p-2"></iframe>
+                        <p class="mb-4 text-sm">{{$conteudos[$i]['descricao_con']}}</p>
+                    </div>
+                @endfor
+            </div>
+            <a href="{{ route('app.gerenciar-conteudos') }}" class="bg-secondary-400 text-mainInputColor p-3 rounded-full items-end mt-4 mb-4">Adicionar conteudo?</a>
         </div>
-    @endfor
-    @endif
-
     <script src="../js/script.js"></script>
 @endsection

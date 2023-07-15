@@ -96,9 +96,11 @@ function fecharDialog(dialog_id) {
 
 function MudarEstadoNav(div) {
     var display = document.getElementById(div).style.display;
+    const body = document.getElementById("app-body");
 
     if (display == "none") {
         document.getElementById(div).style.display = "block";
+        
     } else {
         document.getElementById(div).style.display = "none";
     }
