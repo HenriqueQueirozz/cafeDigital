@@ -70,7 +70,7 @@
                     <a href="{{ route('app.senha') }}" class="text-primary-0 text-sm hover:text-secondary-200">Alterar senha?</a>
                 </div>
             </div>
-            <h1 class="text-2xl xl:mt-2 2xl:mt-12 mb-2 2xl:text-3xl xl:text-xl">Dados Gerais</h1>
+            <h1 class="text-2xl xl:mt-2 2xl:mt-12 mt-5 2xl:text-3xl xl:text-xl">Dados Gerais</h1>
             <div class="home-column bg-mainBodyColorAlt grid lg:grid-cols-4 sm:grid-cols-2 lg:pt-4 lg:pb-8 2xl:pt-8 2xl:pb-16">
                 <div class="main-form-input"><br>
                     <label for="id-input-Cpe" class="main-label label-light">CPE:</label>
@@ -107,7 +107,7 @@
             </div>
 
             @if($editar)
-            <button class="btn-vermelho w-100 h-12 rounded-lg pr-20 pl-20 m-auto text-mainInputColor bg-red-600 xl:mt-2 2xl:mt-12 ms-auto" type="submit">Salvar dados</button>
+            <button class="btn-vermelho w-100 h-12 rounded-lg pr-20 pl-20 m-auto text-mainInputColor bg-red-600 xl:mt-2 2xl:mt-12 ms-auto mt-4" type="submit">Salvar dados</button>
             @endif
         </div>
     </form>

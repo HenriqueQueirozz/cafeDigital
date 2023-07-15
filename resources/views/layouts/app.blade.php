@@ -6,15 +6,17 @@
         @include('configuracoes_head')
     </head>
     <body>
-        <nav class="flex justify-between bg-primary-400 w-100 h-16">
+        <nav class="flex justify-between bg-primary-400 w-100 h-20 shadow-md shadow-indigo-500/40">
             <div class="p-5">
+                <p class="text-2xl text-mainInputColor ml-4">Café Digital</p>
+                <img src="../src/perfil/{{ session('nomeFoto_fp') }}" onclick="MudarEstadoImagem('app-modal-opcoes')" class="absolute top-2 right-3 w-16 border-solid border-4 rounded-full border-secondary-500 hover:border-secondary-300 cursor-pointer" id="perfilImagem">
                 {{-- <label class="hamburger-menu m-3" onclick="">
                     <input type="checkbox" id="app-input-menu" onclick="MudarEstadoNav('app-menu-conteudo')"/>
                 </label> --}}
             </div>
         </nav>
         <div class="flex">
-            <img src="../src/perfil/{{ session('nomeFoto_fp') }}" onclick="MudarEstadoImagem('app-modal-opcoes')" class="fixed top-0 left-100 right-0 m-5 w-16 border-solid border-4 rounded-full border-secondary-500 hover:border-secondary-300 cursor-pointer" id="perfilImagem">
+            
             <div id="app-modal-opcoes" class="w-64 fixed top-24 left-100 right-0 m-5 bg-secondary-0 rounded-lg z-10" style="display: none">
                 <div class="flex flex-col">
                     <div id="upload-image" class="flex flex-col upload-image m-auto mt-5" style="display: none;">
@@ -67,7 +69,7 @@
                             <a href="https://api.whatsapp.com/send/?phone=5514998598589&text=Ol%C3%A1%21+Cheguei+atrav%C3%A9s+do+site.+Pode+me+ajudar%3F&type=phone_number&app_absent=0" class="md:text-xs">Entre em contato</a>
                         </li>
                         <li class="app-item justify-items-center text-center ml-8 hover:text-secondary-200">
-                            <a href="{{ route('logout') }}" class="md:text-xs"><i class="app-icon bi bi-box-arrow-left text-base"></i>Sair</a>
+                            <a href="{{ route('logout') }}" class="md:text-xs"><i class="app-icon bi bi-box-arrow-left text-base mr-2"></i>Sair</a>
                         </li>
                     </div>
                 </ul>
