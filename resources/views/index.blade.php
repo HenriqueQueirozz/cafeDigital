@@ -173,27 +173,27 @@
                 <path id="Forma 2" class="s0" d="m1074 277"/>
             </svg>
             <section id="contato">
-                <h2 class="contato-title text-3xl font-bold">Seja informado sobre as novidades!</h2>
-                <div class="form-group">
+                <h2 class="contato-title text-3xl font-bold mb-5">Seja informado sobre as novidades!</h2>
+                <div class="form-group items-center 2xl:mr-8 2xl:ml-8 justify-around">
                     <div>
-                        <label for="">Nome para contato: *</label>
-                        <input class="text-base w-full" type="text" name="" id="#" placeholder="Seu nome aqui!">
+                        <label for="">Nome para contato:</label>
+                        <input class="xl:text-base w-full 2xl:text-2xl" type="text" name="" id="#" placeholder="Seu nome aqui!">
                     </div>
                     <div class="ml-12">
-                        <label for="">E-mail: *</label>
-                        <input class="text-base w-full" type="text" name="" id="#" placeholder="example@exemple.com">
+                        <label for="">E-mail:</label>
+                        <input class="xl:text-base w-full 2xl:text-2xl" type="text" name="" id="#" placeholder="example@exemple.com">
                     </div>
                     <div class="ml-12">
                         <label for="">Telefone:</label>
-                        <input class="text-base w-full" type="text" name="" id="#" placeholder="(00) 00000-0000">
+                        <input class="xl:text-base w-full 2xl:text-2xl" type="text" name="" id="#" placeholder="(00) 00000-0000">
                     </div>
                 </div>
-                <div class="contato-box">
-                    <div class="form-group">
+                <div class="contato-box mt-8 mb-4 2xl:mr-8 2xl:ml-8">
+                    <div class="form-group 2xl:ml-24">
                         <label for="">Tenho&nbsp;interesse:</label><br>
-                        <input class="text-base  w-full" type="text" name="" id="" placeholder="Sou programador!">
+                        <input class="text-base w-full" type="text" name="" id="" placeholder="Sou programador!">
                     </div>
-                    <button class="btn-vermelho">Cadastrar Contato</button>
+                    <button class="btn-vermelho 2xl:mr-24">Cadastrar Contato</button>
                 </div>       
             </section>
         </main>
