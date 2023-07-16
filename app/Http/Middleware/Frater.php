@@ -21,10 +21,10 @@ class Frater
 
         $type = auth()->user()->fk_idTipoPerfil_usu;
         
-        if($type > 2){
+        if($type <= 3){
+            return $next($request);
+        }else{
             return redirect(route('app.home'));
         }
-
-        return $next($request);
     }
 }

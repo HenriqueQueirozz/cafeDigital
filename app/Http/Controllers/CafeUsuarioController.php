@@ -126,11 +126,11 @@ class CafeUsuarioController extends Controller
 
     public function getUsuarioDados($usuario_id){
         $dados_usuario      = DB::table('cafe_usuarios')
-                                        ->join('cafe_tipo_perfis', 'cafe_usuarios.fk_idTipoPerfil_usu', '=', 'cafe_tipo_perfis.id_tp')
-                                        ->join('cafe_foto_perfis', 'cafe_usuarios.fk_idFotoPerfil_usu', '=', 'cafe_foto_perfis.id_fp')
-                                        ->join('cafe_enderecos', 'cafe_usuarios.fk_idEndereco_usu', '=', 'cafe_enderecos.id_end')
-                                        ->join('cafe_cidades', 'cafe_enderecos.fk_idCidade_end', '=', 'cafe_cidades.id_cid')
-                                        ->join('cafe_estados', 'cafe_cidades.fk_idEstado_end', '=', 'cafe_estados.id_est')
+                                        ->leftJoin('cafe_tipo_perfis', 'cafe_usuarios.fk_idTipoPerfil_usu', '=', 'cafe_tipo_perfis.id_tp')
+                                        ->leftJoin('cafe_foto_perfis', 'cafe_usuarios.fk_idFotoPerfil_usu', '=', 'cafe_foto_perfis.id_fp')
+                                        ->leftJoin('cafe_enderecos', 'cafe_usuarios.fk_idEndereco_usu', '=', 'cafe_enderecos.id_end')
+                                        ->leftJoin('cafe_cidades', 'cafe_enderecos.fk_idCidade_end', '=', 'cafe_cidades.id_cid')
+                                        ->leftJoin('cafe_estados', 'cafe_cidades.fk_idEstado_end', '=', 'cafe_estados.id_est')
                                         ->where('id', $usuario_id)
                                         ->select(
                                                 'cafe_usuarios.id', 
@@ -177,8 +177,18 @@ class CafeUsuarioController extends Controller
         $celular_usuario   = DB::table('cafe_contatos')->where('fk_idUsuario_con', $usuario_id)->where('tipo_con', 'Celular')->get();
 
         $dados_usuario      = get_object_vars($dados_usuario[0]); 
-        $telefone_usuario   = get_object_vars($telefone_usuario[0]);
-        $celular_usuario    = get_object_vars($celular_usuario[0]);
+
+        if(isset($telefone_usuario[0])){
+            $telefone_usuario   = get_object_vars($telefone_usuario[0]);
+        }else{
+            $telefone_usuario   = [];
+        }
+
+        if(isset($celular_usuario[0])){
+            $celular_usuario    = get_object_vars($celular_usuario[0]);
+        }else{
+            $celular_usuario   = [];
+        }
 
         $dados_usuario['celular'] = $celular_usuario;
         $dados_usuario['telefone'] = $telefone_usuario;

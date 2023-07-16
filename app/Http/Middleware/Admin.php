@@ -21,10 +21,11 @@ class Admin
 
         $type = auth()->user()->fk_idTipoPerfil_usu;
         
-        if($type > 0){
+        if($type <= 1){
+            return $next($request);
+        }else{
             return redirect(route('app.home'));
         }
-
-        return $next($request);
+  
     }
 }

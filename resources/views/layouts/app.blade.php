@@ -55,9 +55,15 @@
                         <a href="{{ route('app.associados') }}"><i class="app-icon bi bi-diagram-3-fill"></i></a><br>
                         Associados
                     </li>
+                    @can('admin')
                     <li class="app-item md:text-xs conteudos">
-                        <a href="{{ route('app.conteudos') }}"><i class="app-icon bi bi-archive"></i></i></a><br>
-                        Conteudos
+                        <a href="{{ route('app.gerenciar-conteudos') }}"><i class="app-icon bi bi-kanban"></i></a><br>
+                        Gerenciamento<br>de Conteúdos
+                    </li>
+                    @endcan
+                    <li class="app-item md:text-xs conteudos">
+                        <a href="{{ route('app.conteudos') }}"><i class="app-icon bi bi-archive"></i></a><br>
+                        Conteúdos
                     </li>
                     <li class="app-item md:text-xs financeiro">
                         <a href="{{ route('app.historico-pagamento') }}"><i class="app-icon bi bi-handbag"></i></a><br>

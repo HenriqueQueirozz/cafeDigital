@@ -22,16 +22,16 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Gate::define('ver-detalhes-admin', function(User $user){
-            return $user->type_usu <= 0;
+        Gate::define('admin', function(User $user){
+            return $user->fk_idTipoPerfil_usu <= 1;
         });
 
-        Gate::define('ver-detalhes-owner', function(User $user){
-            return $user->type_usu <= 1;
+        Gate::define('owner', function(User $user){
+            return $user->fk_idTipoPerfil_usu <= 2;
         });
 
-        Gate::define('ver-detalhes-frater', function(User $user){
-            return $user->type_usu <= 1;
+        Gate::define('frater', function(User $user){
+            return $user->fk_idTipoPerfil_usu <= 3;
         });
     }
 }

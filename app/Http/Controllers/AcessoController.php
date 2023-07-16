@@ -154,7 +154,7 @@ class AcessoController extends Controller
                 $cafeUsuario = User::create($cafeUsuario);
     
                 Auth::login($cafeUsuario);
-
+                
                 $dados_usuario = $CafeUsuarioController->getUsuarioDados(auth()->user()->id);
                 session([
                     'id' => $dados_usuario['id'],
@@ -264,7 +264,7 @@ class AcessoController extends Controller
                 break;
             case 4:
                 if(empty($user['input-Codigo'])){
-                    $usuarioIndicacao = false;
+                    $usuarioIndicacao = null;
                 }else{
                     $codigoExistente = $CafeUsuarioController->getUsuarioByCodigo($user['input-Codigo']);
                     if($codigoExistente){
