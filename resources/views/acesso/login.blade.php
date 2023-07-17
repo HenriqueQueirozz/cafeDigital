@@ -15,9 +15,10 @@
                         <h1 class="main-title-second mt-14 xl:mt-28">Entre em sua conta!</h2>
 
                         @if($mensagem = Session::get('erro'))
-                            <div class="flex justify-center mt-10"> 
-                                <div class="w-96 bg-red-300 py-3 rounded-md">
-                                    {{ $mensagem }}
+                            <div class="flex justify-center" id="message-div" style="display: block">
+                                <h3 class="text-2xl text-mainInputColor fixed top-5 right-28 pointer z-10" onclick="RemoverMensagem()">x</h3>
+                                <div class="message">
+                                    {{ $mensagem }} <br>
                                 </div>
                             </div>
                         @endif
@@ -26,11 +27,11 @@
                         @if($errors->any())
                             <div class="flex justify-center" id="message-div" style="display: block">
                                 <h3 class="text-2xl text-mainInputColor fixed top-5 right-28 pointer z-10" onclick="RemoverMensagem()">x</h3>
+                                <div class="message">
                                 @foreach($errors->all() as $error)
-                                    <div class="message">
-                                        {{ $error }} <br>
-                                    </div>
+                                    {{ $error }} <br>
                                 @endforeach
+                                </div>
                             </div>
                         @endif
 
