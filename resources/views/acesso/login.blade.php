@@ -18,7 +18,7 @@
                             <div class="flex justify-center" id="message-div" style="display: block">
                                 <h3 class="text-2xl text-mainInputColor fixed top-5 right-28 pointer z-10" onclick="RemoverMensagem()">x</h3>
                                 <div class="message">
-                                    {{ $mensagem }} <br>
+                                    {{ $mensagem }}
                                 </div>
                             </div>
                         @endif

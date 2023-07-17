@@ -28,13 +28,17 @@
                 <div class="main-session bg-mainBodyColorAlt opacity-95">
                     <div class="main-content second-session">
                         <h1 class="main-title-second mt-14 2xl:mt-28">Crie sua conta</h2>
+
                         @if($mensagem = Session::get('erro'))
-                            <div class="flex justify-center mt-10"> 
-                                <div class="w-96 bg-red-300 py-3 rounded-md">
+                            <div class="flex justify-center" id="message-div" style="display: block">
+                                <h3 class="text-2xl text-mainInputColor fixed top-5 right-28 pointer z-10" onclick="RemoverMensagem()">x</h3>
+                                <div class="message">
                                     {{ $mensagem }}
                                 </div>
                             </div>
                         @endif
+
+
                         @if($errors->any())
                             <div class="flex justify-center" id="message-div" style="display: block">
                                 <h3 class="text-2xl text-mainInputColor fixed top-5 right-28 pointer z-10" onclick="RemoverMensagem()">x</h3>
@@ -45,6 +49,7 @@
                                 </div>
                             </div>
                         @endif
+                        
                         <form method="POST" action="{{ route('register') }}" class="main-form">
                             @csrf
                             <div class="main-form-input"><br>
