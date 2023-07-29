@@ -13,28 +13,28 @@ class DatabaseSeeder extends Seeder
         $this->call(CafeTipoPerfilSeeder::class);
         $this->call(CafeConteudoSeeder::class);
         $this->call(CafeEtapasAberturaSeeder::class);
-        $this->call(CafeEstadoSeeder ::class);
+        // $this->call(CafeEstadoSeeder ::class);
 
-        DB::table('cafe_cidades')->insert([
-            [
-                'id_cid' => '444',
-                'nome_cid' => 'Palmas',
-                'ibge_cid' => '1721000',
-                'fk_idEstado_end' => '27',
-            ],
-            [
-                'id_cid' => '883',
-                'nome_cid' => 'Teresina',
-                'ibge_cid' => '2211001',
-                'fk_idEstado_end' => '18',
-            ],
-            [
-                'id_cid' => '3175',
-                'nome_cid' => 'Vitória',
-                'ibge_cid' => '3205309',
-                'fk_idEstado_end' => '8',
-            ],
-        ]);
+        // DB::table('cafe_cidades')->insert([
+        //     [
+        //         'id_cid' => '444',
+        //         'nome_cid' => 'Palmas',
+        //         'ibge_cid' => '1721000',
+        //         'fk_idEstado_end' => '27',
+        //     ],
+        //     [
+        //         'id_cid' => '883',
+        //         'nome_cid' => 'Teresina',
+        //         'ibge_cid' => '2211001',
+        //         'fk_idEstado_end' => '18',
+        //     ],
+        //     [
+        //         'id_cid' => '3175',
+        //         'nome_cid' => 'Vitória',
+        //         'ibge_cid' => '3205309',
+        //         'fk_idEstado_end' => '8',
+        //     ],
+        // ]);
         
         $this->call(CafeFotoPerfilSeeder ::class);
         // $this->call(CafeCidadeSeeder ::class);

@@ -234,7 +234,15 @@ class CafeUsuarioController extends Controller
                 break;
         }
 
-        return view('app.mapa-associados', ['dados_usuario' => $dados_usuario, 'dados_indicador' => $dados_indicador ? $dados_indicador : '', 'usuarios_indicados' => $array_indicados]);
+        $qt_indicados = count($array_indicados);
+        $qt_finalizados = 0;
+        foreach ($array_indicados as $usuario){
+            if($usuario['fk_idAberturaEtapa_usu'] == 6){
+                $qt_finalizados++;
+            }
+        }
+
+        return view('app.mapa-associados', ['dados_usuario' => $dados_usuario, 'dados_indicador' => $dados_indicador ? $dados_indicador : '', 'usuarios_indicados' => $array_indicados, 'qt_indicados' => $qt_indicados, 'qt_finalizados' => $qt_finalizados]);
     }
 
     public function meu_perfil(Request $request){

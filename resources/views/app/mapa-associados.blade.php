@@ -14,6 +14,8 @@
 
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <input type="text" class="hidden" value="{{ $qt_indicados }}" id="qt_indicados">
+    <input type="text" class="hidden" value="{{ $qt_finalizados }}" id="qt_finalizados">
     <div class="mapa-conteudo p-16 ml-5 flex 2xl:p-36">
         <div class="mt-auto mb-auto">
             <h1 id="mapa-competencia" class="2xl:text-xl lg:text-xl text-center text-mainInputColor">Competência </h1>

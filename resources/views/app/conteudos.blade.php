@@ -38,7 +38,10 @@
                     </div>
                 @endfor
             </div>
-            <a href="{{ route('app.gerenciar-conteudos') }}" class="bg-secondary-400 text-mainInputColor p-3 rounded-full items-end mt-4 mb-4">Adicionar conteudo?</a>
+
+            @can('admin')
+                <a href="{{ route('app.gerenciar-conteudos') }}" class="bg-secondary-400 text-mainInputColor p-3 rounded-full items-end mt-4 mb-4">Gerenciar conteúdo</a>
+            @endcan
         </div>
     <script src="../js/script.js"></script>
 @endsection
