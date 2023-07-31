@@ -232,7 +232,6 @@ class AcessoController extends Controller
                         'input-Bairro' => ['required'],
                         'input-Log' => ['required'],
                         'input-Num' => ['required'],
-                        'input-Comp' => ['required'],
                     ],
                     [
                         'input-Cpe.required' => 'O campo CEP é obrigatório!',
