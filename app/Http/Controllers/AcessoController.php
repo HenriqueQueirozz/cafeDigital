@@ -239,7 +239,6 @@ class AcessoController extends Controller
                         'input-Bairro.required' => 'O campo Bairro é obrigatório!',
                         'input-Log.required' => 'O campo Logradouro é obrigatório!',
                         'input-Num.required' => 'O campo Número é obrigatório!',
-                        'input-Comp.required' => 'O campo Complemento é obrigatório!',
                     ]
                 );
 

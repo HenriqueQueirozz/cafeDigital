@@ -5,6 +5,7 @@ use App\Http\Controllers\AcessoController;
 use App\Http\Controllers\CafeUsuarioController;
 use App\Http\Controllers\ConteudoController;
 use App\Http\Controllers\HistoricoPagamentoController;
+use App\Http\Controllers\SenhaController;
 use App\Http\Controllers\GerenciamentoConteudosController;
 
 /*
@@ -43,7 +44,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/app/conteudos',                [ConteudoController::class, 'index']                    )->name('app.conteudos');
         Route::get('/app/mapa-associados',          [CafeUsuarioController::class, 'mapa_associados']       )->name('app.associados');
         Route::get('/app/historico-pagamento',      [HistoricoPagamentoController::class, 'index']          )->name('app.historico-pagamento');
-        Route::get('/app/senha',                    [CafeUsuarioController::class, 'senha']                      )->name('app.senha');
+        Route::get('/app/senha',                    [SenhaController::class, 'index']                       )->name('app.senha');
         
         Route::post('/v1/salvar-avatar',            [CafeUsuarioController::class, 'salvar_avatar']         )->name('v1.salvar_avatar');
         Route::post('/v1/salvar-senha',             [CafeUsuarioController::class, 'salvar_senha']          )->name('v1.salvar_senha');

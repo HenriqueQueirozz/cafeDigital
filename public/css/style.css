@@ -278,7 +278,7 @@ dialog p{
   }
 
   .message-sucess{
-    background-color: #31c48d;
+    background-color: #31c48d !important;
   }
 
   @keyframes time {

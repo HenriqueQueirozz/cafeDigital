@@ -85,12 +85,10 @@
                 </div>
                     <div class="main-dialog">
                         <div class="dialog-content">
-                            
-                                <p>Insira seu e-mail ou número de celular para procurar a sua conta.</p>
-                                <div class="form-input">
-                                    <input class="control-input" type="text" id="id-input-EsqueciSenha" name="input-EsqueciSenha" placeholder="Email ou número de celular">
-                                </div>  
-                            
+                            <p>Insira seu e-mail ou número de celular para procurar a sua conta.</p>
+                            <div class="form-input">
+                                <input class="control-input" type="text" id="id-input-EsqueciSenha" name="input-EsqueciSenha" placeholder="Email ou número de celular">
+                            </div>
                         </div>
                     </div>
                     <div class="foot-dialog">
