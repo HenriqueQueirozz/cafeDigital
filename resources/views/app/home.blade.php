@@ -67,7 +67,7 @@
                     <br><input class="main-input input-light" type="text" id="id-input-Data" name="input-Data" placeholder="00/00/0000" maxlength="10" value="{{ $dados_usuario['dataNascimento_usu'] }}" {{ $editar ? '' : 'readonly' }}>
                 </div>
                 <div class="m-8 text-center">
-                    <a href="{{ route('app.senha') }}" class="text-primary-0 text-sm hover:text-secondary-200">Alterar senha?</a>
+                    <a href="{{ route('app.senha') }}" class="text-primary-0 text-sm hover:text-secondary-200" onclick="abrirDialog('EsqueciSenha');">Alterar senha?</a>
                 </div>
             </div>
             <h1 class="text-2xl xl:mt-2 2xl:mt-12 mt-5 2xl:text-3xl xl:text-xl">Dados Gerais</h1>
@@ -105,7 +105,6 @@
                     <br><input class="main-input input-light" type="text" id="id-input-Cadastro" name="input-Cadastro" placeholder="00/00/0000" maxlength="10" value="{{ $dados_usuario['created_at'] }}" readonly>
                 </div>
             </div>
-
             @if($editar)
             <button class="btn-vermelho w-100 h-12 rounded-lg pr-20 pl-20 m-auto text-mainInputColor bg-red-600 xl:mt-2 2xl:mt-12 ms-auto mt-4" type="submit">Salvar dados</button>
             @endif

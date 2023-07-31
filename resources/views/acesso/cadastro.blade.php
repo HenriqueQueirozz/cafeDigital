@@ -68,7 +68,7 @@
                                 <label for="id-input-ConfirmeSenha" class="main-label label-light">Confirme a senha:<span class="main-form-obrigatorio">*</span></label>
                                 <input class="main-input input-light" type="password" id="id-input-ConfirmeSenha" name="input-ConfirmeSenha" placeholder="Confirme sua senha" minlength="8" maxlength="15" required onchange="validarSenha();">
                             </div>
-                            <button class="btn-vermelho main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" id="enviar" onsubmit="notify()">Enviar</button>
+                            <button class="btn-vermelho main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Enviar</button>
                             <h2 class="main-desc-cadastro text-base lg:text-sm">Já tem uma conta? <a href="/login" class="main-input-link hover:text-primary-400">Clique aqui para Logar</a></h2>
                             <div class="alert"></div>
                         </form>

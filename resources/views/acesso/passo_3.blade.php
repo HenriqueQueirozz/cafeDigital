@@ -5,6 +5,7 @@
 @section('descricao', 'Informe os dados referentes ao seu endereço')
 
 @section('content')
+    <div class="alert"></div>
     <div class="main-session-etapa">
         <!-- <h1 class="main-title-second mt-24">Continuar Cadastro</h1> -->
         <!-- <h2 class="main-subtitle-second">Falta só mais essas informações</h2> -->
@@ -32,8 +33,12 @@
                     <label for="id-input-Bairro" class="main-label label-dark">Bairro:<span class="main-form-obrigatorio">*</span></label>
                     <br><input class="main-input input-dark" type="text" id="id-input-Bairro" name="input-Bairro" maxlength="20">
                 </div>
+                <div class="main-form-input aside">
+                    <label for="id-input-Comp" class="main-label label-dark">Complemento:</label>
+                    <br><input class="input-dark" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
+                </div>
             </div>
-            <div class="main-form-aside">
+            <div class="main-form-aside mt-4">
                 <div class="main-form-input">
                     <label for="id-input-Cidade" class="main-label label-dark">Cidade:<span class="main-form-obrigatorio">*</span></label>
                     <br><input class="main-input input-dark" type="text" id="id-input-Cidade" name="input-Cidade" maxlength="20">
@@ -47,17 +52,7 @@
                     <br><input class="main-input input-dark" type="number" id="id-input-Num" name="input-Num" maxlength="10">
                 </div>
             </div>
-            <div class="main-form-aside">
-                <div class="main-form-input">
-                    <label for="id-input-Comp" class="main-label label-dark">Complemento:</label>
-                    <br><input class="btn-vermelho input-dark" type="text" id="id-input-Comp" name="input-Comp" placeholder="Casa / Apartamento" maxlength="20">
-                </div>
-            </div>
-            <!-- <div class="main-form-input mb-1 mt-0-75">
-                <input type="checkbox" name="input-Termos-Condicoes" id="id-input-Termos-Condicoes">
-                <label for="id-input-Termos-Condicoes">Aceito os <b>Termos & Condições de uso</b></label>
-            </div> -->
-            <button class="btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit">Avançar</button>
+            <button class="btn main-btn w-100 h-12 rounded-lg pr-20 pl-20 text-mainInputColor bg-red-600" type="submit" id="enviar" onclick="notify()">Avançar</button>
         </form>
     </div>
 @endsection

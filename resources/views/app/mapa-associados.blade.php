@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <input type="text" class="hidden" value="{{ $qt_indicados }}" id="qt_indicados">
     <input type="text" class="hidden" value="{{ $qt_finalizados }}" id="qt_finalizados">
-    <div class="mapa-conteudo p-16 ml-5 flex 2xl:p-36">
+    <div class="mapa-conteudo p-16 ml-5 flex 2xl:p-36 rounded-lg">
         <div class="mt-auto mb-auto">
             <h1 id="mapa-competencia" class="2xl:text-xl lg:text-xl text-center text-mainInputColor">Competência </h1>
             <div class="w-56">
@@ -29,9 +29,9 @@
                 <img src="../src/perfil/{{ $usuario['nomeFoto_fp'] }}" alt="iconePerfil" class="mapa-imagem border-solid border-4 rounded-full border-secondary-500 cursor-pointer">
                 <h2 class="text-base">{{ $usuario['nome_usu'] }}</h2>
                 <h3 class="text-sm">{{ $usuario['dataNascimento_usu'] }}</h3>
-                <div class="flex mapa-status items-center">
+                <div class="flex mapa-status items-center justify-center">
                     <i class="bi bi-check-circle text-mainInputColor m-2"></i>
-                    <h3 class="text-mainInputColor text-center">Convidou você!</h3>
+                    <h3 class="text-mainInputColor text-center">Finalizado!</h3>
                 </div>
             </div>
         @endforeach

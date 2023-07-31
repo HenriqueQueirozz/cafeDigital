@@ -182,8 +182,12 @@ if (btnEnviar) {
 function notify() {
     const btn = document.getElementById("enviar");
     const divMessage = document.querySelector(".alert");
-
     const msg = "Sucesso!";
+
+
+    btn.addEventListener("click", () => {
+        ativar(msg);
+    });
 
     function ativar(msg) {
         const message = document.createElement("div");
@@ -195,10 +199,6 @@ function notify() {
             message.style.display = "none";
         }, 3000);
     }
-
-    btn.addEventListener("click", () => {
-        ativar(msg);
-    });
 }
 
 function RemoverMensagem() {
@@ -217,7 +217,7 @@ function validarSenha() {
     }
 }
 
-// Validar senha
+// Validar CPF
 
 function validarCPF() {
     const cpf = document.querySelector("input[name=input-Cpf]");

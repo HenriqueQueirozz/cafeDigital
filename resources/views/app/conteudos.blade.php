@@ -25,7 +25,7 @@
 </style>
 
 @section('content')
-        <div class="flex items-center flex-col bg-mainBodyColorAlt">   
+        <div class="flex items-center flex-col bg-mainBodyColorAlt rounded-lg my-5">   
             <div>
                 <h3 class="text-2xl text-mainInputColor text-center m-4">Conteúdos</h3>
             </div>
