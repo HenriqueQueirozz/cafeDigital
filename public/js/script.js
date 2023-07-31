@@ -208,7 +208,6 @@ function RemoverMensagem() {
 
 // Validar senha
 function validarSenha() {
-    console.log('Entrouuu')
     const senha = document.querySelector("input[name=input-Senha]");
     const confirma = document.querySelector("input[name=input-ConfirmeSenha]");
     if (senha.value === confirma.value) {
